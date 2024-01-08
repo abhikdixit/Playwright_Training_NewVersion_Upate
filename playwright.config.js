@@ -15,8 +15,8 @@ const { devices } = require('@playwright/test');
 const config = {
   //globalSetup: "./global-setup",
   //testDir: './tests/UI_Tests/',
-  //testDir: './tests/NICE_GUI_Tests/',
-  testDir: './tests/API_Test/',
+  testDir: './tests/NICE_GUI_Tests/',
+  //testDir: './tests/API_Test/',
   //testDir: './tests/ZeroBank_Test_PageObject/',
   //testDir: './tests/Spreecom_API_Framework/',
   //testDir: './tests/Spreecom_API_Minh/test/',
