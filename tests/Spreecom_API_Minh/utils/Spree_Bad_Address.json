@@ -1,0 +1,143 @@
+[
+    {
+        "test_case": "TC1",
+        "expResult" : "valid",
+        "address": {
+            "firstname": "Mark",
+            "lastname": "Winterburn",
+            "address1": "775 Old Georgetown Road",
+            "city": "Qethesda",
+            "phone": "3488545445002",
+            "zipcode": "90210",
+            "state_name": "CA",
+            "country_iso": "US",
+            "label": "Work"
+        }
+    },
+    {
+        "test_case": "TC2",
+        "expResult" : "First Name can't be blank",
+        "address": {
+            "firstname": "",
+            "lastname": "Winterburn",
+            "address1": "775 Old Georgetown Road",
+            "city": "Qethesda",
+            "phone": "3488545445002",
+            "zipcode": "90210",
+            "state_name": "CA",
+            "country_iso": "US"
+        }
+    },
+    {
+        "test_case": "TC3",
+        "expResult" : "Last Name can't be blank",
+        "address": {
+            "firstname": "Mark",
+            "lastname": "",
+            "address1": "775 Old Georgetown Road",
+            "city": "Qethesda",
+            "phone": "3488545445002",
+            "zipcode": "90210",
+            "state_name": "CA",
+            "country_iso": "US"
+        }
+    },
+    {
+        "test_case": "TC4",
+        "expResult" : "Address can't be blank",
+        "address": {
+            "firstname": "Mark",
+            "lastname": "Winterburn",
+            "address1": "",
+            "city": "Qethesda",
+            "phone": "3488545445002",
+            "zipcode": "90210",
+            "state_name": "CA",
+            "country_iso": "US"
+        }
+    },
+    {
+        "test_case": "TC5",
+        "expResult" : "City can't be blank",
+        "address": {
+            "firstname": "Mark",
+            "lastname": "Winterburn",
+            "address1": "775 Old Georgetown Road",
+            "city": "",
+            "phone": "3488545445002",
+            "zipcode": "90210",
+            "state_name": "CA",
+            "country_iso": "US"
+        }
+    },
+    {
+        "test_case": "TC6",
+        "expResult" : "Phone can't be blank",
+        "address": {
+            "firstname": "Mark",
+            "lastname": "Winterburn",
+            "address1": "775 Old Georgetown Road",
+            "city": "Qethesda",
+            "phone": "",
+            "zipcode": "90210",
+            "state_name": "CA",
+            "country_iso": "US"
+        }
+    },
+    {
+        "test_case": "TC7",
+        "expResult" : "Zip Code can't be blank",
+        "address": {
+            "firstname": "Mark",
+            "lastname": "Winterburn",
+            "address1": "775 Old Georgetown Road",
+            "city": "Qethesda",
+            "phone": "3488545445002",
+            "zipcode": "",
+            "state_name": "CA",
+            "country_iso": "US"
+        }
+    },
+    {
+        "test_case": "TC8",
+        "expResult" : "State can't be blank",
+        "address": {
+            "firstname": "Mark",
+            "lastname": "Winterburn",
+            "address1": "775 Old Georgetown Road",
+            "city": "Qethesda",
+            "phone": "3488545445002",
+            "zipcode": "90210",
+            "state_name": "",
+            "country_iso": "US"
+        }
+    },
+    {
+        "test_case": "TC9",
+        "expResult" : "Country can't be blank",
+        "address": {
+            "firstname": "Mark",
+            "lastname": "Winterburn",
+            "address1": "775 Old Georgetown Road",
+            "city": "Qethesda",
+            "phone": "3488545445002",
+            "zipcode": "90210",
+            "state_name": "CA"
+        }
+    },
+    {
+        "test_case": "TC10",
+        "expResult" : "Address name has already been taken",
+        "address": {
+            "firstname": "Mark",
+            "lastname": "Winterburn",
+            "address1": "775 Old Georgetown Road",
+            "city": "Qethesda",
+            "phone": "3488545445002",
+            "zipcode": "90210",
+            "state_name": "CA",
+            "country_iso": "US",
+            "label": "Work"
+        }
+    }
+]

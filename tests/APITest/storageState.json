@@ -1,0 +1,15 @@
+{
+  "cookies": [
+    {
+      "sameSite": "Lax",
+      "name": "JSESSIONID",
+      "value": "6EAA604E",
+      "domain": "zero.webappsecurity.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false
+    }
+  ],
+  "origins": []
+}

@@ -20,6 +20,7 @@ test('Login to Weborders @smoke', async ({ page }) => {
 
   // Click text=Login
   await page.click('text=Login');
+
   await expect(page).toHaveURL('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/default.aspx');
 
   // Click text=Logout

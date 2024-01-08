@@ -6,21 +6,26 @@ test('test', async ({ page }) => {
   // Go to https://the-internet.herokuapp.com/javascript_alerts
   await page.goto('https://the-internet.herokuapp.com/javascript_alerts');
 
-  // Click text=Click for JS Alert
-  page.once('dialog', dialog => {
-    console.log(`Dialog message: ${dialog.message()}`);
-    dialog.dismiss().catch(() => {});
-  });
+
   await page.click('text=Click for JS Alert');
   await page.waitForTimeout(2000)
-  // Click text=Click for JS Prompt
-  page.once('dialog', dialog => {
+  // Click text=Click for JS Alert
+  page.on('dialog', dialog => {
     console.log(`Dialog message: ${dialog.message()}`);
-    dialog.dismiss().catch(() => {});
+    dialog.dismiss().catch(() => { });
   });
-  await page.click('text=Click for JS Prompt');
+  // Click text=Click for JS Prompt
+  page.on('dialog', dialog => {
+    console.log(`Dialog message: ${dialog.message()}`);
+    dialog.dismiss().catch(() => { });
+  });
+  await page.click('text=Click for JS Confirm');
   await page.waitForTimeout(2000)
-  // Click text=You entered: Abhi
+  //page.on('dialog', dialog => dialog.accept());
+  //await page.click('text=Click for JS Prompt');
+  //await page.waitForTimeout(2000)
+  //await page.fill("Abhi")
+  //Click text=You entered: Abhi
   //await page.click('text=You entered: Abhi');
 
 });

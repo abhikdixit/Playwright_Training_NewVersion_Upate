@@ -17,7 +17,7 @@ test('Navigate All Links', async ({ page }) => {
     // Check if its having http:// or not in returned href
   if (return_href.substring(0, 7) == 'http://')
     console.log('Link having http attached = ' +return_href)
-    //await page.goto(return_href)
+    await page.goto(return_href)
   }
 
 });

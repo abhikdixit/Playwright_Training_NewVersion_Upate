@@ -31,6 +31,7 @@ exports.FeedbackPage= class FeedbackPage {
     await this.emailInput.type(email)
     await this.subjectInput.type(subject)
     await this.commentInput.type(comment)
+    
   }
 
   async resetForm() {

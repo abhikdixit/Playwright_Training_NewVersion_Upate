@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 test.describe('MYSQL Test', function() {
         class ConnectDatabase {
         constructor() {
-            var mysql = require("mysql2");
+            var mysql = require("mysql");
             this.connection = mysql.createConnection({
                 host: "localhost",
                 Port: 3306,

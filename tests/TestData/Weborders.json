@@ -2,17 +2,17 @@
 [
     {
       "test_case": "TC1",
-      "name": "Tester", 
-      "password": "test"
+      "name": "Admin", 
+      "password": "admin123"
     },
     { 
         "test_case": "TC2",
-        "name": "Tester", 
-        "password": "test"
+        "name": "Admin", 
+        "password": "admin123"
       },
       { 
         "test_case": "TC3",
-        "name": "Tester", 
-        "password": "test"
+        "name": "Admin", 
+        "password": "admin123"
       }
   ]

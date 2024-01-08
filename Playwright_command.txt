@@ -1,0 +1,126 @@
+--------------------------------------------------------------
+Shortcut key to do allignment of codegen
+On Windows Shift + Alt + F.
+On Mac Shift + Option + F.
+On Ubuntu Ctrl + Shift + I.
+-------------------------------------------------------
+
+1.Run specific spec file in Playwright
+
+	npx playwright test tests/OrangeHRM_Login.spec.js --headed
+
+2. Run all spec file under folder
+
+	npx playwright test --headed
+
+3. command to record the steps
+
+	npx playwright codegen http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx
+
+4. command to execute with specific browser
+npx playwright test tests/Login_Valid_Invalid_Scenario.spec.js --headed --browser=firefox
+
+5.command to execute based on configuration set in :playwright.config.js"
+npx playwright test --config=./tests/playwright.config.js ./tests/UI_Tests/OrangeHRM_Login.spec.js  --headed
+
+6.command to execute based on configuration set in :playwright.config.js" by giving browser from project section
+npx playwright test --config=./tests/playwright.config.js --project=webkit ./tests/UI_Tests/OrangeHRM_Login.spec.js  --headed
+
+7. Command to Generate HTML report
+npx playwright test --config=./tests/playwright.config.js ./tests/UI_Tests/WebOrder_Login.spec.js  --headed --reporter=html
+8. Command to Generate line and list report
+npx playwright test --config=./tests/playwright.config.js ./tests/UI_Tests/WebOrder_Login.spec.js  --headed --reporter=line
+npx playwright test --config=./tests/playwright.config.js ./tests/UI_Tests/WebOrder_Login.spec.js  --headed --reporter=list
+--------------------------------Result of List------------------------------------------------
+Running 4 tests using 4 workers
+
+  ✓  [Firefox] › UI_Tests\WebOrder_Login.spec.js:4:1 › test (21s)
+  ✓  [Chromium] › UI_Tests\WebOrder_Login.spec.js:4:1 › test (16s)
+  ✓  [Webkit] › UI_Tests\WebOrder_Login.spec.js:4:1 › test (17s)
+  ✓  [Mobile chromium] › UI_Tests\WebOrder_Login.spec.js:4:1 › test (18s)
+
+  Slow test file: [Firefox] › UI_Tests\WebOrder_Login.spec.js (21s)
+  Slow test file: [Mobile chromium] › UI_Tests\WebOrder_Login.spec.js (18s)
+  Slow test file: [Webkit] › UI_Tests\WebOrder_Login.spec.js (17s)
+  Slow test file: [Chromium] › UI_Tests\WebOrder_Login.spec.js (16s)
+  Consider splitting slow test files to speed up parallel execution
+  --------------------------------------------------------------------------------------------------
+9. Run in debug mode with Playwright Inspector
+  npx playwright test ./tests/UI_Tests/OrangeHRM_Login.spec.js  --headed --debug
+
+10. Run tests in all browsers (config-less mode)
+npx playwright test ./tests/UI_Tests/OrangeHRM_Login.spec.js  --headed --browser=all
+
+11. Disable parallelization (Test are marked as paralle, but Disable them through CLI)
+npx playwright test ./tests/UI_Tests/Login_Valid_Invalid_Scenario.spec.js  --headed --workers=1
+---------------------------------------------------------------------------------------------------------------
+12. How to run scripts through node scripts npm run
+
+Specify the path under scripts in package.json file
+ "scripts": {
+    "test-chrome": "playwright test --config=./tests/playwright.config.js --project=Chromium --headed"
+  },
+
+  run below mentioned command
+
+npm run test-chrome  Hooks_At_SuiteLevel_WebOrder.spec.js
+---------------------------------------------------------------------------------------------------------
+To launch application in mobile device to have quick verification.
+npx playwright open --device="iPhone 11 Pro" google.com
+----------------------------------------------------------------------
+To convert any application to PDF file, playwright have in built feature
+npx playwright pdf https://opensource-demo.orangehrmlive.com/index.php/auth/login tests/TestData/OrangeHRM.pdf
+
+----------------------------------------------------------------------------------------------------------------
+To skip the test based on test.skip()
+npx playwright test ./tests/UI_Tests/Browser_Skip_Example.spec.js  --headed --browser=all
+
+  ✓  [chromium] › tests\UI_Tests\Browser_Skip_Example.spec.js:3:1 › Login to Weborders @smoke (7s)
+  -  [firefox] › tests\UI_Tests\Browser_Skip_Example.spec.js:3:1 › Login to Weborders @smoke
+  ✓  [webkit] › tests\UI_Tests\Browser_Skip_Example.spec.js:3:1 › Login to Weborders @smoke (7s)
+
+
+  1 skipped
+  2 passed (11s)
+  ---------------------------------------------------------------------------------------------------------------
+
+  12. Running test with multiple data againts multiple browser
+
+  npx playwright test ./tests/UI_Tests/Read_DataFrom_CSV_WebordersAPP.spec --headed --browser=all
+  ------------------------------------------------------------------------------------------------------------------
+  Recording a Trace and Viewing Trace
+
+  Run below command: Before that add in config
+
+  use: {
+    trace: 'on-first-retry', // record traces on first retry of each test
+  },
+
+  npx playwright test --config=./tests/playwright.config.js ./tests/UI_Tests/OrangeHRM_Login.spec.js  --headed --trace on
+
+  --------------------Allure Report-----------
+
+  https://kailash-pathak.medium.com/allure-report-integration-with-playwright-cdbff75b2dc
+  npm install -g allure-commandline --save-dev
+
+  To Execute all Test
+    npx playwright test — reporter=line,allure-playwright
+  To execute single test
+    npx playwright test — reporter=line,allure-playwright WebOrder_Calling_baseURL_From_Config.spec.js --headed
+
+  Post Execution - run below command
+  allure generate ./allure-results --clean
+  -------------------
+  To Access Data from CSV and xlsx
+
+  npm install CSV
+
+  npm install xlsx
+
+  -----------------------------------------------Execution with Tag----------------
+If you have marked as Tags like Smoke and Sanity
+  npx playwright test --grep "@smoke"
+As per your test cases name in test like "test('Blazedemo', async ({ page }) => {"
+  npx playwright test --grep "Blazedemo"
+Execute Test which has both matching tags
+npx playwright test --grep "(?=.*Unique Order)(?=.*@smoke)"

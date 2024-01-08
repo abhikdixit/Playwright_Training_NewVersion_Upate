@@ -1,0 +1,4 @@
+"test_case","uname","upass","exp_result"
+"TC1","Admin","admin123","Dashboard"
+"TC2","Admin","admin123","Dashboard"
+"TC3","Admin","admin123","Dashboard"

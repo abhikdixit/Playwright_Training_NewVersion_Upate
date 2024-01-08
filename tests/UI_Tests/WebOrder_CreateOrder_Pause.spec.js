@@ -6,7 +6,7 @@ test('test', async ({ page }) => {
   //Browser.object.action
   await page.getByLabel('Username:').click();
   await page.getByLabel('Username:').fill('Tester');
-  //await page.pause();
+  await page.pause();
   await page.getByLabel('Password:').click();
   await page.getByLabel('Password:').fill('test');
   await page.getByRole('button', { name: 'Login' }).click();

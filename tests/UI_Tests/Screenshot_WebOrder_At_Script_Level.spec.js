@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const assert = require('assert')
 
-test.describe('Hooks', () =>{
+test.describe('Hooks Example for Screenshot', () =>{
 
   test.beforeEach(async ({ page }) => {
       // Go to http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx

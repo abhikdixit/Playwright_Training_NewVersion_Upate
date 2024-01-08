@@ -1,0 +1,20 @@
+[
+    {
+      "test_case": "TC1",
+      "name": "Admin", 
+      "password": "admin123",
+      "exp_result":"Dashboard"
+    },
+    { 
+        "test_case": "TC2",
+        "name": "Admin", 
+        "password": "admin123",
+        "exp_result":"Dashboard"
+      },
+      { 
+        "test_case": "TC3",
+        "name": "Admin", 
+        "password": "admin123",
+        "exp_result":"Dashboard"
+      }
+  ]

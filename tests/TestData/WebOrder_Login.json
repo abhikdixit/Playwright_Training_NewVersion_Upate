@@ -13,5 +13,10 @@
         "test_case": "TC3",
         "name": "Tester", 
         "password": "test"
+      },
+      { 
+        "test_case": "TC3",
+        "name": "Tester", 
+        "password": "test"
       }
   ]

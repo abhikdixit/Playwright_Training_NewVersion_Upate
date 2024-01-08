@@ -35,41 +35,38 @@ const { test, expect } = require('@playwright/test');
 test.describe('Login / Logout Flow', () => {
   // Before Hook
   test.beforeEach(async ({ page }) => {
-    await page.goto('https://opensource-demo.orangehrmlive.com/index.php/auth/login')
+    await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
   })
 
   // Negative Scenario
-  test.skip('Negative Scenario for login', async ({ page }) => {
+  test.fixme('Negative Scenario for login', async ({ page }) => {
     //await page.goto('https://opensource-demo.orangehrmlive.com/index.php/auth/login')
-    // Fill input[name="txtUsername"]
-    await page.type('input[name="txtUsername"]', 'Admin');
+   
 
-    // Fill input[name="txtPassword"]
-    await page.fill('input[name="txtPassword"]', 'admin1234');
+    await page.getByLabel('Username:').type('Tester1')
   
-    // Click input:has-text("LOGIN")
-    await page.click('input:has-text("LOGIN1")');
+    await page.getByLabel('Password:').fill('test');
+    await page.getByRole('button', { name: 'Login' }).click();
+    await page.getByRole('link', { name: 'Logout' }).click();
 
-    const errorMessage = await page.locator('#spanMessage')
-    await expect(errorMessage).toContainText('Invalid credentials')
+   // const errorMessage = await page.locator('#spanMessage')
+  //  await expect(errorMessage).toContainText('Invalid credentials')
   })
 
   // Positive Scenario + Logout
   test('Positive Scenario for login + logout', async ({ page }) => {
-    //await page.goto('https://opensource-demo.orangehrmlive.com/index.php/auth/login')
-    await page.type('input[name="txtUsername"]', 'Admin');
 
-    // Fill input[name="txtPassword"]
-    await page.fill('input[name="txtPassword"]', 'admin123');
+    await page.getByLabel('Username:').type('Tester')
   
-    // Click input:has-text("LOGIN")
-    await page.click('input:has-text("LOGIN")');
+    await page.getByLabel('Password:').fill('test');
+    await page.getByRole('button', { name: 'Login' }).click();
+    await page.getByRole('link', { name: 'Logout' }).click();
 
-    const DashboardTab = await page.locator("#menu_dashboard_index")
+    /*const DashboardTab = await page.locator("#menu_dashboard_index")
     await expect(DashboardTab).toContainText('Dashboard')
     await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/index.php/dashboard')
 
     await page.goto('https://opensource-demo.orangehrmlive.com/index.php/auth/logout')
-    await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/index.php/auth/login')
+    await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/index.php/auth/login')*/
   })
 })

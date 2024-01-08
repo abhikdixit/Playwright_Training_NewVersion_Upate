@@ -1,0 +1,92 @@
+[
+    {
+        "test_case": "TC1",
+        "expResult": "valid",
+        "role": "Admin",
+        "name": "Odis Adalwin",
+        "status": "Enable",
+        "username": "minhadmin",
+        "pass": "a123456",
+        "confirm": "a123456"
+    },
+    {
+        "test_case": "TC2",
+        "expResult": "empty_role",
+        "role": "",
+        "name": "Odis Adalwin",
+        "status": "Enable",
+        "username": "minhadmin1",
+        "pass": "a123456",
+        "confirm": "a123456"
+    },
+    {
+        "test_case": "TC3",
+        "expResult": "empty_name",
+        "role": "Admin",
+        "name": "",
+        "status": "Enable",
+        "username": "minhadmin1",
+        "pass": "a123456",
+        "confirm": "a123456"
+    },
+    {
+        "test_case": "TC4",
+        "expResult": "empty_status",
+        "role": "Admin",
+        "name": "Odis Adalwin",
+        "status": "",
+        "username": "minhadmin1",
+        "pass": "a123456",
+        "confirm": "a123456"
+    },
+    {
+        "test_case": "TC5",
+        "expResult": "empty_username",
+        "role": "Admin",
+        "name": "Odis Adalwin",
+        "status": "Enable",
+        "username": "",
+        "pass": "a123456",
+        "confirm": "a123456"
+    },
+    {
+        "test_case": "TC6",
+        "expResult": "invalid_username",
+        "role": "Admin",
+        "name": "Odis Adalwin",
+        "status": "Enable",
+        "username": "minh",
+        "pass": "a123456",
+        "confirm": "a123456"
+    },
+    {
+        "test_case": "TC7",
+        "expResult": "exist_username",
+        "role": "Admin",
+        "name": "Odis Adalwin",
+        "status": "Enable",
+        "username": "Admin",
+        "pass": "a123456",
+        "confirm": "a123456"
+    },
+    {
+        "test_case": "TC8",
+        "expResult": "empty_pass",
+        "role": "Admin",
+        "name": "Odis Adalwin",
+        "status": "Enable",
+        "username": "minhadmin1",
+        "pass": "",
+        "confirm": "a123456"
+    },
+    {
+        "test_case": "TC9",
+        "expResult": "empty_confirm_pass",
+        "role": "Admin",
+        "name": "Odis Adalwin",
+        "status": "Enable",
+        "username": "minhadmin1",
+        "pass": "a123456",
+        "confirm": ""
+    }
+]

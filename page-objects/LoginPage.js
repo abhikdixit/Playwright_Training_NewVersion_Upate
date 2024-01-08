@@ -1,17 +1,18 @@
 //import { expect, Locator, Page } from '@playwright/test'
-const { expect, Locator, Page } = require('@playwright/test');
-const { AbstractPage } = require('./AbstractPage')
+import { expect, Locator, Page } from '@playwright/test';
+import { AbstractPage } from './AbstractPage';
 
-exports.LoginPage = class LoginPage extends AbstractPage {
+export class LoginPage extends AbstractPage {
+//exports.LoginPage = class LoginPage {
   // Define selectors
   // readonly page: Page
-   usernameInput= Locator
-  passwordInput= Locator
-  submitButton= Locator
-  errorMessage= Locator
+  usernameInput = Locator
+  passwordInput = Locator
+  submitButton = Locator
+  errorMessage = Locator
 
   // Init selectors using constructor
-  constructor(page= Page) {
+  constructor(page = Page) {
     // this.page = page
     super(page)
     this.usernameInput = page.locator('#user_login')
@@ -21,11 +22,11 @@ exports.LoginPage = class LoginPage extends AbstractPage {
   }
 
   // Define login page methods
-  async login(username= string, password= string) {
+  async login(username = string, password = string) {
     await this.usernameInput.type(username)
     await this.passwordInput.type(password)
     await this.submitButton.click()
-    
+
   }
 
   async assertErrorMessage() {

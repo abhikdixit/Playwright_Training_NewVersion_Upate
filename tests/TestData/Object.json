@@ -12,6 +12,14 @@
     "OpenAccountButton":"//button[normalize-space()='Open Account']",
     "CustomersButton":"//button[normalize-space()='Customers']",
     "SearchCustomer":"input[placeholder='Search Customer']"
+},
+
+"OrangeHRM_Login":{
+    "InputUsername":"Username",
+    "InputPassword":"Password",
+    "LoginButton":"button', { name: 'Login' }"   
 }
+
+
 
 }

@@ -31,11 +31,16 @@ test.describe('Login->Create Order->Logout', async () => {
     await page.getByLabel('Card Nr:*').fill('123456789');
     await page.getByLabel('Expire date (mm/yy):*').click();
     await page.getByLabel('Expire date (mm/yy):*').fill('12/23');
-    await page.getByRole('link', { name: 'Process' }).click();
+    await page.getByRole('link', { name: 'Process1' }).click();
     await expect(page.locator('#ctl00_MainContent_fmwOrder > tbody > tr > td > div > strong')).toContainText('New order has been successfully added')
 
 });
 
+test('Verify Order', async () => {
+  await page.locator("//a[normalize-space()='View all products']").click();
+  await expect(page.locator("//h2[normalize-space()='List of Products']")).toContainText('List of Products')
+
+});
 test.afterAll(async () => {
 
   await page.getByRole('link', { name: 'Logout' }).click();

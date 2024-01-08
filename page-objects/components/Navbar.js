@@ -1,15 +1,18 @@
 //import { Locator, Page } from '@playwright/test'
-const { expect, Locator, Page } = require('@playwright/test');
-exports.Navbar= class Navbar {
-   page= Page
-   accountSummary= Locator
-   accountActivity= Locator
-   transferFunds= Locator
-   payBills= Locator
-   myMoneyApp= Locator
-   onlineStatements= Locator
+const { test, expect, Locator, Page } = require('@playwright/test');
+exports.Navbar = class Navbar {
+  page = Page
+  accountSummary = Locator
+  accountActivity = Locator
+  transferFunds = Locator
+  payBills = Locator
+  myMoneyApp = Locator
+  onlineStatements = Locator
 
-  constructor(page= Page) {
+
+
+  constructor(page = Page) {
+
     this.page = page
     this.accountSummary = page.locator('#account_summary_tab')
     this.accountActivity = page.locator('#account_activity_tab')
@@ -18,6 +21,7 @@ exports.Navbar= class Navbar {
     this.myMoneyApp = page.locator('#money_map_tab')
     this.onlineStatements = page.locator('#online_statements_tab')
   }
+
 
   async clickOnTab(tabName) {
     switch (tabName) {
