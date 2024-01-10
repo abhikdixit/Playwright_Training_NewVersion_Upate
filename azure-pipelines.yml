@@ -15,5 +15,5 @@ steps:
 
 - script: |
     npm install
-    npm run API_Test
+    npm run ZeroBank_Test
   displayName: 'npm install and API_Test'
