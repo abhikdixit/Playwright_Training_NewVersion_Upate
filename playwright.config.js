@@ -58,7 +58,7 @@ const config = {
     //screenshot: 'only-on-failure',
     //storageState: "./LoginAuth.json"
     //viewport: { width: 680, height: 520 },
-    headless: false
+    headless: true
   },
 
   /* Configure projects for major browsers */
