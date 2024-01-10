@@ -7,7 +7,7 @@
     "NICE_GUI_Tests_Headed": "playwright test --config=nice_ui_test.config.js --headed",
     "NICE_GUI_Tests_Headless": "playwright test --config=nice_ui_test.config.js",
     "API_Test": "playwright test --config=API_test.config.js",
-    "ZeroBank_Test": "playwright test --config=ZeroBank.config.js --headed"
+    "ZeroBank_Test": "playwright test --config=ZeroBank.config.js"
   },
   "author": "Abhi",
   "license": "ISC",
