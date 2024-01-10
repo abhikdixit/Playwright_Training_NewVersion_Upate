@@ -18,5 +18,5 @@ steps:
   displayName: 'npm ci'
 - script: npx playwright install --with-deps
   displayName: 'Install Playwright browsers'
-- script: npm run ZeroBank_Test
+- script: npm run NICE_GUI_Tests_Headless
   displayName: 'Run Playwright tests'
