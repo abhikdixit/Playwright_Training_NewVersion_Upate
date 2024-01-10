@@ -14,6 +14,6 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    npx playwright install
+    npm init playwright@latest
     npm run ZeroBank_Test
   displayName: 'npm install and ZeroBank_Test'
