@@ -15,4 +15,4 @@ steps:
 
 - script: |
     npm run ZeroBank_Test
-  displayName: 'npm install and ZeroBank_Test'
+  displayName: 'npm ZeroBank_Test'
