@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Playwright Tests
 on:
   push:
@@ -25,3 +26,32 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+=======
+name: Playwright Tests
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 18
+    - name: Install dependencies
+      run: npm ci
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+    - name: Run Playwright tests
+      run: npm run ZeroBank_Test
+    - uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30
+>>>>>>> 796fa8c26ef3f4b9fb0de1c80104217345bbea20

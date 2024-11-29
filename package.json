@@ -9,11 +9,15 @@
     "NICE_GUI_Tests_Headless": "playwright test --config=nice_ui_test.config.js",
     "Single_Script": "playwright test WebOrder_Update_Order_VerifyOrder.spec.js ReadData_From_JSON_WebOrder_Login_All_TCs.spec.js --headed",
     "API_Test": "playwright test --config=API_test.config.js",
+<<<<<<< HEAD
     "ZeroBank_Test": "playwright test --config=ZeroBank.config.js --headed",
     "ZeroBank_Headless": "playwright test --config=ZeroBank.config.js",
     "Smoke_Test": "playwright test --grep @smoke",
     "Sanity_Test": "playwright test --grep @sanity",
     "Notes_API_Test": "playwright test"
+=======
+    "ZeroBank_Test": "playwright test --config=ZeroBank.config.js"
+>>>>>>> 796fa8c26ef3f4b9fb0de1c80104217345bbea20
   },
   "author": "Abhi",
   "license": "ISC",
