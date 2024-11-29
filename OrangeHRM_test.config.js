@@ -5,6 +5,7 @@ const config = {
     globalSetup: require.resolve('./OrangeHRM_Login_Setup'),
     workers: 2,
     retries: 1,
+    reporter: 'html',
     use: {
         // Tell all tests to load signed-in state from 'storageState.json'.
         storageState: './tests/OrangeHRM/storageState.json',
@@ -14,15 +15,16 @@ const config = {
             //If want to run your scripts in slow mode
             //slowMo: 1000,
         },
-        testDir: './tests/UI_Tests/',
+        testDir: './tests/OrangeHRM/',
         //testMatch: /.*\.e2e\.js/,
         video: "on",
+
     },
     projects: [
-        {
-            name: 'Chromium',
-            use: { browserName: 'chromium' },
-        },
+        // {
+        //     name: 'Chromium',
+        //     use: { browserName: 'chromium' },
+        // },
         /* {
             name: 'firefox',
             use: {
@@ -30,7 +32,7 @@ const config = {
             }
           },*/
 
-       /* {
+        {
 
             name: 'Webkit',
 

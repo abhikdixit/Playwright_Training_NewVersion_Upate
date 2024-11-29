@@ -101,19 +101,43 @@ npx playwright test ./tests/UI_Tests/Browser_Skip_Example.spec.js  --headed --br
   --------------------Allure Report-----------
 
   https://kailash-pathak.medium.com/allure-report-integration-with-playwright-cdbff75b2dc
+  https://allurereport.org/docs/playwright/
+  
   npm install -g allure-commandline --save-dev
 
   To Execute all Test
-    npx playwright test — reporter=line,allure-playwright
+    npx playwright test --reporter=line,allure-playwright
   To execute single test
-    npx playwright test — reporter=line,allure-playwright WebOrder_Calling_baseURL_From_Config.spec.js --headed
+    npx playwright test --reporter=line,allure-playwright WebOrder_Calling_baseURL_From_Config.spec.js --headed
 
   Post Execution - run below command
   allure generate ./allure-results --clean
+-----------------------------------Allure Report New--------------------
+Allure Report with Playwright [Screenshots, Videos & Traces]
+
+Step1: Install Allure Report command-line tool
+npm install -g allure-commandline --save-dev
+
+Step2: Install the Allure Playwright adapter.
+npm install --save-dev allure-playwright
+
+Step3: Add below config in playwright.config.js file.
+reporter:[['html'],['allure-playwright']],
+
+Generate Allure Report after the tests are executed:
+  allure generate ./allure-results -o ./allure-report --clean
+Open the generated report:
+  allure open ./allure-report
+Step4: Run Playwright tests.
+npx playwright test
+
+Step5: Generate Allure Report
+npx allure serve allure-results
+-----------------------------------------------------------------------
   -------------------
   To Access Data from CSV and xlsx
 
-  npm install CSV
+  npm install csv
 
   npm install xlsx
 
@@ -124,3 +148,5 @@ As per your test cases name in test like "test('Blazedemo', async ({ page }) => 
   npx playwright test --grep "Blazedemo"
 Execute Test which has both matching tags
 npx playwright test --grep "(?=.*Unique Order)(?=.*@smoke)"
+List out all test cases which are marked as @smoke without executing.
+  npx playwright test --list --grep "@smoke"

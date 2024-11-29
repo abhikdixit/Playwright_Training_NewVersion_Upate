@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 
 test('Scrap all Data from webtable', async ({ page }) => {
         await page.goto('https://the-internet.herokuapp.com/tables#edit');
-        const tablebodydata = await page.$eval('#table1 tbody', tableBody => {
+        const tablebodydata = await page.$eval('#table2 tbody', tableBody => {
             let all = []
             for (let i = 0, row; row = tableBody.rows[i]; i++) {
                 let tdata = [];

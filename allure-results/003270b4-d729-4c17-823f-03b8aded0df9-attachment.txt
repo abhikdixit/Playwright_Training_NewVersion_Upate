@@ -1,0 +1,88 @@
+48cef4fedb774b14a50087f2f0f4a876189b2801e7d24880998f80ca1b161186
+{
+  success: true,
+  status: 200,
+  message: 'Notes successfully retrieved',
+  data: [
+    {
+      id: '67493b1218b6cc0152406c92',
+      title: 'Playwright_Notes_API',
+      description: 'Done via API',
+      category: 'Work',
+      completed: false,
+      created_at: '2024-11-29T03:54:58.966Z',
+      updated_at: '2024-11-29T03:54:58.966Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '67493b0418b6cc0152406c8c',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2024-11-29T03:54:44.106Z',
+      updated_at: '2024-11-29T03:54:44.106Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6747044018b6cc0152402c13',
+      title: 'Testing',
+      description: 'Testing using Playwright',
+      category: 'Work',
+      completed: true,
+      created_at: '2024-11-27T11:36:32.806Z',
+      updated_at: '2024-11-27T11:36:32.806Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '674183545ba2e5015294b692',
+      title: 'API437',
+      description: 'Done via RestAssured',
+      category: 'Home',
+      completed: false,
+      created_at: '2024-11-23T07:25:08.517Z',
+      updated_at: '2024-11-23T07:25:08.517Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6741823f5ba2e5015294b638',
+      title: 'API926',
+      description: 'Done via RestAssured',
+      category: 'Home',
+      completed: false,
+      created_at: '2024-11-23T07:20:31.213Z',
+      updated_at: '2024-11-23T07:20:31.213Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '674181d55ba2e5015294b62e',
+      title: 'API943',
+      description: 'Done via RestAssured',
+      category: 'Home',
+      completed: false,
+      created_at: '2024-11-23T07:18:45.772Z',
+      updated_at: '2024-11-23T07:18:45.772Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6741819d5ba2e5015294b628',
+      title: 'API160',
+      description: 'Done via RestAssured',
+      category: 'Home',
+      completed: false,
+      created_at: '2024-11-23T07:17:49.042Z',
+      updated_at: '2024-11-23T07:17:49.042Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '67417ec85ba2e5015294b607',
+      title: 'Testing',
+      description: 'API Testing',
+      category: 'Home',
+      completed: false,
+      created_at: '2024-11-23T07:05:44.106Z',
+      updated_at: '2024-11-23T07:05:44.106Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    }
+  ]
+}

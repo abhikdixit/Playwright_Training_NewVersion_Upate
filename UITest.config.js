@@ -13,7 +13,7 @@ const { devices } = require('@playwright/test');
  * @type {import('@playwright/test').PlaywrightTestConfig}
  */
 const config = {
-  testDir: './tests',
+  testDir: './tests/UI_Tests/',
   /* Maximum time one test can run for. */
   timeout: 50 * 1000,
   expect: {
@@ -48,7 +48,8 @@ const config = {
     trace: 'on-first-retry',
     video:"on",
     screenshot: 'only-on-failure',
-    viewport: { width: 1280, height: 1000 },
+    viewport: { width: 1280, height: 1000 }
+   // headless: false,
   },
 
   /* Configure projects for major browsers */

@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const assert = require('assert')
 
 test('test', async ({ page }) => {
-  test.setTimeout(6000000);
+  test.setTimeout(50000);
   // Go to http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx
   await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
 

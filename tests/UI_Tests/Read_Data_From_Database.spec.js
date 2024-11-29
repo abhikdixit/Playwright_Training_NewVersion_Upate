@@ -3,13 +3,14 @@ const { test, expect } = require('@playwright/test');
 test.describe('MYSQL Test', function() {
         class ConnectDatabase {
         constructor() {
-            var mysql = require("mysql");
+            var mysql = require("mysql2");
             this.connection = mysql.createConnection({
                 host: "localhost",
                 Port: 3306,
                 user: "root",
                 password: "root",
-                database: "demo_weborders"
+                database: "orangehrm",
+                insecureAuth : true
             });
         }
     }

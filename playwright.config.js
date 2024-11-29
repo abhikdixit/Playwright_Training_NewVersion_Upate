@@ -1,5 +1,8 @@
 // @ts-check
-const { devices } = require('@playwright/test');
+
+// Read environment variables from file.
+require('dotenv').config();
+import { devices } from '@playwright/test';
 
 /**
  * Read environment variables from file.
@@ -13,27 +16,39 @@ const { devices } = require('@playwright/test');
  * @type {import('@playwright/test').PlaywrightTestConfig}
  */
 const config = {
+
+  // @ts-ignore
+  //globalSetup: require.resolve('./OrangeHRM_Login_Setup'),
+  //globalSetup: require.resolve('./WebOrder_Login_Setup'),
   //globalSetup: "./global-setup",
+  //testDir: './tests/',
   //testDir: './tests/UI_Tests/',
-  testDir: './tests/NICE_GUI_Tests/',
+  //testDir: './tests/UI_Special_Control/',
+  //testDir: './tests/NICE_GUI_Tests/',
+  //testDir: './tests/Assignments/',
   //testDir: './tests/API_Test/',
+  //testDir: './tests/API_Test/Restful-booker_API/',
+  //testDir: './tests/Mock_API_Test/',
+  //testDir: './tests/OrangeHRM/',
   //testDir: './tests/ZeroBank_Test_PageObject/',
   //testDir: './tests/Spreecom_API_Framework/',
-  //testDir: './tests/Spreecom_API_Minh/test/',
+  //testDir: './tests/Spreecom_API_Minh/API_test/',
+  //testDir:'./tests/API_Test/Request_API/',
+  testDir:'./tests/API_Test/Notes_API/',
   /* Maximum time one test can run for. */
-  timeout: 70 * 1000,
+  //timeout: 40000,
   
   expect: {
     /**
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    timeout: 5000
+    //timeout: 7000
   },
   /* Run tests in files in parallel */
- // fullyParallel: true,
-  //workers: 2,
-  //retries: 1,
+  fullyParallel: true,
+  workers:1,
+  //retries: 3,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   //forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -41,7 +56,10 @@ const config = {
   /* Opt out of parallel tests on CI. */
   //workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  //reporter: 'html',
+  //reporter: [['html', { open: 'never' }]],
+  //reporter: [["line"], ["allure-playwright"]],
+  reporter: [["html"], ["allure-playwright"]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
 
@@ -49,16 +67,25 @@ const config = {
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
     //baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
-    baseURL: 'https://demo.spreecommerce.org/',
+    //baseURL: 'http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx',
+    baseURL: 'https://practice.expandtesting.com/',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on',
+    //trace: 'retain-on-failure',
     //video: 'on-first-retry',
     video: 'on',
-    screenshot: 'only-on-failure',
+    screenshot: 'on',
+    // Tell all tests to load signed-in state from 'storageState.json'.
+    //storageState: './tests/OrangeHRM/WebOrderState.json',
+    //storageState: './tests/OrangeHRM/storageState.json',
+    //video: 'retain-on-failure',
+    //screenshot: 'only-on-failure',
     //screenshot: 'only-on-failure',
     //storageState: "./LoginAuth.json"
-    //viewport: { width: 680, height: 520 },
-    headless: false
+    //viewport: { width: 1920, height: 1080 },
+    headless: false,
+    trace : 'on',
+    // To bypass Certificate error.
+    ignoreHTTPSErrors:true
   },
 
   /* Configure projects for major browsers */
@@ -67,40 +94,46 @@ const config = {
       name: 'chrome',
       use: {
         ...devices['Desktop Chrome'],
-        launchOptions:{
-          args:["--start-fullscreen"]
-        }
+        viewport:{width:1536,height:864},
+        //colorScheme: 'dark',
+        // launchOptions:{
+        //   args:["--start-fullscreen"]
+        //   //args:["--start-maximized"]
+        // }
       },
     },
     
-   /* {
-      name: 'Microsoft Edge',
-      use: { ...devices['Desktop Edge'], channel: 'msedge' }, // or 'msedge-dev'
-    },
-      {
-         name: 'firefox',
-         use: {
-         ...devices['Desktop Firefox'],
-         },
-       },*/
-
-  /*  {
-      name: 'webkit',
-      use: {
-        ...devices['Desktop Safari'],
-        launchOptions:{
-          args:["--start-maximized"]
-        }
-      },
-    }*/
-
-    /* Test against mobile viewports. */
-    /*  {
-        name: 'Mobile Chrome',
-        use: {
-          ...devices['iPhone XR'],
-        },
-      },*/
+    // {
+    //   name: 'Microsoft Edge',
+    //   use: { ...devices['Desktop Edge'], channel: 'msedge' }, // or 'msedge-dev'
+    // },
+  //     {
+  //        name: 'firefox',
+  //        use: {
+  //        ...devices['Desktop Firefox'],
+  //        launchOptions:{
+  //         args:["--start-maximized"]
+  //        }
+  //      },
+  //     },
+  //  {
+  //     name: 'webkit',
+  //     use: {
+  //       ...devices['Desktop Safari'],
+  //       //viewport:{width:1536,height:864}
+  //       // launchOptions:{
+  //       //   args:["--start-maximized"]
+  //       //  }
+  //      },
+  //     },
+    
+     // Test against mobile viewports. */
+      //  {
+      //    name: 'Mobile Chrome',
+      //    use: {
+      //      ...devices['iPhone 14 Pro Max'],
+      //    },
+      //  },
     /* {
       name: 'Mobile Chrome',
       use: {
@@ -108,12 +141,12 @@ const config = {
       },
     },*/
     /* Test against mobile viewports. */
-   /*  {
-       name: 'Mobile Chrome',
-       use: {
-         ...devices['iPad Mini'],
-       },
-     },*/
+    //  {
+    //    name: 'Mobile Chrome',
+    //    use: {
+    //      ...devices['iPad Mini'],
+    //    },
+    //  },
     /* {
        name: 'Mobile Safari',
         use: {
@@ -146,4 +179,4 @@ const config = {
   // },
 };
 
-module.exports = config;
+export default config;

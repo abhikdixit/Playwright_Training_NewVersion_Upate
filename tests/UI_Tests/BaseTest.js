@@ -2,17 +2,16 @@ export class Login_LogoutPage {
 
   constructor(page) {
     this.page = page;
-    this.InputUserName = this.page.getByPlaceholder("username");
-    this.InputPassword = this.page.getByPlaceholder("password");
-    this.LoginButton = this.page.locator("//button[@type='submit']");
-    this.Logout = this.page.getByRole('menuitem', { name: 'Logout' });
+    this.InputUserName = this.page.getByLabel("Username:");
+    this.InputPassword = this.page.getByLabel("Password:");
+    this.LoginButton = this.page.locator("//input[@id='ctl00_MainContent_login_button']");
+    this.Logout_O = this.page.getByRole('menuitem', { name: 'Logout' });
+    this.Logout = this.page.locator("//a[text()='Logout']");
     this.icon = this.page.locator("//i[@class='oxd-icon bi-caret-down-fill oxd-userdropdown-icon']");
-
-
   }
 
   async gotoURL() {
-    await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    await this.page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
   }
 
   async LoginToApp(uname, pass) {
@@ -26,10 +25,8 @@ export class Login_LogoutPage {
     await this.Logout.click()
   }
 
-  async ForgetYourPassword() {
+  async ForgetYourPassword() 
+  {
 
   }
-
-  
-
 }

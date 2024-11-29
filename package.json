@@ -4,21 +4,32 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "UITest": "playwright test --config=UITest.config.js --headed",
     "NICE_GUI_Tests_Headed": "playwright test --config=nice_ui_test.config.js --headed",
     "NICE_GUI_Tests_Headless": "playwright test --config=nice_ui_test.config.js",
+    "Single_Script": "playwright test WebOrder_Update_Order_VerifyOrder.spec.js ReadData_From_JSON_WebOrder_Login_All_TCs.spec.js --headed",
     "API_Test": "playwright test --config=API_test.config.js",
-    "ZeroBank_Test": "playwright test --config=ZeroBank.config.js --headed"
+    "ZeroBank_Test": "playwright test --config=ZeroBank.config.js --headed",
+    "ZeroBank_Headless": "playwright test --config=ZeroBank.config.js",
+    "Smoke_Test": "playwright test --grep @smoke",
+    "Sanity_Test": "playwright test --grep @sanity",
+    "Notes_API_Test": "playwright test"
   },
   "author": "Abhi",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.36.2",
-    "allure-playwright": "^2.5.0"
+    "@playwright/test": "^1.44.1",
+    "allure-playwright": "^2.15.1"
   },
   "dependencies": {
     "chai": "^4.3.7",
     "csv": "^6.3.6",
-    "mysql": "^2.18.1",
+    "csv-parse": "^5.6.0",
+    "dotenv": "^16.4.5",
+    "js-xlsx": "^0.8.22",
+    "mysql2": "^3.11.3",
+    "otplib": "^12.0.1",
+    "playwright_newversion": "file:",
     "xlsx": "^0.18.5"
   }
 }

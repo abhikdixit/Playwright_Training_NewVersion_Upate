@@ -1,6 +1,6 @@
 //import { expect, Locator, Page } from '@playwright/test'
-const { expect, Locator, Page } = require('@playwright/test');
-exports.FeedbackPage= class FeedbackPage {
+import { expect, Locator, Page } from '@playwright/test';
+export class FeedbackPage {
    page= Page
    nameInput= Locator
    emailInput= Locator

@@ -1,11 +1,11 @@
 //Run "npm install xlsx" to install the xlsx file
 
-const { test, expect, Page } = require('@playwright/test');
-var XLSX = require('xlsx')
+import { test, expect, Page } from '@playwright/test';
+import { readFile, utils } from 'xlsx';
 
-var workbook = XLSX.readFile('./tests/TestData/TestAllScenario.xlsx');
+var workbook = readFile('./tests/TestData/TestAllScenario.xlsx');
 var sheet_name_list = workbook.SheetNames;
-var records = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
+var records = utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
 test.describe('WebOrder All Test Scenario', () => {
   let page = Page;
   //Page can be directly used in test not in hooks, in hooks we can use browser and assign new page to page
@@ -28,6 +28,7 @@ test.describe('WebOrder All Test Scenario', () => {
 
       // Click text=Login
       await page.click('text=Login');
+      await page.waitForLoadState()
       //Check condition whether Valid or Invalid
       const del = await page.$("#ctl00_MainContent_btnDelete");
       if (del) {

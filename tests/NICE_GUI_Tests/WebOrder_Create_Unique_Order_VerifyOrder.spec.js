@@ -19,12 +19,14 @@ test('Create Order Unique Order- Verify Order @smoke', async ({ page }) => {
   //await page.getByText('Quantity:*').click();
   await page.getByLabel('Quantity:*').fill('5');
   //await page.getByLabel('Customer name:*').click();
-  const ExpUserName = 'Dixit' + Math.random() * 1000;
+  
+  const ExpUserName = 'Dixit' + Math.random() * 10000;
 
   await page.getByLabel('Customer name:*').fill(ExpUserName);
+  //await page.pause()
   await page.getByLabel('Street:*').fill('BTM')
   await page.waitForTimeout(5000)
-  await page.waitForLoadState();
+  //await page.waitForLoadState();
   //await page.getByLabel('Street:*').isEditable().fill('BTM');
   await page.getByLabel('City:*').fill('Bangalore');
   await page.getByLabel('Zip:*').click();
@@ -41,8 +43,6 @@ test('Create Order Unique Order- Verify Order @smoke', async ({ page }) => {
   await page.getByRole('link', { name: 'View all orders' }).click();
   // Verify that user got created
   await expect(page.locator("//td[normalize-space()='"+ExpUserName+"']")).toHaveText(ExpUserName)
-
-
   
   await page.getByRole('link', { name: 'Logout' }).click()
   await page.url().includes("/Login.aspx")

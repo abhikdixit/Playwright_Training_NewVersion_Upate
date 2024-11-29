@@ -1,0 +1,1 @@
+locator('//strong[normalize-space()=\'New order has been successfully added.\']')

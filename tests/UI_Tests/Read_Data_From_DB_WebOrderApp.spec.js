@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-
+const mysql = require("mysql2");
 //test.describe('MYSQL Test', function() {
 //var rows
 /*class ConnectDatabase {
@@ -38,8 +38,8 @@ constructor() {
       }) 
   })   */  
 
-//test('DataBase testing in Playwright', async ({ page }) => {
-    var mysql = require("mysql");
+test('DataBase testing in Playwright', async ({ page }) => {
+    //var mysql = require("mysql");
     connection = mysql.createConnection({
         host: "localhost",
         Port: 3306,
@@ -80,6 +80,6 @@ connection.query(sql, async (err, rows) => {
       
         });
     }
-    //connectDatabase.connection.end()
+    connectDatabase.connection.end()
 });
-//});
+});

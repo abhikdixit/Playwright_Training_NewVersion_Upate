@@ -19,30 +19,15 @@ test.describe('WebOrder All Test Scenario', () => {
 
   test('WebOrder App', async () => {
     for (const record of records) {
-      //console.log(records)
-      //console.log(record.uname, record.pass);
       await page.locator('input[name="ctl00\\$MainContent\\$username"]').clear();
       await page.fill('input[name="ctl00\\$MainContent\\$username"]', record.uname);
       await page.locator('input[name="ctl00\\$MainContent\\$password"]').clear();
-      // Fill input[name="ctl00\$MainContent\$password"]
       await page.fill('input[name="ctl00\\$MainContent\\$password"]', record.pass);
 
-      // Click text=Login
       await page.click('text=Login');
-      //await page.waitForTimeout(2000);
-      //await page.waitFor
-      //Check condition whether Valid or Invalid
-      //const del = await page.$("#ctl00_MainContent_btnDelete");
-      //const del = await page.$eval("#ctl00_MainContent_status", el => el.textContent.trim())
-      //const del = await page.$eval("h2[normalize-space()='List of All Orders']", el => el.textContent.trim())
-      //console.log(del)
       if ('List of All Orders' == record.Exp_Result) {
 
         await expect(page.locator("div[class='content'] h2")).toContainText(record.Exp_Result)
-        //const name = await page.$eval("h2[normalize-space()='List of All Orders']", el => el.textContent.trim())
-        //expect(name).toBe('List of All Orders')
-        //expect(name).toBe(record.Exp_Result)
-        // Click text=Logout
         await page.click('text=Logout');
         await page.waitForLoadState(); // The promise resolves after 'load' event.
 

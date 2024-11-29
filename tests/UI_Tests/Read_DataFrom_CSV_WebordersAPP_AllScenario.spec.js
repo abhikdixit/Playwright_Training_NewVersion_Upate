@@ -1,13 +1,12 @@
 //Run "npm install csv" to install the full csv module or run npm install csv-parse 
 //if you are only interested by the CSV parser.
+import { readFileSync } from 'fs';
+import { join } from 'path';
+import { test, expect, Page } from '@playwright/test';
+//const assert = require('assert')
+import { parse } from 'csv-parse/sync';
 
-const fs = require('fs');
-const path = require('path');
-const { test, expect,Page } = require('@playwright/test');
-const assert = require('assert')
-const { parse } = require('csv-parse/sync');
-
-const records = parse(fs.readFileSync(path.join('./tests/TestData', 'WebOrder_Login_All_Scenario.csv')), {
+const records = parse(readFileSync(join('./tests/TestData', 'WebOrder_Login_All_Scenario.csv')), {
   columns: true,
   skip_empty_lines: true
 });
@@ -33,25 +32,12 @@ test.describe('WebOrder All Test Scenario', () => {
 
       // Click text=Login
       await page.click('text=Login');
-      //await page.waitForTimeout(2000);
-      //await page.waitFor
-      //Check condition whether Valid or Invalid
-      //const del = await page.$("#ctl00_MainContent_btnDelete");
-      //const del = await page.$eval("#ctl00_MainContent_status", el => el.textContent.trim())
-      //const del = await page.$eval("h2[normalize-space()='List of All Orders']", el => el.textContent.trim())
-      //console.log(del)
       if ('List of All Orders' == record.Exp_Result) {
 
         await expect(page.locator("div[class='content'] h2")).toContainText(record.Exp_Result)
-        //const name = await page.$eval("h2[normalize-space()='List of All Orders']", el => el.textContent.trim())
-        //expect(name).toBe('List of All Orders')
-        //expect(name).toBe(record.Exp_Result)
-        // Click text=Logout
         await page.click('text=Logout');
         await page.waitForLoadState(); // The promise resolves after 'load' event.
-
-      } else if ('Invalid Login or Password.' == record.Exp_Result)
-      {
+      } else if ('Invalid Login or Password.' == record.Exp_Result) {
         const name = await page.$eval("#ctl00_MainContent_status", el => el.textContent.trim())
         //expect(name).toBe('Invalid Login or Password.')
         expect(name).toBe(record.Exp_Result)

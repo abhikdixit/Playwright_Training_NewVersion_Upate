@@ -1,9 +1,9 @@
-const { test, expect } = require("@playwright/test");
-const fs = require('fs');
-let objects = fs.readFileSync('./tests/TestData/OrangeHRM_AddUsers_All_TCs.json')
+import { test, expect } from "@playwright/test";
+import { readFileSync } from 'fs';
+let objects = readFileSync('./tests/TestData/OrangeHRM_AddUsers_All_TCs.json')
 const users = JSON.parse(objects);
 
-test.describe("OrangeHRM", () => {
+test.describe("Admin -OrangeHRM", () => {
   let page;
   let newAdminUsername = "minhadmin";
   let newAdminPassword = "a123456";
@@ -16,6 +16,7 @@ test.describe("OrangeHRM", () => {
     await page.getByPlaceholder("Username").fill("Admin");
     await page.getByPlaceholder("Password").fill("admin123");
     await page.getByRole("button", { name: "Login" }).click();
+    
   });
 
   for (const record of users) {
@@ -100,7 +101,7 @@ test.describe("OrangeHRM", () => {
           await expect(page.locator("xpath=//label[text()='Confirm Password']/parent::div/following-sibling::span[text()='Passwords do not match']")).toBeVisible();
           break;
         case "empty_confirm_pass":
-          await expect(page.locator("xpath=//label[text()='Confirm Password']/parent::div/following-sibling::span[text()='Required']")).toBeVisible();
+          await expect(page.locator("xpath=//label[text()='Confirm Password']/parent::div/following-sibling::span[text()='Passwords do not match']")).toBeVisible();
           break;
 
       }

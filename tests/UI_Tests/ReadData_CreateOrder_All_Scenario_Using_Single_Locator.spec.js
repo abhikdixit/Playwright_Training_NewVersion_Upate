@@ -1,8 +1,8 @@
-const { test, expect } = require('@playwright/test');
-const fs = require('fs');
+import { test, expect } from '@playwright/test';
+import { readFileSync } from 'fs';
 
 // Reads the JSON file and saves it  
-let objects = fs.readFileSync('./tests/TestData/create_order_All_Scenario.json')
+let objects = readFileSync('./tests/TestData/create_order_All_Scenario.json')
 const orders = JSON.parse(objects);
 
 test.describe('E2E WebOrder Application', () => {
@@ -10,6 +10,7 @@ test.describe('E2E WebOrder Application', () => {
     // let ExpUserName;
 
     test.beforeAll(async ({ browser }) => {
+        
         page = await browser.newPage();
         await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
         //Browser.object.action
@@ -38,6 +39,7 @@ test.describe('E2E WebOrder Application', () => {
             await page.getByLabel('City:*').fill(data.City);
             await page.getByLabel('Zip:*').fill(data.Zip);
             await page.getByLabel('Visa').check();
+            //await page.pause();
             await page.getByLabel('Card Nr:*').fill(data.Card);
             await page.getByLabel('Expire date (mm/yy):*').fill(data.Expire);
             await page.getByRole('link', { name: 'Process' }).click();

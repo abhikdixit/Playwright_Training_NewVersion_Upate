@@ -18,6 +18,13 @@ test.describe('OrangeHRM tests', () => {
      
     });
 
+    test('Go to PIM Page', async ({ page }) => {
+
+        //Navigate to Admin and Click on Add User
+        await page.getByRole('link', { name: 'PIM' }).click();
+        await page.getByRole('button', { name: ' Add' }).click();
+     
+    });
     
     test.afterEach(async ({ page }) => {
         //Logout from Application

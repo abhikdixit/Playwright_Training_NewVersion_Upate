@@ -1,0 +1,12 @@
+{
+    "Module1TestData":{
+      "skill1":"Selenium",
+        "skill2":"Robotframework",
+        "skill3":"java"
+    },
+    "qaTestData":{
+        "skill1":"Jmeter",
+        "skill2":"Postman",
+        "skill3":"BDD"
+    }
+}

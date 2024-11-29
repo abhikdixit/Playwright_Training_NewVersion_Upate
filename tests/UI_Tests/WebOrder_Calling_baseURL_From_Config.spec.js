@@ -1,27 +1,24 @@
 //import { test, expect } from '@playwright/test';
 const { test, expect } = require('@playwright/test');
 
-test.only('Spree com Mouse Hover', async ({ page }) => {
+test('Notes App', async ({ page }) => {
 
-  // Go to https://opensource-demo.orangehrmlive.com/index.php/auth/login
-  // Relative Path Example
-  //await page.goto('/t/categories/women');
-  //Absolute Path Example
   await page.goto('/');
-  // Click #divUsername >> text=Username
-  await page.hover("//a[text()='Women']")
-
-  await page.click("//a[text()='Skirts']");
-  await expect(page).toHaveURL('https://demo.spreecommerce.org/t/categories/women/skirts');
-  await expect(page).toHaveTitle("Skirts - Spree Demo Site");
-
- 
+  await page.locator("#notes-react-app").click()
+  await page.locator("//a[normalize-space()='Login']").click();
+  await page.getByTestId('login-email').fill('abhinay.dixit@hotmail.com');
+  //await page.getByLabel('Password:').click();
+  await page.getByTestId('login-password').fill('pass@1234');
+  await page.getByRole('button', { name: 'Login' }).click();
+  await expect(page).toHaveURL("https://practice.expandtesting.com/notes/app")
+  await page.getByTestId("logout").click();
+  await expect(page).toHaveURL("https://practice.expandtesting.com/notes/app")
 });
 
-test('OrangeHRN', async ({ page }) => {
+test.skip('OrangeHRM', async ({ page }) => {
   await page.goto('/');
-  await page.getByPlaceholder("username").type("Admin");
-  await page.getByPlaceholder("password").type("admin123");
+  await page.getByPlaceholder("username").fill("Admin");
+  await page.getByPlaceholder("password").fill("admin123");
   await page.locator("//button[@type='submit']").click();
   const Dashboard = page.locator("//h6[text()='Dashboard']")
   await expect(Dashboard).toHaveText("Dashboard")

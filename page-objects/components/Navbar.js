@@ -1,6 +1,6 @@
 //import { Locator, Page } from '@playwright/test'
-const { test, expect, Locator, Page } = require('@playwright/test');
-exports.Navbar = class Navbar {
+import { test, expect, Locator, Page } from '@playwright/test';
+export class Navbar {
   page = Page
   accountSummary = Locator
   accountActivity = Locator

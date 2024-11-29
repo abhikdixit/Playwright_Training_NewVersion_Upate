@@ -17,9 +17,7 @@ for (const record of records) {
     console.log(record.uname, record.upass, record.exp_result);
 
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-    await page.getByPlaceholder('Username').click();
     await page.getByPlaceholder('Username').fill(record.uname);
-    await page.getByPlaceholder('Password').click();
     await page.getByPlaceholder('Password').fill(record.upass);
     await page.getByRole('button', { name: 'Login' }).click();
     await page.waitForSelector("//h6[text()='Dashboard']")

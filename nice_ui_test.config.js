@@ -18,7 +18,7 @@ const config = {
   //testDir: './tests/API_Test/',
   //testDir: './tests/E2E_Test_PageObject/',
   /* Maximum time one test can run for. */
-  timeout: 30 * 1000,
+  timeout: 50 * 1000,
   
   expect: {
     /**

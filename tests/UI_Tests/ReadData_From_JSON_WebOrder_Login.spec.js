@@ -9,9 +9,7 @@ test('Web Login:', async ({ page }) => {
   for (const record of users) {
     //console.log(record.name, record.password, record.exp_result);
     await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
-    await page.getByLabel('Username:').click();
     await page.getByLabel('Username:').fill(record.name);
-    await page.getByLabel('Password:').click();
     await page.getByLabel('Password:').fill(record.password);
     await page.getByRole('button', { name: 'Login' }).click();
     await expect(page).toHaveURL('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/default.aspx');

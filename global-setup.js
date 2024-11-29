@@ -14,7 +14,7 @@ async function globalSetup()
     //save the state of the webpage
     await page.context().storageState({path:"./LoginAuth.json"});
 
-    await page.close();
+   // await page.close();
 }
 
 export default globalSetup;

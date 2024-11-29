@@ -6,6 +6,7 @@ test.describe.parallel('My First Test', () => {
     await page.click('a:has-text("type")')
     await page.waitForURL(/.+\/commands\/actions$/)
     await page.fill('.action-email', 'fake@email.com')
+    //await page.waitForTimeout(3000)
     await expect(page.locator('.action-email')).toHaveValue('fake@email.com')
   })
   test('clicking "type" shows the right headings 2', async ({ page }) => {

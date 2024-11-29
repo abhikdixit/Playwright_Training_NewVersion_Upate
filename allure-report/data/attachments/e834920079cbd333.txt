@@ -1,0 +1,17 @@
+Getting Access Token....
+06f43591e6214c6384d67aaf6e09280bc0bac57799264826abb7a9f8ba6dcb6f
+{
+  success: true,
+  status: 200,
+  message: 'Note successfully created',
+  data: {
+    id: '67161e1f2b47f201538b7fc7',
+    title: 'Playwright_Notes',
+    description: 'Done via API',
+    category: 'Personal',
+    completed: false,
+    created_at: '2024-10-21T09:25:51.737Z',
+    updated_at: '2024-10-21T09:25:51.737Z',
+    user_id: '65f1cc0b55382801413dbc96'
+  }
+}

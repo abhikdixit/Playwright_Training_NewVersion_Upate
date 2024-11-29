@@ -1,0 +1,16 @@
+[
+    {
+	"TestCaseID": "TC1",
+    "selectCurrency": "AUD",
+    "enterAmount":"99",
+    "selectRadioButton": "U.S. dollar (USD)",
+    "Result":"Foreign currency cash was successfully purchased."
+},
+{
+	"TestCaseID": "TC2",
+    "selectCurrency": "CAD",
+    "enterAmount":"55.5",
+    "selectRadioButton": "Selected currency",
+    "Result":"Foreign currency cash was successfully purchased."
+}
+]

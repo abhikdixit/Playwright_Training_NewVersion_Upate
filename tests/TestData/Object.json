@@ -1,6 +1,7 @@
 {
    
 "TestUrl":"http://www.way2automation.com/angularjs-protractor/banking/#/login",
+"TestUrl_HRM":"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
 
 "Locators":{
     "BankManagerLoginButton":"button[ng-click='manager()']",
@@ -15,11 +16,20 @@
 },
 
 "OrangeHRM_Login":{
+    "InputUsername":"//input[@placeholder='Username']",
+    "InputPassword":"//input[@placeholder='Password']",
+    "LoginButton":"//button[normalize-space()='Login']"   
+},
+
+"WebOrder_Login":{
     "InputUsername":"Username",
     "InputPassword":"Password",
     "LoginButton":"button', { name: 'Login' }"   
+},
+"WebOrder_CreateOrder":{
+    "DropdownProduct":"Username",
+    "InputQuantity":"Password",
+    "ProcessButton":"button', { name: 'Login' }"   
 }
-
-
 
 }

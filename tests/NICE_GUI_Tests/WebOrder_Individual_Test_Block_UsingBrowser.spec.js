@@ -6,7 +6,9 @@ test.describe('E2E WebOrder Application', () => {
   let ExpUserName;
 
   test.beforeAll(async ({ browser }) => {
+    //page = await browser.newPage({viewport: { width: 1920, height: 1080 }});
     page = await browser.newPage();
+
     await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
     //Browser.object.action
     await page.getByLabel('Username:').fill('Tester');

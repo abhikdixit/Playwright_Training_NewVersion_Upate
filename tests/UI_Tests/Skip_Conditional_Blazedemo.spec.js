@@ -1,7 +1,8 @@
 const { test, expect } = require('@playwright/test');
 //const { test, expect } = require('@playwright/test');
-test('test', async ({ page ,browserName}) => {
-  test.skip(browserName === 'chrome', 'Still working on it');
+
+test('BalzeDemo', async ({ page,browserName  }) => {
+  test.skip(browserName === 'firefox', 'Still working on it');
   await page.goto('https://blazedemo.com/');
   //await page.pause();
   await page.locator('select[name="fromPort"]').selectOption('Boston');

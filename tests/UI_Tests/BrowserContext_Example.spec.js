@@ -1,7 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
 test('Login to Weborders', async ({ browser }) => {
-
   // Create a new incognito browser context
   const context = await browser.newContext();
   // Create a new page inside context.

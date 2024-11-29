@@ -1,0 +1,15 @@
+{
+  success: true,
+  status: 200,
+  message: 'Note successfully Updated',
+  data: {
+    id: '67161fec2b47f201538b815f',
+    title: 'Playwright_Notes_API_Updated-2',
+    description: 'Done via API_Update-2',
+    category: 'Home',
+    completed: false,
+    created_at: '2024-10-21T09:33:32.001Z',
+    updated_at: '2024-10-21T09:33:32.494Z',
+    user_id: '65f1cc0b55382801413dbc96'
+  }
+}

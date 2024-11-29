@@ -1,8 +1,8 @@
 // global-setup.js
 
-const { chromium } = require('@playwright/test');
+import { chromium } from '@playwright/test';
 
-module.exports = async config => {
+export default async config => {
 
     const browser = await chromium.launch();
     const page = await browser.newPage();

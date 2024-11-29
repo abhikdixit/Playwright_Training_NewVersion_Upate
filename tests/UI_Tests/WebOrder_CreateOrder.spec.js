@@ -14,7 +14,7 @@ test('test', async ({ page }) => {
   await page.getByLabel('Quantity:*').fill('05');
   await page.getByText('Quantity:*').click();
   await page.getByLabel('Customer name:*').click();
-  await page.getByLabel('Customer name:*').fill('Sada');
+  await page.getByLabel('Customer name:*').fill('Dixit1');
   await page.getByLabel('Street:*').click();
   await page.getByLabel('Street:*').fill('ABC');
   await page.getByLabel('City:*').click();
@@ -27,6 +27,10 @@ test('test', async ({ page }) => {
   await page.getByLabel('Expire date (mm/yy):*').click();
   await page.getByLabel('Expire date (mm/yy):*').fill('12/23');
   await page.getByRole('link', { name: 'Process' }).click();
-  await page.getByText('New order has been successfully added.').click();
+  await expect(page.locator("//strong[normalize-space()='New order has been successfully added.']")).toHaveText("New order has been successfully added.")
+  //await page.getByText('New order has been successfully added.').click();
+  await page.getByRole('link', { name: 'View all orders', exact: true }).click();
+  await expect(page.locator("//td[normalize-space()='Dixit1']")).toHaveText("Dixit1")
   await page.getByRole('link', { name: 'Logout' }).click();
+
 });

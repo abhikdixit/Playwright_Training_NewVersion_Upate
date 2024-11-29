@@ -1,4 +1,5 @@
 // @ts-check
+require('dotenv').config();
 const { devices } = require('@playwright/test');
 
 /**
@@ -33,7 +34,7 @@ const config = {
   /* Run tests in files in parallel */
   fullyParallel: true,
   workers: 1,
-  retries: 1,
+  //retries: 1,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   //forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -56,7 +57,7 @@ const config = {
     video: 'on',
     //screenshot:'on',
     screenshot: 'only-on-failure',
-    storageState: "./LoginAuth.json"
+    //storageState: "./LoginAuth.json"
     //viewport: { width: 1280, height: 1020 }
   },
 

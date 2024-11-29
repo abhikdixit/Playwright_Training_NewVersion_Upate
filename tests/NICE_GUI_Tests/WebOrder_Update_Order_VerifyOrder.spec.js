@@ -1,7 +1,7 @@
 //import { test, expect } from '@playwright/test';
 const { test, expect } = require('@playwright/test');
 
-test('Create Order-Update Order- Verify Order', async ({ page }) => {
+test('Create Order-Update Order- Verify Order @smoke', async ({ page }) => {
   await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
   //Browser.object.action
   await page.getByLabel('Username:').fill('Tester');
@@ -43,7 +43,7 @@ test('Create Order-Update Order- Verify Order', async ({ page }) => {
   // Update the Order details
 
   await page.locator("//td[normalize-space()='"+ExpUserName+"']//following-sibling::td/input").click();
-  await page.waitForTimeout(3000)
+  //await page.waitForTimeout(3000)
   await page.locator('#ctl00_MainContent_fmwOrder_TextBox3').clear()
   await page.locator('#ctl00_MainContent_fmwOrder_TextBox3').fill('Delhi');
   await page.locator("#ctl00_MainContent_fmwOrder_UpdateButton").click()

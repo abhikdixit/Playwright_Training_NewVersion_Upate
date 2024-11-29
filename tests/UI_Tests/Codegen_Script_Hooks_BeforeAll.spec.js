@@ -31,7 +31,7 @@ test.describe('Login->Create Order->Logout', async () => {
     await page.getByLabel('Card Nr:*').fill('123456789');
     await page.getByLabel('Expire date (mm/yy):*').click();
     await page.getByLabel('Expire date (mm/yy):*').fill('12/23');
-    await page.getByRole('link', { name: 'Process1' }).click();
+    await page.getByRole('link', { name: 'Process' }).click();
     await expect(page.locator('#ctl00_MainContent_fmwOrder > tbody > tr > td > div > strong')).toContainText('New order has been successfully added')
 
 });

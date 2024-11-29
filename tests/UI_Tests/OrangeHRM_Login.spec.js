@@ -1,6 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 test('test', async ({ page }) => {
+  test.setTimeout(70000)
   // This will help to mesure the performance of test within given timeline
   //test.setTimeout(10000);
   //Unconditionally marks a test as "slow". Slow test will be given triple the default timeout.

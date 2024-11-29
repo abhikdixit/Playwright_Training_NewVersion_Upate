@@ -1,7 +1,7 @@
 //import { Page } from '@playwright/test'
-const { expect, Locator, Page } = require('@playwright/test');
+import { expect, Locator, Page } from '@playwright/test';
 
-exports.AbstractPage= class AbstractPage {
+export class AbstractPage {
    page= Page
 
   constructor(page= Page) {

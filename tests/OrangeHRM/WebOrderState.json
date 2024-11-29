@@ -1,0 +1,25 @@
+{
+  "cookies": [
+    {
+      "name": "ASP.NET_SessionId",
+      "value": "ryz5yt45u3bkcheg230xjr55",
+      "domain": "secure.smartbearsoftware.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": ".ASPNET",
+      "value": "FE4B463677EBEC5EB6AEDA1E80EE6F03CED00DA8E18DF1E32577B8884A03BDC55DE337DC9C89AF6A37EFAEF0EFF05B22F429AA2EE767B6C56BAB2EC0E272F833FF93D89FFB3E2DAA6E15F42373707BDF222A125F24486857206679EE8FF989276C0A812A58742ACE2ECE273A7C732FC1F95BE2F0",
+      "domain": "secure.smartbearsoftware.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}
