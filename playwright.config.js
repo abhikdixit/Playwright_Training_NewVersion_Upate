@@ -81,16 +81,13 @@ const config = {
     //screenshot: 'only-on-failure',
     //screenshot: 'only-on-failure',
     //storageState: "./LoginAuth.json"
-<<<<<<< HEAD
     //viewport: { width: 1920, height: 1080 },
     headless: false,
     trace : 'on',
     // To bypass Certificate error.
     ignoreHTTPSErrors:true
-=======
-    //viewport: { width: 680, height: 520 },
-    headless: true
->>>>>>> 796fa8c26ef3f4b9fb0de1c80104217345bbea20
+    //viewport: { width: 680, height: 520 }
+
   },
 
   /* Configure projects for major browsers */
