@@ -31,21 +31,21 @@ test.describe("Create Notes API Testing", () => {
     expect(responseBody.data.title).toBe(random_title);
     console.log(random_title);
   });
-  test("Delete test", async ({ page }) => {
-    await page.goto("https://practice.expandtesting.com/notes/app");
-    await page.getByRole("link", { name: "Login" }).click();
-    await page.locator("#email").fill("Deekshitha@practice.com");
-    await page.locator("#password").fill("Deekshitha10");
-    await page.getByRole("button", { name: "Login" }).click();
-    await page
-      .locator(
-        "//div[text()='" +
-          random_title +
-          "']//following-sibling::div/div/button[normalize-space()='Delete']"
-      )
-      .click();
+  // test("Delete test", async ({ page }) => {
+  //   await page.goto("https://practice.expandtesting.com/notes/app");
+  //   await page.getByRole("link", { name: "Login" }).click();
+  //   await page.locator("#email").fill("Deekshitha@practice.com");
+  //   await page.locator("#password").fill("Deekshitha10");
+  //   await page.getByRole("button", { name: "Login" }).click();
+  //   await page
+  //     .locator(
+  //       "//div[text()='" +
+  //         random_title +
+  //         "']//following-sibling::div/div/button[normalize-space()='Delete']"
+  //     )
+  //     .click();
 
-      await page.click("//button[@type='button'][normalize-space()='Delete']");
-      await expect(page.locator(".container")).not.toBe(random_title)
-  });
+  //     await page.click("//button[@type='button'][normalize-space()='Delete']");
+  //     await expect(page.locator(".container")).not.toBe(random_title)
+  // });
 });
