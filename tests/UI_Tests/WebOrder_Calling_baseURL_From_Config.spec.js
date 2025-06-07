@@ -1,7 +1,7 @@
 //import { test, expect } from '@playwright/test';
 const { test, expect } = require('@playwright/test');
 
-test('Notes App', async ({ page }) => {
+test.skip('Notes App', async ({ page }) => {
 
   await page.goto('/');
   await page.locator("#notes-react-app").click()
@@ -15,7 +15,7 @@ test('Notes App', async ({ page }) => {
   await expect(page).toHaveURL("https://practice.expandtesting.com/notes/app")
 });
 
-test.skip('OrangeHRM', async ({ page }) => {
+test('OrangeHRM', async ({ page }) => {
   await page.goto('/');
   await page.getByPlaceholder("username").fill("Admin");
   await page.getByPlaceholder("password").fill("admin123");

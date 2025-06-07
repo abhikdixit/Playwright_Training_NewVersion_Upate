@@ -8,9 +8,10 @@ test('Right Clieck', async ({ page }) => {
         const filepath = 'tests/TestData/Images/Abhi.jpg'
         //console.log(filepath)
         await page.locator('#file-upload').setInputFiles(filepath)
-        await page.locator('#file-submit').click({timeout:5000})
+        await page.locator('#file-submit').click()
+        //await page.locator('#file-submit').click({timeout:5000})
         await page.waitForSelector("//h3[normalize-space()='File Uploaded!']")
         //await page.waitForTimeout(5000)
         await expect(page.locator('#uploaded-files')).toContainText('Abhi.jpg')
-        await page.routeFromHAR
+        //await page.routeFromHAR
     })

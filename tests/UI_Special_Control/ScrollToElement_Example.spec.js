@@ -2,10 +2,11 @@
 import { test, expect } from '@playwright/test';
 
 test('Scroll To Particular Element Example @sanity', async ({ page }) => {
+  //test.setTimeout(80000)
   await page.goto('https://stackoverflow.com/');
   //await page.pause()
-  const element = page.locator("//a[normalize-space()='Careers at Stack Overflow']")
+  const element = page.locator("//a[text()='Press']")
   await element.scrollIntoViewIfNeeded()
   await element.click()
-  await page.pause()
+  await page.waitForTimeout(5000)
 });

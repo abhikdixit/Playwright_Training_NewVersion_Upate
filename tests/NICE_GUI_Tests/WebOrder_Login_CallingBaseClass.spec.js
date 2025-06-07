@@ -8,6 +8,7 @@ test.describe('WebOrder E2E Test tests @sanity', () => {
         loginPage = new Login_LogoutPage(page);
         await loginPage.gotoURL();
         await loginPage.LoginToApp("Tester", "test");
+        
     });
 
     test('Go to Order Page', async ({ page }) => {

@@ -2,10 +2,10 @@
 const { test, expect } = require('@playwright/test');
 test('test', async ({ page }) => {
   await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
-  await page.getByLabel('Username:').click();
   await page.getByLabel('Username:').fill('Tester');
-  await page.getByLabel('Password:').click();
   await page.getByLabel('Password:').fill('test');
+   await expect(page.locator('#aspnetForm')).toContainText('In order to log in Orders sample use the following information:');
+
   // Pause on the following line.
   await page.pause();
   await page.getByRole('button', { name: 'Login' }).click();

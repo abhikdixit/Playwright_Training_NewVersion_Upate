@@ -14,6 +14,7 @@ test('Test login page Smoke', async ({ page }) => {
   await page.getByPlaceholder('Credit Card Number').fill('123456789');
   await page.getByPlaceholder('John Smith').click();
   await page.getByPlaceholder('John Smith').fill('Abhi');
+  await page.waitForTimeout(5000);
   await page.getByRole('button', { name: 'Purchase Flight' }).click();
   await page.getByRole('heading', { name: 'Thank you for your purchase today!' }).click();
 });

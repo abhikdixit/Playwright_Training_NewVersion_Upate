@@ -6,8 +6,8 @@ test.describe("Create Notes API Testing", () => {
   const random_title = "Playwright_Notes " + Math.random() * 1000;
   test.beforeAll(async ({ request }) => {
     token = await AccessToken(
-      "Deekshitha@practice.com",
-      "Deekshitha10",
+      "abhi@xyz.com",
+      "test1234",
       request
     );
     expect(token).toBeTruthy();
@@ -34,8 +34,8 @@ test.describe("Create Notes API Testing", () => {
   test("Delete test", async ({ page }) => {
     await page.goto("https://practice.expandtesting.com/notes/app");
     await page.getByRole("link", { name: "Login" }).click();
-    await page.locator("#email").fill("Deekshitha@practice.com");
-    await page.locator("#password").fill("Deekshitha10");
+    await page.locator("#email").fill("abhi@xyz.com");
+    await page.locator("#password").fill("test1234");
     await page.getByRole("button", { name: "Login" }).click();
     await page
       .locator(

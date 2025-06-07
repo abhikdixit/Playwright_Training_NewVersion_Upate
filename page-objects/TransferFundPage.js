@@ -11,7 +11,7 @@ exports.TransferFundPage = class TransferFundPage {
   continueButton = Locator;
   message = Locator;
   fundTransferPage= Locator;
-
+  cancelButton = Locator;
 
   constructor(page) {
     this.page = page;
@@ -26,6 +26,7 @@ exports.TransferFundPage = class TransferFundPage {
     this.submitPaymentButton = page.locator("//button[@type='submit']");
     this.message = page.locator("//div[@class='alert alert-success']");
     this.fundTransferPage = page.locator("//h2[@class='board-header']")
+    this.cancelButton = page.locator("#btn_cancel");
   }
 
   async makePayment(selectFromAccount, toAccount, amount, description) {
@@ -39,6 +40,11 @@ exports.TransferFundPage = class TransferFundPage {
   async verifyAndSubmit(){
     await expect(this.verifyDetail).toBeVisible();
     await this.submitPaymentButton.click();
+  }
+
+   async verifyAndCancel(){
+    await expect(this.verifyDetail).toBeVisible();
+    await this.cancelButton.click();
   }
 
   async assertSuccessMessage() {

@@ -8,7 +8,7 @@ const { devices } = require('@playwright/test');
 // require('dotenv').config();
 
 
-/**
+/**playwright.config.js
  * @see https://playwright.dev/docs/test-configuration
  * @type {import('@playwright/test').PlaywrightTestConfig}
  */

@@ -3,13 +3,10 @@ const { test, expect } = require('@playwright/test');
 
 test('Verify that User is able to login with Valid Credentials', async ({ page }) => {
   await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
-
    await page.locator('#ctl00_MainContent_username').type('Tester');
-
    await page.locator('#ctl00_MainContent_password').type('test');
-
    await page.locator('#ctl00_MainContent_login_button1').click();
-  
+ 
   // Expects the URL to contain intro.
   await expect(page).toHaveURL('/samples/TestComplete11/WebOrders/default.aspx');
   //Verify the Text

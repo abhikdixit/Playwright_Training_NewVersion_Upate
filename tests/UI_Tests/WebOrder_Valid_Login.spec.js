@@ -5,7 +5,7 @@ test('WebOrder Login Test', async ({ page }) => {
   await page.getByLabel('Username:').fill('Tester');
   await page.getByLabel('Password:').fill('test');
   await page.getByRole('button', { name: 'Login' }).click();
-  await page.pause()
+  //await page.pause()
   await expect(page.locator("//body[1]/form[1]/table[1]")).toHaveAttribute('color','#3C3C3C')
   await expect(page.locator('#ctl00_logout')).toContainText('Logout');
   await page.getByRole('link', { name: 'Logout' }).click();

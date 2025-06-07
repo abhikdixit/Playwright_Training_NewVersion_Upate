@@ -24,10 +24,11 @@ test.describe('E2E WebOrder Application', () => {
 
     });
 
-    //for (const data of orders) {
-    //test(`Create Order - Verify Order: ${data.TestCaseID}`, async () => {
-    test('Create Order', async () => {
-        for (const data of orders) {
+    for (const data of orders) {
+    test(`Create Order - Verify Order: ${data.TestCaseID}`, async () => {
+    //test('Create Order', async () => {
+        //for (const data of orders) {
+        
             //await expect(page).toHaveURL('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/default.aspx')
             await page.getByRole('link', { name: 'Order' }).nth(1).click();
             //Verify that user has clicked on Order Link
@@ -47,15 +48,15 @@ test.describe('E2E WebOrder Application', () => {
             let msg
             if (data.Result == ' New order has been successfully added. ') {
                 msg = await page.locator("//strong[normalize-space()='New order has been successfully added.']")
-                await expect(msg).toContainText(data.Result)
+                await expect(msg).toHaveText(data.Result)
             }
             else {
                 msg = await page.locator("//span[@style='color: red; display: inline;']")
             }
             await expect(msg).toContainText(data.Result)
-        }
+       // }
     });
-
+    }
     test.afterAll(async () => {
         await page.getByRole('link', { name: 'Logout' }).click()
         await page.url().includes("/Login.aspx")

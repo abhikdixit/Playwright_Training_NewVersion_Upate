@@ -5,7 +5,7 @@ test.describe('Create Notes API Testing', () => {
   var token
 
   test.beforeAll(async ({ request }) => {
-    token = await AccessToken("abhinay.dixit@hotmail.com", "pass@1234", request)
+    token = await AccessToken("abhi@xyz.com", "test1234", request)
     expect(token).toBeTruthy();
   })
   
@@ -17,7 +17,7 @@ test.describe('Create Notes API Testing', () => {
         },
         data:
         {         
-            title: "Playwright_Notes",
+            title: "Playwright_Notes_CallingToken",
             description: "Done via API",
             category: "Personal"
           },
@@ -26,7 +26,7 @@ test.describe('Create Notes API Testing', () => {
     const responseBody = JSON.parse(await response.text())
     console.log(responseBody)
     expect(responseBody.message).toBe('Note successfully created')
-    expect(responseBody.data.title).toBe('Playwright_Notes')
- 
+    expect(responseBody.data.title).toBe('Playwright_Notes_CallingToken')
+
     })
 })

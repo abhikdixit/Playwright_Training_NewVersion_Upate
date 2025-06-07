@@ -29,6 +29,7 @@ export class LoginPage extends AbstractPage {
   async login(username = string, password = string) {
     await this.usernameInput.type(username)
     await this.passwordInput.type(password)
+    
     await this.submitButton.click()
     
   }

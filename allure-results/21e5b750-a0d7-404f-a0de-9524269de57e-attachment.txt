@@ -1,0 +1,988 @@
+ff0135add488412688a512275489117dfa03e9e7e22d4ea18d68dfec0a297c65
+{
+  success: true,
+  status: 200,
+  message: 'Notes successfully retrieved',
+  data: [
+    {
+      id: '67b82e2628fd7f02868c6ab2',
+      title: 'Playwright_UI',
+      description: 'Done via API',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-02-21T07:41:26.105Z',
+      updated_at: '2025-02-21T07:41:26.105Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '67b82e2128fd7f02868c6a96',
+      title: 'Playwright_Notes_API',
+      description: 'Done via API',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-02-21T07:41:21.021Z',
+      updated_at: '2025-02-21T07:41:21.021Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '67b82e2028fd7f02868c6a90',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-02-21T07:41:20.032Z',
+      updated_at: '2025-02-21T07:41:20.032Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '67932c71c57b0a0284ac6980',
+      title: 'PyTest_API',
+      description: 'Done via RestAssured',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-24T06:00:17.843Z',
+      updated_at: '2025-01-24T06:00:17.843Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '67932c0fc57b0a0284ac6978',
+      title: 'PyTest_API',
+      description: 'Done via RestAssured',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-24T05:58:39.871Z',
+      updated_at: '2025-01-24T05:58:39.871Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '67932a47c57b0a0284ac696d',
+      title: 'API_Testing',
+      description: 'Welcome to Python API',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-24T05:51:03.453Z',
+      updated_at: '2025-01-24T05:51:03.453Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678f13f22ea75e0284a70a78',
+      title: 'TestNG_API',
+      description: 'Done via RestAssured',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-21T03:26:42.771Z',
+      updated_at: '2025-01-21T03:26:42.771Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678ddfe12ea75e0284a7052f',
+      title: 'Cypress420.076076997556',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-20T05:32:17.216Z',
+      updated_at: '2025-01-20T05:32:17.216Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678dd2942ea75e0284a704ec',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-20T04:35:32.769Z',
+      updated_at: '2025-01-20T04:35:32.769Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678dd27e2ea75e0284a704d3',
+      title: 'Cypress_Notes_API_Updated-2',
+      description: 'Done via API_Update-2',
+      category: 'Home',
+      completed: true,
+      created_at: '2025-01-20T04:35:10.302Z',
+      updated_at: '2025-01-20T04:35:10.832Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678dd2702ea75e0284a704cd',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-20T04:34:56.485Z',
+      updated_at: '2025-01-20T04:34:56.485Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678dd24b2ea75e0284a704ae',
+      title: 'Cypress_Notes_New',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-20T04:34:19.336Z',
+      updated_at: '2025-01-20T04:34:19.336Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678dd2442ea75e0284a704a8',
+      title: 'Cypress_Notes_API',
+      description: 'Done via API',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-20T04:34:12.405Z',
+      updated_at: '2025-01-20T04:34:12.405Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678dd23d2ea75e0284a704a2',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-20T04:34:05.662Z',
+      updated_at: '2025-01-20T04:34:05.662Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678dd23d2ea75e0284a7049e',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-20T04:34:05.228Z',
+      updated_at: '2025-01-20T04:34:05.228Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678dd23c2ea75e0284a7049a',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-20T04:34:04.783Z',
+      updated_at: '2025-01-20T04:34:04.783Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678dd1682ea75e0284a70477',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-20T04:30:32.450Z',
+      updated_at: '2025-01-20T04:30:32.450Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678dd1682ea75e0284a70473',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-20T04:30:32.051Z',
+      updated_at: '2025-01-20T04:30:32.051Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678dd1672ea75e0284a7046f',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-20T04:30:31.647Z',
+      updated_at: '2025-01-20T04:30:31.647Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a105cd3ad290283becfcb',
+      title: 'Cypress897.1418853395552',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T08:10:04.706Z',
+      updated_at: '2025-01-17T08:10:04.706Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a1050d3ad290283becfae',
+      title: 'Cypress_Notes_New',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T08:09:52.499Z',
+      updated_at: '2025-01-17T08:09:52.499Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0f82d3ad290283becf04',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T08:06:26.048Z',
+      updated_at: '2025-01-17T08:06:26.048Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0f78d3ad290283beceeb',
+      title: 'Cypress_Notes_API_Updated-2',
+      description: 'Done via API_Update-2',
+      category: 'Home',
+      completed: true,
+      created_at: '2025-01-17T08:06:16.493Z',
+      updated_at: '2025-01-17T08:06:16.912Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0f73d3ad290283becee5',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T08:06:11.056Z',
+      updated_at: '2025-01-17T08:06:11.056Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0f63d3ad290283becebe',
+      title: 'Cypress_Notes_New',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T08:05:55.952Z',
+      updated_at: '2025-01-17T08:05:55.952Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0f61d3ad290283beceb8',
+      title: 'Cypress_Notes_API',
+      description: 'Done via API',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T08:05:53.310Z',
+      updated_at: '2025-01-17T08:05:53.310Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0f5ed3ad290283beceb2',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T08:05:50.593Z',
+      updated_at: '2025-01-17T08:05:50.593Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0f5ed3ad290283beceae',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T08:05:50.192Z',
+      updated_at: '2025-01-17T08:05:50.192Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0f5dd3ad290283beceaa',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T08:05:49.801Z',
+      updated_at: '2025-01-17T08:05:49.801Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0e90d3ad290283bece5f',
+      title: 'Cypress_Notes_New',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T08:02:24.045Z',
+      updated_at: '2025-01-17T08:02:24.045Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0748d3ad290283bec857',
+      title: 'Cypress149.60389056768508',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T07:31:20.487Z',
+      updated_at: '2025-01-17T07:31:20.487Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0743d3ad290283bec83c',
+      title: 'Cypress_Notes_API2',
+      description: 'Done via API2',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T07:31:15.128Z',
+      updated_at: '2025-01-17T07:31:15.128Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0742d3ad290283bec838',
+      title: 'Cypress_Notes_API',
+      description: 'Done via API',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T07:31:14.488Z',
+      updated_at: '2025-01-17T07:31:14.488Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a071ad3ad290283bec82d',
+      title: 'Cypress386.72599266225996',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T07:30:34.880Z',
+      updated_at: '2025-01-17T07:30:34.880Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a03fbd3ad290283bec792',
+      title: 'Cypress372.19318886600104',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T07:17:15.851Z',
+      updated_at: '2025-01-17T07:17:15.851Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a03b6d3ad290283bec786',
+      title: 'Cypress876.1614802319726',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T07:16:06.282Z',
+      updated_at: '2025-01-17T07:16:06.282Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0320d3ad290283bec780',
+      title: 'Cypress257.55839572463566',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T07:13:36.756Z',
+      updated_at: '2025-01-17T07:13:36.756Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a02d8d3ad290283bec765',
+      title: 'Cypress923.4190927808165',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T07:12:24.834Z',
+      updated_at: '2025-01-17T07:12:24.834Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a02a5d3ad290283bec746',
+      title: 'Cypress691.1528838365355',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T07:11:33.819Z',
+      updated_at: '2025-01-17T07:11:33.819Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a02a4d3ad290283bec740',
+      title: 'Cypress304.91750783809323',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T07:11:32.189Z',
+      updated_at: '2025-01-17T07:11:32.189Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a027cd3ad290283bec726',
+      title: 'Cypress726.7885503078373',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T07:10:52.689Z',
+      updated_at: '2025-01-17T07:10:52.689Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0260d3ad290283bec6f9',
+      title: 'Cypress366.59552249674255',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T07:10:24.562Z',
+      updated_at: '2025-01-17T07:10:24.562Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0259d3ad290283bec6e1',
+      title: 'Cypress402.2193045291005',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T07:10:17.197Z',
+      updated_at: '2025-01-17T07:10:17.197Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0245d3ad290283bec6cb',
+      title: 'Cypress643.7356661027798',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T07:09:57.866Z',
+      updated_at: '2025-01-17T07:09:57.866Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0112d3ad290283bec625',
+      title: 'Test',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T07:04:50.242Z',
+      updated_at: '2025-01-17T07:04:50.242Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a00fbd3ad290283bec60c',
+      title: 'Test',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T07:04:27.294Z',
+      updated_at: '2025-01-17T07:04:27.294Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a00e7d3ad290283bec5f7',
+      title: 'Test',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T07:04:07.894Z',
+      updated_at: '2025-01-17T07:04:07.894Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '678a0015d3ad290283bec53a',
+      title: 'Test',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T07:00:37.642Z',
+      updated_at: '2025-01-17T07:00:37.642Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ffcdd3ad290283bec4f0',
+      title: 'Test',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T06:59:25.874Z',
+      updated_at: '2025-01-17T06:59:25.874Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ff90d3ad290283bec4d1',
+      title: 'Test',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T06:58:24.527Z',
+      updated_at: '2025-01-17T06:58:24.527Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ff40d3ad290283bec4ad',
+      title: 'Test',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T06:57:04.871Z',
+      updated_at: '2025-01-17T06:57:04.871Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ff2fd3ad290283bec4a6',
+      title: 'Home',
+      description: 'Desc',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T06:56:47.422Z',
+      updated_at: '2025-01-17T06:56:47.422Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789f8f6d3ad290283bec0e4',
+      title: 'Home_work',
+      description: 'Done via API',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T06:30:14.560Z',
+      updated_at: '2025-01-17T06:30:14.560Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789f8f1d3ad290283bec0d2',
+      title: '[object Object]',
+      description: 'Done via API',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T06:30:09.987Z',
+      updated_at: '2025-01-17T06:30:09.987Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789f8ecd3ad290283bec0cc',
+      title: 'Cypress_Notes_API',
+      description: 'Done via API',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T06:30:04.137Z',
+      updated_at: '2025-01-17T06:30:04.137Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789f680d3ad290283bebece',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T06:19:44.622Z',
+      updated_at: '2025-01-17T06:19:44.622Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789f680d3ad290283bebeca',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T06:19:44.230Z',
+      updated_at: '2025-01-17T06:19:44.230Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789f67fd3ad290283bebec6',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T06:19:43.832Z',
+      updated_at: '2025-01-17T06:19:43.832Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea80d3ad290283bebb45',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T05:28:32.055Z',
+      updated_at: '2025-01-17T05:28:32.055Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea7fd3ad290283bebb41',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T05:28:31.639Z',
+      updated_at: '2025-01-17T05:28:31.639Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea7dd3ad290283bebb2d',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T05:28:29.241Z',
+      updated_at: '2025-01-17T05:28:29.241Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea7cd3ad290283bebb23',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T05:28:28.562Z',
+      updated_at: '2025-01-17T05:28:28.562Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea7cd3ad290283bebb1f',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T05:28:28.159Z',
+      updated_at: '2025-01-17T05:28:28.159Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea79d3ad290283bebb13',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T05:28:25.463Z',
+      updated_at: '2025-01-17T05:28:25.463Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea78d3ad290283bebb0d',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T05:28:24.802Z',
+      updated_at: '2025-01-17T05:28:24.802Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea78d3ad290283bebb09',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T05:28:24.220Z',
+      updated_at: '2025-01-17T05:28:24.220Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea75d3ad290283bebaf9',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T05:28:21.172Z',
+      updated_at: '2025-01-17T05:28:21.172Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea74d3ad290283bebaef',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T05:28:20.624Z',
+      updated_at: '2025-01-17T05:28:20.624Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea74d3ad290283bebae3',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T05:28:20.101Z',
+      updated_at: '2025-01-17T05:28:20.101Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea71d3ad290283bebacd',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T05:28:17.546Z',
+      updated_at: '2025-01-17T05:28:17.546Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea71d3ad290283bebac9',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T05:28:17.152Z',
+      updated_at: '2025-01-17T05:28:17.152Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea70d3ad290283bebac5',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T05:28:16.758Z',
+      updated_at: '2025-01-17T05:28:16.758Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea68d3ad290283bebabd',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T05:28:08.966Z',
+      updated_at: '2025-01-17T05:28:08.966Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea68d3ad290283bebab9',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T05:28:08.576Z',
+      updated_at: '2025-01-17T05:28:08.576Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea68d3ad290283bebab5',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T05:28:08.155Z',
+      updated_at: '2025-01-17T05:28:08.155Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea63d3ad290283bebaa8',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T05:28:03.130Z',
+      updated_at: '2025-01-17T05:28:03.130Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea62d3ad290283bebaa4',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T05:28:02.660Z',
+      updated_at: '2025-01-17T05:28:02.660Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea61d3ad290283beba9e',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T05:28:01.175Z',
+      updated_at: '2025-01-17T05:28:01.175Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea5ed3ad290283beba96',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T05:27:58.577Z',
+      updated_at: '2025-01-17T05:27:58.577Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea5ed3ad290283beba92',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T05:27:58.149Z',
+      updated_at: '2025-01-17T05:27:58.149Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea5dd3ad290283beba8e',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T05:27:57.693Z',
+      updated_at: '2025-01-17T05:27:57.693Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea5bd3ad290283beba88',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T05:27:55.262Z',
+      updated_at: '2025-01-17T05:27:55.262Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea5ad3ad290283beba83',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T05:27:54.612Z',
+      updated_at: '2025-01-17T05:27:54.612Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea5ad3ad290283beba7e',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T05:27:54.220Z',
+      updated_at: '2025-01-17T05:27:54.220Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea34d3ad290283beba64',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T05:27:16.050Z',
+      updated_at: '2025-01-17T05:27:16.050Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea33d3ad290283beba60',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T05:27:15.398Z',
+      updated_at: '2025-01-17T05:27:15.398Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea32d3ad290283beba5c',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T05:27:14.754Z',
+      updated_at: '2025-01-17T05:27:14.754Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea07d3ad290283beba2e',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T05:26:31.352Z',
+      updated_at: '2025-01-17T05:26:31.352Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea06d3ad290283beba2a',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T05:26:30.888Z',
+      updated_at: '2025-01-17T05:26:30.888Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789ea06d3ad290283beba26',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T05:26:30.451Z',
+      updated_at: '2025-01-17T05:26:30.451Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789e8d4d3ad290283beb916',
+      title: 'Cypress_Notes_New',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T05:21:24.080Z',
+      updated_at: '2025-01-17T05:21:24.080Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789e853d3ad290283beb908',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T05:19:15.875Z',
+      updated_at: '2025-01-17T05:19:15.875Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789e853d3ad290283beb904',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T05:19:15.093Z',
+      updated_at: '2025-01-17T05:19:15.093Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789e852d3ad290283beb900',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T05:19:14.311Z',
+      updated_at: '2025-01-17T05:19:14.311Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789e7f4d3ad290283beb8df',
+      title: 'Personal_Notes',
+      description: 'Done via Cypress',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-01-17T05:17:40.066Z',
+      updated_at: '2025-01-17T05:17:40.066Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789e7f3d3ad290283beb8db',
+      title: 'Work_Notes',
+      description: 'Done via Cypress',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-01-17T05:17:39.653Z',
+      updated_at: '2025-01-17T05:17:39.653Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789e7f3d3ad290283beb8d7',
+      title: 'Home_work',
+      description: 'Done via Cypress',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T05:17:39.254Z',
+      updated_at: '2025-01-17T05:17:39.254Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6789e7f2d3ad290283beb8d1',
+      title: 'API756',
+      description: 'Done via RestAssured',
+      category: 'Home',
+      completed: false,
+      created_at: '2025-01-17T05:17:38.397Z',
+      updated_at: '2025-01-17T05:17:38.397Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    }
+  ]
+}

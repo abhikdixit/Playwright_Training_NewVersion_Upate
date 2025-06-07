@@ -1,5 +1,5 @@
 //import { test, expect } from '@playwright/test';
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
 
 test('Create Order Unique Order- Verify Order @smoke', async ({ page }) => {
   await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
@@ -20,7 +20,7 @@ test('Create Order Unique Order- Verify Order @smoke', async ({ page }) => {
   await page.getByLabel('Quantity:*').fill('5');
   //await page.getByLabel('Customer name:*').click();
   
-  const ExpUserName = 'Dixit' + Math.random() * 10000;
+  const ExpUserName = 'Dixit' + Math.random() * 1000000;
 
   await page.getByLabel('Customer name:*').fill(ExpUserName);
   //await page.pause()

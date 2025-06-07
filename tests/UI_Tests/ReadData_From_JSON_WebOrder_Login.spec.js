@@ -4,9 +4,8 @@ const { test, expect } = require('@playwright/test');
 let objects = fs.readFileSync('./tests/TestData/WebOrder_Login.json')
 const users = JSON.parse(objects);
 
-test('Web Login:', async ({ page }) => {
-
-  for (const record of users) {
+for (const record of users) {
+  test(`WebOrder Login: ${record.test_case}`, async ({ page }) => {
     //console.log(record.name, record.password, record.exp_result);
     await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
     await page.getByLabel('Username:').fill(record.name);
@@ -16,6 +15,6 @@ test('Web Login:', async ({ page }) => {
     await page.getByRole('link', { name: 'Logout' }).click();
     const login = page.locator('#ctl00_MainContent_login_button');
     await expect(login).toBeVisible();
-  }
-});
 
+});
+}

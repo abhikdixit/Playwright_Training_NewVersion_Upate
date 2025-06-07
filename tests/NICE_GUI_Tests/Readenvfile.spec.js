@@ -17,7 +17,7 @@ test('Read Env File in playwright', async({page}) =>{
     console.log("Username is : "+process.env.USER_NAME);
     console.log("Password is : "+process.env.PASSWORD);
 
-    await page.waitForTimeout(5000);
+    // await page.waitForTimeout(5000);
 
 })
 

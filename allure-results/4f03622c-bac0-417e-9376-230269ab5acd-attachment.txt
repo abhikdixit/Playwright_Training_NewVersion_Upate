@@ -1,0 +1,16 @@
+{
+  data: {
+    id: '2411',
+    type: 'country',
+    attributes: {
+      iso: 'US',
+      iso3: 'USA',
+      iso_name: 'UNITED STATES',
+      name: 'United States',
+      states_required: true,
+      zipcode_required: true,
+      default: true
+    },
+    relationships: { states: [Object], checkout_zone_applicable_states: [Object] }
+  }
+}

@@ -40,7 +40,7 @@ test.describe('Create Notes API Testing', () => {
           },
           data:
           {         
-              title: "Playwright_Updated_Notes",
+              title: "Playwright_Deleted_Notes",
               description: "Done via PUT API request",
               category: "Personal",
               completed : "true"
@@ -50,7 +50,7 @@ test.describe('Create Notes API Testing', () => {
       const responseBody = JSON.parse(await response.text())
       console.log(responseBody)
       expect(responseBody.message).toBe('Note successfully Updated')
-      expect(responseBody.data.title).toBe('Playwright_Updated_Notes')
+      expect(responseBody.data.title).toBe('Playwright_Deleted_Notes')
       updated_id = responseBody.data.id
       })
 

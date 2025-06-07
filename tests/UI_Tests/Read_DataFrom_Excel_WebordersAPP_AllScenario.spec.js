@@ -1,11 +1,10 @@
 //Run "npm install xlsx" to install the xlsx file
+import { test, expect, Page } from '@playwright/test';
+import { readFile, utils } from 'xlsx';
 
-const { test, expect, Page } = require('@playwright/test');
-var XLSX = require('xlsx')
-
-var workbook = XLSX.readFile('./tests/TestData/WebOrder_TS_All_Scenario.xlsx');
+var workbook = readFile('./tests/TestData/WebOrder_TS_All_Scenario.xlsx');
 var sheet_name_list = workbook.SheetNames;
-var records = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
+var records = utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
 
 test.describe('WebOrder All Test Scenario', () => {
   let page = Page;

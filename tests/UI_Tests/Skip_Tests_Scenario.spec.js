@@ -12,7 +12,7 @@ test.describe('Hooks Example in Playwright', () => {
     await expect(page.getByRole('link', { name: 'Logout' })).toHaveText("Logout")
 
   })
-  test.only('Go to Order Page', async ({ page }) => {
+  test('Go to Order Page', async ({ page }) => {
     await page.getByRole('link', { name: 'Order' }).nth(1).click();
 
   });
@@ -22,7 +22,7 @@ test.describe('Hooks Example in Playwright', () => {
 
   });
 
-  test('Go to View all products Page', async ({ page }) => {
+  test.skip('Go to View all products Page', async ({ page }) => {
     await page.getByRole('link', { name: 'View all products' }).click();
 
   });

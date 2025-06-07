@@ -1,0 +1,15 @@
+{
+  success: true,
+  status: 200,
+  message: 'Note successfully created',
+  data: {
+    id: '680883a014cb530286ccd06f',
+    title: 'Note 2',
+    description: 'This is the second note',
+    category: 'Work',
+    completed: false,
+    created_at: '2025-04-23T06:07:28.219Z',
+    updated_at: '2025-04-23T06:07:28.219Z',
+    user_id: '67b42c63a9e25a0285c853f8'
+  }
+}

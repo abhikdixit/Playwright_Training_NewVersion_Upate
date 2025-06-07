@@ -14,6 +14,7 @@ test('Login Test case', async ({ page }) => {
 });
 
 test('Create Order - Verify Order', async ({ page }) => {
+  
   await page.getByRole('link', { name: 'Order' }).nth(1).click();
   //Verify that user has clicked on Order Link
   await page.url().includes('/Process.aspx')
@@ -47,7 +48,8 @@ test('Create Order - Verify Order', async ({ page }) => {
 
 test('Update Order - Verify Order', async ({ page }) => {
   // Update the Order details
-
+  await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
+  
   await page.locator("//td[normalize-space()='" + ExpUserName + "']//following-sibling::td/input").click();
   await page.waitForTimeout(3000)
   await page.locator('#ctl00_MainContent_fmwOrder_TextBox3').clear()
@@ -61,7 +63,8 @@ test('Update Order - Verify Order', async ({ page }) => {
 
 test('Delete Order - Verify Order', async ({ page }) => {
   // Delete the Order and Verify that Order got deleted
-
+  await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
+  
   await page.locator("//td[normalize-space()='" + ExpUserName + "']//preceding-sibling::td/input").click();
   await page.locator("#ctl00_MainContent_btnDelete").click()
   // Verify that user got deleted

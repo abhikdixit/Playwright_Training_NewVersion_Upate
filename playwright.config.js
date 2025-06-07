@@ -23,8 +23,9 @@ const config = {
   //globalSetup: "./global-setup",
   //testDir: './tests/',
   //testDir: './tests/UI_Tests/',
+
   //testDir: './tests/UI_Special_Control/',
-  //testDir: './tests/NICE_GUI_Tests/',
+  testDir: './tests/NICE_GUI_Tests/',
   //testDir: './tests/Assignments/',
   //testDir: './tests/API_Test/',
   //testDir: './tests/API_Test/Restful-booker_API/',
@@ -34,9 +35,10 @@ const config = {
   //testDir: './tests/Spreecom_API_Framework/',
   //testDir: './tests/Spreecom_API_Minh/API_test/',
   //testDir:'./tests/API_Test/Request_API/',
-  testDir:'./tests/API_Test/Notes_API/',
+  //testDir:'./tests/API_Test/Notes_API/',
+  //testDir: './tests/Salesforce_Test',
   /* Maximum time one test can run for. */
-  //timeout: 40000,
+  //timeout: 60000,
   
   expect: {
     /**
@@ -48,7 +50,7 @@ const config = {
   /* Run tests in files in parallel */
   fullyParallel: true,
   workers:1,
-  //retries: 3,
+  //retries: 2,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   //forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -57,40 +59,38 @@ const config = {
   //workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   //reporter: 'html',
-  //reporter: [['html', { open: 'never' }]],
+  reporter: [['html', { open: 'never' }]],
   //reporter: [["line"], ["allure-playwright"]],
-  reporter: [["html"], ["allure-playwright"]],
+  //reporter: [["html"], ["allure-playwright"]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
 
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    //baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
+    baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
     //baseURL: 'http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx',
-    baseURL: 'https://practice.expandtesting.com/',
+    //baseURL: 'https://practice.expandtesting.com/',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    //trace: 'retain-on-failure',
+    trace: 'retain-on-failure',
     //video: 'on-first-retry',
-    video: 'on',
+    //video: 'retain-on-failure',
     screenshot: 'on',
+    // slowMo: 1000, // Moved to launchOptions in project config if needed
     // Tell all tests to load signed-in state from 'storageState.json'.
     //storageState: './tests/OrangeHRM/WebOrderState.json',
     //storageState: './tests/OrangeHRM/storageState.json',
-    //video: 'retain-on-failure',
+    video: 'on',
     //screenshot: 'only-on-failure',
     //screenshot: 'only-on-failure',
     //storageState: "./LoginAuth.json"
-<<<<<<< HEAD
     //viewport: { width: 1920, height: 1080 },
     headless: false,
-    trace : 'on',
+    //trace : 'on',
     // To bypass Certificate error.
     ignoreHTTPSErrors:true
-=======
-    //viewport: { width: 680, height: 520 },
-    headless: true
->>>>>>> 796fa8c26ef3f4b9fb0de1c80104217345bbea20
+    //viewport: { width: 680, height: 520 }
+
   },
 
   /* Configure projects for major browsers */
@@ -101,10 +101,11 @@ const config = {
         ...devices['Desktop Chrome'],
         viewport:{width:1536,height:864},
         //colorScheme: 'dark',
-        // launchOptions:{
-        //   args:["--start-fullscreen"]
-        //   //args:["--start-maximized"]
-        // }
+        launchOptions: {
+          //slowMo: 1000,
+           //args:["--start-fullscreen"]
+           //args:["--start-maximized"]
+        }
       },
     },
     

@@ -1,5 +1,4 @@
 import { readFileSync } from 'fs';
-
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../page-objects/LoginPage';
 import { HomePage } from '../../page-objects/HomePage';

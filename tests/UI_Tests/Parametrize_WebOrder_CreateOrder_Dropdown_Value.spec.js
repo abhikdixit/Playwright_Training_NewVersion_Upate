@@ -20,6 +20,8 @@ for (const Product of testParameters) {
     await page.getByRole('link', { name: 'Order' }).nth(1).click();
     //Verify that user has clicked on Order Link
     await page.url().includes('/Process.aspx')
+
+
     await page.getByRole('combobox', { name: 'Product:*' }).selectOption(Product);
     //await page.getByLabel('Price per unit:*').getAttribute
 
@@ -34,6 +36,7 @@ for (const Product of testParameters) {
     await page.getByLabel('Expire date (mm/yy):*').fill('12/23');
     await page.getByRole('link', { name: 'Process' }).click();
 
+  
     const neworder = await page.locator("//strong[normalize-space()='New order has been successfully added.']")
     console.log(neworder)
     await expect(neworder).toContainText('New order has been successfully added.')

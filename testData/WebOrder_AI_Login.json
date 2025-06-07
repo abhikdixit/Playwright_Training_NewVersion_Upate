@@ -1,0 +1,21 @@
+{
+    "url": "http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx",
+    "testScenarios": [
+        {
+            "name": "Valid Login",
+            "username": "Tester",
+            "password": "test",
+            "expectedResult": "Logout",
+            "locator": "a:text('Logout')",
+            "isValid": true
+        },
+        {
+            "name": "Invalid Login",
+            "username": "invalid",
+            "password": "invalid",
+            "expectedResult": "Invalid Login or Password.",
+            "locator": "#ctl00_MainContent_status",
+            "isValid": false
+        }
+    ]
+}

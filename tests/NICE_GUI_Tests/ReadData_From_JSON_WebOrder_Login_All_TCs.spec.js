@@ -23,13 +23,11 @@ for (const record of users) {
       await page.click('text=Logout');
       await page.waitForLoadState(); // The promise resolves after 'load' event.
 
-    } else if ('Invalid Login or Password.' == record.exp_res) {
-      //const name = await page.$eval("#ctl00_MainContent_status", el => el.textContent.trim())
-      //expect(name).toBe('Invalid Login or Password.')
-      //expect(name).toBe(record.exp_res)
+    } 
+    else
       await expect(page.locator("span[id='ctl00_MainContent_status']")).toContainText(record.exp_res)
 
-    }
+    
 
     // }
   })

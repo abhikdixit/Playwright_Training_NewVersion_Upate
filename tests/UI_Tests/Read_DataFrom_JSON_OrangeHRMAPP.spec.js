@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { test, expect } = require('@playwright/test');
+const { test } = require('@playwright/test');
 
 // Reads the JSON file and saves it  
 let objects = fs.readFileSync('./tests/TestData/OrangeHRM.json')
@@ -9,7 +9,7 @@ for (const record of users) {
   test(`OrangeHRM: ${record.test_case}`, async ({ page }) => {
     console.log(record.name, record.password, record.exp_result);
 
-    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    await page.goto(record.url);
     await page.getByPlaceholder('Username').click();
     await page.getByPlaceholder('Username').fill(record.name);
     await page.getByPlaceholder('Password').click();

@@ -19,7 +19,7 @@ test('Delete Order - Verify Order @sanity', async ({ page }) => {
   //await page.getByText('Quantity:*').click();
   await page.getByLabel('Quantity:*').fill('5');
   //await page.getByLabel('Customer name:*').click();
-  const ExpUserName = 'Dixit' + Math.random() * 1000;
+  const ExpUserName = 'Dixit' + Math.random() * 100000;
 
   await page.getByLabel('Customer name:*').fill(ExpUserName);
   await page.getByLabel('Street:*').fill('BTM')

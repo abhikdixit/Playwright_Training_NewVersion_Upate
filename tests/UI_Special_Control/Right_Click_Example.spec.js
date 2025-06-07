@@ -9,7 +9,7 @@ test('Right Clieck', async ({ page }) => {
     //await page.pause()
     await page.click("//span[text()='right click me']",{ button: 'right'});
     await page.waitForTimeout(5000)
-    await page.click('.context-menu-icon-edit > span')
-    
+    await page.locator('.context-menu-list.context-menu-root').click()
+    //await page.click('.context-menu-icon-edit > span')
+    await page.waitForTimeout(5000)
 });
-

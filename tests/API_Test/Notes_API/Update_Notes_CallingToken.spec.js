@@ -4,9 +4,9 @@ test.describe('Create Notes API Testing', () => {
   const baseUrl = 'https://practice.expandtesting.com'
   var token
   var id
-  var title="Playwright_Notes_API_21"
+  var Exp_title="Playwright_Notes_API_21"
   test.beforeAll(async ({ request }) => {
-    token = await AccessToken("abhinay.dixit@hotmail.com", "pass@1234", request)
+    token = await AccessToken("abhi@xyz.com", "test1234", request)
     expect(token).toBeTruthy();
   })
   
@@ -18,7 +18,7 @@ test.describe('Create Notes API Testing', () => {
         },
         data:
         {         
-            title: "Playwright_Notes",
+            title: Exp_title,
             description: "Done via API",
             category: "Personal"
           },
@@ -27,7 +27,7 @@ test.describe('Create Notes API Testing', () => {
     const responseBody = JSON.parse(await response.text())
     console.log(responseBody)
     expect(responseBody.message).toBe('Note successfully created')
-    expect(responseBody.data.title).toBe('Playwright_Notes')
+    expect(responseBody.data.title).toBe(Exp_title)
     id = responseBody.data.id
  
     })
@@ -54,28 +54,5 @@ test.describe('Create Notes API Testing', () => {
       expect(responseBody.data.title).toBe('Playwright_Updated_Notes')
    
       })
-
-      test.skip('Put Request - Update Notes', async ({ request }) => {
-        const response = await request.put(`${baseUrl}/notes/api/notes/${id}`, {
-    
-            headers: {
-              'x-auth-token': `${token}`,
-              //'Content-Type': 'application/x-www-form-urlencoded' 
-            },
-            data:
-            {         
-                title: "Playwright_Notes",
-                description: "Updated via API",
-                category: "Home",
-                completed: "true"
-              },
-        })
-        expect(response.status()).toBe(200)
-        const responseBody = JSON.parse(await response.text())
-        console.log(responseBody)
-        expect(responseBody.message).toBe('Note successfully Updated')
-        expect(responseBody.data.title).toBe("Playwright_Notes")
-     
-        })
 
 })

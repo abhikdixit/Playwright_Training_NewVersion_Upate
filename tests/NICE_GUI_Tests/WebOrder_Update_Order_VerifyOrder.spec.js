@@ -19,7 +19,7 @@ test('Create Order-Update Order- Verify Order @smoke', async ({ page }) => {
   //await page.getByText('Quantity:*').click();
   await page.getByLabel('Quantity:*').fill('5');
   //await page.getByLabel('Customer name:*').click();
-  const ExpUserName = 'Dixit' + Math.random() * 1000;
+  const ExpUserName = 'Megha' + Math.random() * 1000000;
 
   await page.getByLabel('Customer name:*').fill(ExpUserName);
   await page.getByLabel('Street:*').fill('BTM')
@@ -43,7 +43,7 @@ test('Create Order-Update Order- Verify Order @smoke', async ({ page }) => {
   // Update the Order details
 
   await page.locator("//td[normalize-space()='"+ExpUserName+"']//following-sibling::td/input").click();
-  //await page.waitForTimeout(3000)
+  await page.waitForTimeout(3000)
   await page.locator('#ctl00_MainContent_fmwOrder_TextBox3').clear()
   await page.locator('#ctl00_MainContent_fmwOrder_TextBox3').fill('Delhi');
   await page.locator("#ctl00_MainContent_fmwOrder_UpdateButton").click()

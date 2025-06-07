@@ -1,9 +1,8 @@
 //Run "npm install xlsx" to install the xlsx file
-
 const { test, expect } = require('@playwright/test');
 var XLSX = require('xlsx')
 
-var workbook = XLSX.readFile('./tests/TestData/TestAllData.xlsx');
+var workbook = XLSX.readFile('./tests/TestData/WebOrder_Login_Data.xlsx');
 var sheet_name_list = workbook.SheetNames;
 var records = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
 
