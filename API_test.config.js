@@ -15,8 +15,8 @@ const { devices } = require('@playwright/test');
 const config = {
   //testDir: './tests/UI_Tests/',
   //testDir: './tests/NICE_GUI_Tests/',
-  testDir: './tests/API_Test/Request_API/',
-  //testDir: './tests/E2E_Test_PageObject/',
+  //testDir: './tests/API_Test/Request_API/',
+  testDir: './tests/API_Test/Notes_API/',
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
   

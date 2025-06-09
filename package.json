@@ -13,13 +13,10 @@
     "ZeroBank_Headless": "playwright test --config=ZeroBank.config.js",
     "Smoke_Test": "playwright test --grep @smoke",
     "Sanity_Test": "playwright test --grep @sanity",
-<<<<<<< HEAD
     "Restful_API_Test": "playwright test",
     "MyTest":"playwright test WebOrder_Create_Unique_Order_VerifyOrder.spec --headed",
-    "Sanity_Test_Config":"playwright test --config=Sanity.config.js"
-=======
-    "Notes_API_Test": "playwright test"
->>>>>>> 984a89f3115af4a1be65517a906ac91274408efc
+    "Sanity_Test_Config":"playwright test --config=Sanity.config.js",
+    "Notes_API_Test": "playwright test --config=API_test.config.js"
   },
   "author": "Abhi",
   "license": "ISC",
