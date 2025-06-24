@@ -22,9 +22,9 @@ const config = {
   //globalSetup: require.resolve('./WebOrder_Login_Setup'),
   //globalSetup: "./global-setup",
   //testDir: './tests/',
-  //testDir: './tests/UI_Tests/',
+  testDir: './tests/UI_Tests/',
 
-  testDir: './tests/UI_Special_Control/',
+  //testDir: './tests/UI_Special_Control/',
   //testDir: './tests/NICE_GUI_Tests/',
   //testDir: './tests/Assignments/',
   //testDir: './tests/API_Test/',
@@ -75,12 +75,12 @@ const config = {
     trace: 'retain-on-failure',
     //video: 'on-first-retry',
     //video: 'retain-on-failure',
-    screenshot: 'on',
+    screenshot: 'only-on-failure',
     // slowMo: 1000, // Moved to launchOptions in project config if needed
     // Tell all tests to load signed-in state from 'storageState.json'.
     //storageState: './tests/OrangeHRM/WebOrderState.json',
     //storageState: './tests/OrangeHRM/storageState.json',
-    video: 'on',
+    video: 'retain-on-failure',
     //screenshot: 'only-on-failure',
     //screenshot: 'only-on-failure',
     //storageState: "./LoginAuth.json"

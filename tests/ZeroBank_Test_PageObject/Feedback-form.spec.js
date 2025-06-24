@@ -3,7 +3,7 @@ import { HomePage } from '../../page-objects/HomePage'
 import { FeedbackPage } from  '../../page-objects/FeedbackPage'
 
 
-test.describe('Feedback Form', () => {
+test.describe('Feedback Form E2E Functionality', () => {
   let homePage= HomePage
   let feedbackPage= FeedbackPage
 

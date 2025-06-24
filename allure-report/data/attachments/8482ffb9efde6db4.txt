@@ -1,0 +1,32 @@
+[
+  {
+    test_case: 'TC1',
+    uname: 'Tester',
+    pass: 'test',
+    Exp_Result: 'List of All Orders'
+  },
+  {
+    test_case: 'TC2',
+    uname: 'Tester1',
+    pass: 'test',
+    Exp_Result: 'Invalid Login or Password.'
+  },
+  {
+    test_case: 'TC3',
+    uname: 'Tester',
+    pass: '       ',
+    Exp_Result: 'Invalid Login or Password.'
+  },
+  {
+    test_case: 'TC4',
+    uname: '        ',
+    pass: 'test',
+    Exp_Result: 'Invalid Login or Password.'
+  },
+  {
+    test_case: 'TC5',
+    uname: 'Tester',
+    pass: 'test1',
+    Exp_Result: 'Invalid Login or Password.'
+  }
+]

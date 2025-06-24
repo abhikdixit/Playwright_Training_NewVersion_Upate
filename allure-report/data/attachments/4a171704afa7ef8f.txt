@@ -1,0 +1,16 @@
+Getting Access Token....
+a123d8f0ca294488af2a1b1e27d1b3a263eabb14001c4a35b9693f604e09d3d1
+💡 Negative Response: {
+  success: false,
+  status: 400,
+  message: 'Title must be between 4 and 100 characters'
+}
+❌ Schema validation failed as expected:  [
+  {
+    instancePath: '',
+    schemaPath: '#/required',
+    keyword: 'required',
+    params: { missingProperty: 'data' },
+    message: "must have required property 'data'"
+  }
+]

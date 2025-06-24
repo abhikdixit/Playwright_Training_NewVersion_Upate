@@ -64,6 +64,7 @@ test.only("OrangeHRM Window ", async ({page}) => {
     const text = await OrangeHRMPage.textContent("//h1")
     console.log(OrangeHRMPage.url());
     console.log(text);
-
+    OrangeHRMPage.close
+    await page.waitForTimeout(5000);
     
 });

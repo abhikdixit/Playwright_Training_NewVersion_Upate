@@ -1,0 +1,34 @@
+An error occurred: elementHandle.$eval: Failed to find element matching selector "td.sorting_1"
+    at Login_LogoutPage.scraper2 (C:\Training_Scripts\Playwright_Training_NewVersion\tests\NICE_GUI_Tests\BaseTest.js:51:34)
+    at C:\Training_Scripts\Playwright_Training_NewVersion\tests\NICE_GUI_Tests\ScrapData_BaseClass_Method.spec.js:14:5 {
+  name: 'Error',
+  [Symbol(step)]: {
+    stepId: 'pw:api@10',
+    location: {
+      file: 'C:\\Training_Scripts\\Playwright_Training_NewVersion\\tests\\NICE_GUI_Tests\\BaseTest.js',
+      line: 51,
+      column: 34,
+      function: 'Login_LogoutPage.scraper2'
+    },
+    category: 'pw:api',
+    title: 'elementHandle.$eval(td.sorting_1)',
+    apiName: 'elementHandle.$eval',
+    params: {
+      selector: 'td.sorting_1',
+      expression: 'element => element.innerText',
+      isFunction: true,
+      arg: [Object]
+    },
+    wallTime: 1740034105587,
+    boxedStack: undefined,
+    steps: [],
+    complete: [Function: complete],
+    endWallTime: 1740034105621,
+    error: {
+      message: 'Error: elementHandle.$eval: Failed to find element matching selector "td.sorting_1"',
+      stack: 'Error: elementHandle.$eval: Failed to find element matching selector "td.sorting_1"\n' +
+        '    at Login_LogoutPage.scraper2 (C:\\Training_Scripts\\Playwright_Training_NewVersion\\tests\\NICE_GUI_Tests\\BaseTest.js:51:34)\n' +
+        '    at C:\\Training_Scripts\\Playwright_Training_NewVersion\\tests\\NICE_GUI_Tests\\ScrapData_BaseClass_Method.spec.js:14:5'
+    }
+  }
+}

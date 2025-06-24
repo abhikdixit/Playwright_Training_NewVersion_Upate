@@ -14,17 +14,19 @@
     "Smoke_Test": "playwright test --grep @smoke",
     "Sanity_Test": "playwright test --grep @sanity",
     "Restful_API_Test": "playwright test",
-    "MyTest":"playwright test WebOrder_Create_Unique_Order_VerifyOrder.spec --headed",
-    "Sanity_Test_Config":"playwright test --config=Sanity.config.js",
+    "MyTest": "playwright test WebOrder_Create_Unique_Order_VerifyOrder.spec --headed",
+    "Sanity_Test_Config": "playwright test --config=Sanity.config.js",
     "Notes_API_Test": "playwright test --config=API_test.config.js"
   },
   "author": "Abhi",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.44.1",
+    "@playwright/test": "^1.53.0",
     "allure-playwright": "^2.15.1"
   },
   "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
     "chai": "^4.3.7",
     "csv": "^6.3.11",
     "csv-parse": "^5.6.0",
@@ -35,6 +37,6 @@
     "mysql2": "^3.12.0",
     "otplib": "^12.0.1",
     "playwright_newversion": "file:",
-    "xlsx": "^0.18.5"
+    "xlsx": "^0.18.6"
   }
 }

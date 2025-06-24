@@ -11,7 +11,7 @@ test('Create Order-Update Order- Verify Order @smoke', async ({ page }) => {
   //Verify that user has logged in
   //await page.url().includes('/Default1.aspx')
   await expect(page).toHaveURL('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/default.aspx')
-  await page.getByRole('link', { name: 'Order' }).nth(1).click();
+  await page.getByRole('link', { name: 'Order', exact: true }).click();
     //Verify that user has clicked on Order Link
   await page.url().includes('/Process.aspx')
   await page.getByRole('combobox', { name: 'Product:*' }).selectOption('FamilyAlbum');

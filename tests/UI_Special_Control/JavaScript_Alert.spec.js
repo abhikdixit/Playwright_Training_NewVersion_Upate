@@ -6,7 +6,8 @@ test.describe(
     test.beforeEach(async ({page}) => {
       await page.goto('https://the-internet.herokuapp.com/javascript_alerts')
     })
-
+/*page.on('dialog', ...): Registers an event listener that runs 
+whenever a dialog appears (like alert(), confirm(), or prompt()).*/
     test('Handling JS Alert - Validate Alert Text and Click OK', async ({
       page,
     }) => {

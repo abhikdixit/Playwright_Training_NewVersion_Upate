@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import assert from 'assert';
 
-test.describe('Hooks Example in Playwright', () => {
+test.describe('E2E Test - Hooks Example in Playwright', () => {
 
   test.beforeEach(async ({ page }) => {
     // Go to http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx

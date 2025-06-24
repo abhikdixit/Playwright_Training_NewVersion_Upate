@@ -6,7 +6,7 @@ test.describe('Create Notes API Testing', () => {
   var id
   var Exp_title="Playwright_Notes_API_21"
   test.beforeAll(async ({ request }) => {
-    token = await AccessToken("abhi@xyz.com", "test1234", request)
+    token = await AccessToken("testing@abc.com", "test1234", request)
     expect(token).toBeTruthy();
   })
   

@@ -26,8 +26,6 @@ export class HomePage {
 
   async clickOnSignIn() {
     await this.signInButton.click()
-        //This is to bypass SSL error
-        //await page.goto('http://zero.webappsecurity.com/bank/transfer-funds.html')
   }
 
   async clickOnFeedbackLink() {

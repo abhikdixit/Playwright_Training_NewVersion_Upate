@@ -49,6 +49,7 @@ export class PurchaseForeignCurrencyCash {
 
   async assertConversionAmount() {
     await expect(this.conversionAmount).toBeVisible();
+    
   }
 
   async clickPurchaseButton() {

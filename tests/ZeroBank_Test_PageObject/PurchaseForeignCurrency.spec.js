@@ -30,12 +30,16 @@ test.describe('Transfer Funds and Make Payment', () => {
     await homePage.visit()
     await homePage.clickOnSignIn()
     await loginPage.login('username', 'password')
+    //await loginPage.wait()
     //This is to bypass SSL error
+    //await page.setBypassCSP(true);
+    await page.waitForLoadState('networkidle');
      await page.goto('http://zero.webappsecurity.com/bank/transfer-funds.html')
+     await loginPage.wait(3000)
   })
   for (const record of users) {
 
-  test(`Purchase Foreign Currency Cash - Australia (dollar): ${record.TestCaseID}`, async ({ page }) => {
+  test(`Purchase Foreign Currency Cash - ${record.selectCurrency}: ${record.TestCaseID}`, async ({ page }) => {
     await navbar.clickOnTab('Pay Bills');
     await PayBills.clickOnPayBillsTab("Purchase Foreign Currency");
     await PayBills.purchaseForeignCurrencyTitle();

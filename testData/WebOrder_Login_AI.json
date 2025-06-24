@@ -1,0 +1,24 @@
+{
+  "scenarios": [
+    {
+      "description": "Valid credentials",
+      "username": "Tester",
+      "password": "test",
+      "expected": "List of All Orders"
+    },
+    {
+      "description": "Invalid password",
+      "username": "Tester",
+      "password": "wrongpass",
+      "expected": "failure",
+      "expectedMessage": "Invalid Login or Password."
+    },
+    {
+      "description": "Invalid username",
+      "username": "WrongUser",
+      "password": "test",
+      "expected": "failure",
+      "expectedMessage": "Invalid Login or Password."
+    }
+  ]
+}

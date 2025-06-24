@@ -3,6 +3,15 @@ test("Multiple Window ", async ({page}) => {
 
     await page.goto("https://www.lambdatest.com/selenium-playground/window-popup-modal-demo");
     console.log(page.url());
+
+    /*Why Promise.all?
+    Playwright needs to:
+    Click the element to trigger the popup
+    Listen for the popup at the same time
+    ❗ If you await page.click() before calling waitForEvent("popup"), 
+    the event might be missed because Playwright doesn’t start listening early enough.*/
+    //Promise.all([...]) executes both actions simultaneously.
+
     // Multiple Windows
     const [multiPage] = await Promise.all([
         //Wait for popup window: this is not javascript alert or window alert

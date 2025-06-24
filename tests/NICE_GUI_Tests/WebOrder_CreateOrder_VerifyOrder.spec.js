@@ -21,7 +21,7 @@ test('Login and Then Create Order and Verify Order', async ({ page }) => {
   //await page.getByText('Quantity:*').click();
   await page.getByLabel('Quantity:*').fill('5');
   //await page.getByLabel('Customer name:*').click();
-  await page.getByLabel('Customer name:*').fill('Dixit4');
+  await page.getByLabel('Customer name:*').fill('Dixit6');
   //await page.getByLabel('Street:*').click();
   await page.getByLabel('Street:*').fill('BTM');
   //await page.getByLabel('City:*').click();
@@ -40,7 +40,7 @@ test('Login and Then Create Order and Verify Order', async ({ page }) => {
 
   await page.getByRole('link', { name: 'View all orders' }).click();
 
-  await expect(page.locator("//td[text()='Dixit4']")).toHaveText('Dixit4')
+  await expect(page.locator("//td[text()='Dixit6']")).toHaveText('Dixit6')
 
   await page.getByRole('link', { name: 'Logout' }).click();
   await page.url().includes("/Login.aspx")

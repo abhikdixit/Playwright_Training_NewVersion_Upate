@@ -1,0 +1,16 @@
+ff0135add488412688a512275489117dfa03e9e7e22d4ea18d68dfec0a297c65
+{
+  success: true,
+  status: 200,
+  message: 'Note successfully created',
+  data: {
+    id: '67b82e2b28fd7f02868c6ad0',
+    title: 'Playwright_Notes_API',
+    description: 'Done via API',
+    category: 'Work',
+    completed: false,
+    created_at: '2025-02-21T07:41:31.245Z',
+    updated_at: '2025-02-21T07:41:31.245Z',
+    user_id: '65f1cc0b55382801413dbc96'
+  }
+}

@@ -19,7 +19,7 @@ test.describe('Login / Logout Flow @smoke', () => {
   test('Negative Scenario for login', async () => {
     await homePage.clickOnSignIn()
     await loginPage.login('invalid username', 'invalid password')
-    await loginPage.wait(3000)
+    await loginPage.wait()
     await loginPage.assertErrorMessage()
   
   })

@@ -12,6 +12,8 @@ exports.TransferFundPage = class TransferFundPage {
   message = Locator;
   fundTransferPage= Locator;
   cancelButton = Locator;
+  submitPaymentButton = Locator;
+  verifyDetail = Locator;
 
   constructor(page) {
     this.page = page;

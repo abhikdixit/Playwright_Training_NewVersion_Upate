@@ -8,4 +8,5 @@ test('Flipcart Login Page Mouse Hover', async ({ page }) => {
   await expect(page.locator("//button[normalize-space()='Request OTP']")).toHaveText("Request OTP")
   await expect(page.locator("//button[normalize-space()='Request OTP']")).toBeVisible()
   await page.waitForTimeout(5000)
+
 });

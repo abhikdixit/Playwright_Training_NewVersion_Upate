@@ -25,25 +25,36 @@ test.describe("Transfer Funds and Make Payment", () => {
     await homePage.visit();
     await homePage.clickOnSignIn();
     await loginPage.login("username", "password");
+    await page.waitForLoadState('networkidle');
     //This is to bypass SSL error
     await page.goto("http://zero.webappsecurity.com/bank/transfer-funds.html");
+    //await loginPage.wait();
+    await page.waitForLoadState("networkidle");
   });
-  for (let funds of transferFunds) {
-    test(`Transfer Funds ${funds.TC}`, async ({ page }) => {
-      //await homePage.clickOnOnlineBankingLink()
-      await navbar.clickOnTab("Transfer Funds");
-      await transferFundPage.makePayment(
-        funds.fromAccount,
-        funds.toAccount,
-        funds.amount,
-        funds.description
-      );
-      if (funds.amount == "") {
-        await transferFundPage.assertSamePage();
-      } else {
-        await transferFundPage.verifyAndSubmit();
-        await transferFundPage.assertSuccessMessage();
+  
+  test('Transfer Funds Test', async () => {
+    try {
+      for (const funds of transferFunds) {
+        console.log(`Processing test case: ${funds.TC || 'Default'}`);
+        await navbar.clickOnTab("Transfer Funds");
+        await transferFundPage.makePayment(
+          funds.fromAccount,
+          funds.toAccount,
+          funds.amount,
+          funds.description
+        );
+        
+        if (!funds.amount) {
+          await transferFundPage.assertSamePage();
+        } else {
+          await transferFundPage.verifyAndSubmit();
+          await transferFundPage.assertSuccessMessage();
+        }
       }
-    });
-  }
+    } catch (error) {
+      
+      console.error('Test failed:', error);
+      throw error;
+    }
+  });
 });

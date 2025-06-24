@@ -1,0 +1,15 @@
+{
+  success: true,
+  status: 200,
+  message: 'Note successfully Updated',
+  data: {
+    id: '67b82e2428fd7f02868c6aa3',
+    title: 'Playwright_Updated_Notes',
+    description: 'Done via PUT API request',
+    category: 'Personal',
+    completed: true,
+    created_at: '2025-02-21T07:41:24.130Z',
+    updated_at: '2025-02-21T07:41:24.640Z',
+    user_id: '65f1cc0b55382801413dbc96'
+  }
+}

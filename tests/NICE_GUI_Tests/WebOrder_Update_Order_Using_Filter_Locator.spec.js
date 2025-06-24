@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+const { str } = require('ajv');
 
 test('Create Order - Update Order - Verify Order @smoke', async ({ page }) => {
   await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
@@ -6,7 +7,7 @@ test('Create Order - Update Order - Verify Order @smoke', async ({ page }) => {
   // Login
   await page.getByLabel('Username:').fill('Tester');
   await page.getByLabel('Password:').fill('test');
-  await page.getByRole('button', { name: 'Login' }).click();
+  await page.getByRole('button', { name: 'Login' }).click({ strict: true },{timeout: 5000 });
   await expect(page).toHaveURL('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/default.aspx');
 
   // Click Order
@@ -32,9 +33,10 @@ test('Create Order - Update Order - Verify Order @smoke', async ({ page }) => {
 
   // View all orders
   await page.getByRole('link', { name: 'View all orders' }).click();
-  const userRow = page.locator('#ctl00_MainContent_orderGrid td').filter({
-    has: page.locator('td').filter({ hasText: ExpUserName })
-  });
+
+  // const userRow = page.locator('#ctl00_MainContent_orderGrid td').filter({
+  //   has: page.locator('td').filter({ hasText: ExpUserName })
+  // });
 
   // Verify user exists
 await expect(

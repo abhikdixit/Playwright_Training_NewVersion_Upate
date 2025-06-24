@@ -2,6 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 test.describe('E2E WebOrder Application', () => {
+  //Global variables declaration
   let page;
   let ExpUserName;
 
@@ -54,7 +55,7 @@ test.describe('E2E WebOrder Application', () => {
 
   test('Update Order', async () => {
     // Update the Order details
-
+    
     await page.locator("//td[normalize-space()='" + ExpUserName + "']//following-sibling::td/input").click();
     await page.waitForTimeout(3000)
     await page.locator('#ctl00_MainContent_fmwOrder_TextBox3').clear()

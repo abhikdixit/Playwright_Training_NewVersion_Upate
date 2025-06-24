@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 
 test.describe('API Testing', () => {
-  const baseUrl = 'https://demo.spreecommerce.org'
+  const baseUrl = 'http://demo.spreecommerce.org'
 
   test('Get Default Country', async ({ request }) => {
 

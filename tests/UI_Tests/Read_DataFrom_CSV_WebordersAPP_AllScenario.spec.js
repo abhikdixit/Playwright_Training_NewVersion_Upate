@@ -39,6 +39,8 @@ test.describe('WebOrder All Test Scenario', () => {
         await page.waitForLoadState(); // The promise resolves after 'load' event.
       } else if ('Invalid Login or Password.' == record.Exp_Result) {
         const name = await page.$eval("#ctl00_MainContent_status", el => el.textContent.trim())
+        // const name = await page.locator("#ctl00_MainContent_status")
+        // await page.evaluate(name => name.textContent.trim(), name);
         //expect(name).toBe('Invalid Login or Password.')
         expect(name).toBe(record.Exp_Result)
 
