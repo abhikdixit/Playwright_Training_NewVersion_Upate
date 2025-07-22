@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const { test, expect } = require("@playwright/test");
 const { AccessToken } = require("./BaseTest");
 test.describe("Create Notes API Testing", () => {
