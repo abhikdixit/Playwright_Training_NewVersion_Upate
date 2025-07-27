@@ -22,10 +22,10 @@ const config = {
   globalSetup: require.resolve('./WebOrder_Login_Setup'),
   //globalSetup: "./global-setup",
   //testDir: './tests/',
-  //testDir: './tests/UI_Tests/',
-  //testDir: './tests/WEBORDER/',
+  testDir: './tests/UI_Tests/',
+
   //testDir: './tests/UI_Special_Control/',
-  //testDir: './tests/NICE_GUI_Tests/',
+  testDir: './tests/NICE_GUI_Tests/',
   //testDir: './tests/Assignments/',
   //testDir: './tests/API_Test/',
   //testDir: './tests/API_Test/Restful-booker_API/',
