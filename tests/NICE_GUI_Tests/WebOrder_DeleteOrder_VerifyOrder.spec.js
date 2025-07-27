@@ -1,7 +1,7 @@
 //import { test, expect } from '@playwright/test';
 import { test, expect } from '@playwright/test';
 
-test('Delete Order - Verify Order @sanity', async ({ page }) => {
+test('Delete Order - Verify Order got deleted @sanity', async ({ page }) => {
   await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
   //Browser.object.action
   await page.getByLabel('Username:').fill('Tester');
@@ -48,19 +48,23 @@ test('Delete Order - Verify Order @sanity', async ({ page }) => {
   await page.locator('#ctl00_MainContent_fmwOrder_TextBox3').clear()
   await page.locator('#ctl00_MainContent_fmwOrder_TextBox3').fill('Delhi');
   await page.locator("#ctl00_MainContent_fmwOrder_UpdateButton").click()
-
+  
   //Verify that City value change to Delhi
   await expect(page.locator("//td[normalize-space()='" + ExpUserName + "']//following-sibling::td[text()='Delhi']")).toHaveText("Delhi")
 
   // Delete the Order and Verify that Order got deleted
-
+  await expect(page).toHaveURL('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Default.aspx')
   await page.locator("//td[normalize-space()='" + ExpUserName + "']//preceding-sibling::td/input").click();
   await page.locator("#ctl00_MainContent_btnDelete").click()
   // Verify that user got deleted
-
+  //await page.waitForTimeout(3000)
+  // wait for element to be present before checking its text
+  await page.waitForSelector('#ctl00_MainContent_orderGrid');
   await expect(page.locator('#ctl00_MainContent_orderGrid')).not.toContainText(ExpUserName)
 
   // Logout from Application
   await page.getByRole('link', { name: 'Logout' }).click()
+  // when you are travelling from one page to another, it is a good practice to wait for the network to be idle
+  await page.waitForLoadState('networkidle');
   await page.url().includes("/Login.aspx")
 });

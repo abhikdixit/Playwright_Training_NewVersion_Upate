@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 //const { test, expect } = require('@playwright/test');
 
 test.describe('chromium only', () => {
-  test.skip(({ browserName }) => browserName !== 'chromium', 'Chromium only!');
+  test.skip(({ browserName }) => browserName !== 'webkit', 'Webkit only!');
 test('BalzeDemo', async ({ page,browserName  }) => {
   //test.skip(browserName === 'firefox', 'Still working on it');
   await page.goto('https://blazedemo.com/');

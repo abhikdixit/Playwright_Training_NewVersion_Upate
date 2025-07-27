@@ -31,15 +31,35 @@ exports.TransferFundPage = class TransferFundPage {
     this.cancelButton = page.locator("#btn_cancel");
   }
 
-  async makePayment(selectFromAccount, toAccount, amount, description) {
-    await this.fromAccount.selectOption(selectFromAccount);
-    await this.toAccount.selectOption(toAccount);
-    await this.amount.type(amount);
-    await this.descriptionInput.type(description);
-    await this.continueButton.click();
-  }
+  // async makePayment(selectFromAccount, toAccount, amount, description) {
+  //   await this.fromAccount.selectOption(selectFromAccount);
+  //   await this.toAccount.selectOption(toAccount);
+  //   await this.amount.type(amount);
+  //   await this.descriptionInput.type(description);
+  //   await this.continueButton.click();
+  // }
+
+async makePayment(selectFromAccount, toAccount, amount, description) {
+  // Wait for both dropdowns to be visible before selecting
+  await expect(this.fromAccount).toBeVisible({ timeout: 10000 });
+  await expect(this.toAccount).toBeVisible({ timeout: 10000 });
+
+  // Select options
+  await this.fromAccount.selectOption(selectFromAccount);
+  await this.toAccount.selectOption(toAccount);
+
+  // Fill other fields
+  await this.amount.fill(amount);
+  await this.descriptionInput.fill(description);
+
+  // Click continue
+  await this.continueButton.click();
+}
+
+
 
   async verifyAndSubmit(){
+    await this.page.waitForLoadState("networkidle");
     await expect(this.verifyDetail).toBeVisible();
     await this.submitPaymentButton.click();
   }

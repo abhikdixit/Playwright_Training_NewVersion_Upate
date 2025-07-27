@@ -9,7 +9,7 @@ test.describe('MYSQL Test', function() {
                 Port: 3306,
                 user: "root",
                 password: "root",
-                database: "orangehrm",
+                database: "weborder_db",
                 insecureAuth : true
             });
         }
@@ -27,7 +27,7 @@ test.describe('MYSQL Test', function() {
                 console.log(rows)
             for (const row of rows)
             {
-                console.log(row.uname +" "+ row.upass)
+                console.log(row.uname +" "+ row.pass)
                 // Do whatever else you need
             }
             }

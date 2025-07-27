@@ -60,9 +60,8 @@ export class PurchaseForeignCurrencyCash {
     await expect(this.todaysSellRate).toBeVisible();
   }
 
-  async assertSuccessMessage() {
+  async assertSuccessMessage(expResult) {
     await expect(this.message).toBeVisible();
-    await expect(this.message).toContainText("Foreign currency cash was successfully purchased."
-    );
+    await expect(this.message).toContainText(expResult);
   }
 }

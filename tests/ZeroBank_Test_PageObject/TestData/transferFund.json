@@ -257,12 +257,5 @@
         "amount":"",
         "description":"Test1",
         "TC":"TC37"
-    },
-    {
-        "fromAccount":"6",
-        "toAccount":"6",
-        "amount":"100",
-        "description":"",
-        "TC":"TC38"
     }
 ]

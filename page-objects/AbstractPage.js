@@ -1,7 +1,8 @@
 //import { Page } from '@playwright/test'
-import { expect, Locator, Page } from '@playwright/test';
+  import { expect, Locator, Page } from '@playwright/test';
   const fs = require('fs');
-  const path = require('path');
+  const xlsx = require('xlsx');
+  import { parse } from 'csv-parse/sync';
 
 export class AbstractPage {
    page= Page
@@ -16,11 +17,25 @@ export class AbstractPage {
   }
 
   async readDataFromJSONFile(fileName) {
-
-    const filePath = path.join(__dirname, '..', 'data', fileName);
-    const data = fs.readFileSync(filePath)
+    // Reads the JSON file and returns the parsed data
+    const data = fs.readFileSync(fileName)
     return JSON.parse(data);
   }
 
-  
+  async readDataFromExcelFile(fileName, sheetName) {
+    // Reads the Excel file and returns the parsed data
+    const workbook = xlsx.readFile(fileName);
+    const sheetNameList = workbook.SheetNames;
+    return xlsx.utils.sheet_to_json(workbook.Sheets[sheetNameList[sheetName]]);
+  }
+
+  async readDataFromCSVFile(fileName) {
+    // Reads the CSV file and returns the parsed data
+    const records = parse(readFileSync(fileName), {
+      columns: true,
+      skip_empty_lines: true
+    });
+    return records;
+  }
+
 }

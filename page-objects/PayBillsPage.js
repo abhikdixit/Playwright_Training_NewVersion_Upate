@@ -5,6 +5,7 @@ export class PayBillsPage {
     paySavedPayeeTab = Locator;
     addNewPayeeTab = Locator;
     purchaseForeignCurrencyTab = Locator;
+    
     constructor(page = Page) {
         this.page = page;
         this.paySavedPayeeTab = page.locator("//a[text()='Pay Saved Payee']");

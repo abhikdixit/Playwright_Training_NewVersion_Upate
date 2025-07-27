@@ -5,9 +5,11 @@ const { test, expect } = require('@playwright/test');
 let objects = fs.readFileSync('./tests/TestData/WebOrder_Login_All_TCs.json')
 const users = JSON.parse(objects);
 
-for (const record of users) {
-test(`WebOrder Login Functionality: ${record.test_case}`, async ({ page }) => {
-    //console.log(record.name, record.password, record.exp_result);
+//for (const record of users) {
+//test(`WebOrder Login Functionality: ${record.test_case}`, async ({ page }) => {
+test('WebOrder Login Functionality: ${record.test_case}', async ({ page }) => {
+  for (const record of users) { 
+  //console.log(record.name, record.password, record.exp_result);
     await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
     await page.getByLabel('Username:').click();
     await page.getByLabel('Username:').fill(record.uname);
@@ -32,8 +34,8 @@ test(`WebOrder Login Functionality: ${record.test_case}`, async ({ page }) => {
 
     }
 
-
+  }
 });
 
-  }
+
 

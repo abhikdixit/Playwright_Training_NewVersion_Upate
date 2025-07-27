@@ -30,11 +30,7 @@ test.describe('Login / Logout Flow @smoke', () => {
     await loginPage.login(process.env.zeroBankUserName, process.env.zeroBankPassword)
     //This is to bypass SSL error
     await page.goto('http://zero.webappsecurity.com/bank/transfer-funds.html')
-    //Below practice is not advisable
-    // const accountSummaryTab = await page.locator('#account_summary_tab')
-    // await expect(accountSummaryTab).toBeVisible()
     await homePage.logout()
-    // await page.goto('http://zero.webappsecurity.com/logout.html')
-    await expect(page).toHaveURL('http://zero.webappsecurity.com/index.html')
+    await homePage.VerifyURL('http://zero.webappsecurity.com/index.html')
   })
 })

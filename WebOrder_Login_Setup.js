@@ -1,21 +1,27 @@
 // global-setup.js
 
-const { chromium } = require('@playwright/test');
+import { chromium } from '@playwright/test';
+import fs from 'fs';
+import path from 'path';
 
-module.exports = async config => {
+async function globalSetup() {
+  const browser = await chromium.launch();
+  const page = await browser.newPage();
 
-    const browser = await chromium.launch();
-    const page = await browser.newPage();
-    await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
-    await page.getByLabel('Username:').fill('Tester');
- // await page.pause()
-    await page.getByLabel('Password:').fill('test');
-    await page.getByRole('button', { name: 'Login' }).click();
+  await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
+  await page.getByLabel('Username:').fill('Tester');
+  await page.getByLabel('Password:').fill('test');
+  await page.getByRole('button', { name: 'Login' }).click();
 
-    // Save signed-in state to 'storageState.json'.
+  // Ensure the folder exists
+  const storagePath = path.resolve('./tests/OrangeHRM');
+  if (!fs.existsSync(storagePath)) {
+    fs.mkdirSync(storagePath, { recursive: true });
+  }
 
-    await page.context().storageState({ path: './tests/OrangeHRM/WebOrderState.json' });
+  await page.context().storageState({ path: path.join(storagePath, 'WebOrderState.json') });
 
-    //await browser.close();
+  await browser.close();
+}
 
-};
+export default globalSetup;

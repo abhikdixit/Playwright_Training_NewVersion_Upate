@@ -119,5 +119,18 @@
     "Card":"card number",
     "Expire":"12/22",
     "Result":"Invalid format. Only digits allowed."
+},
+{
+        
+	"TestCaseID": "TC11",
+    "Product": "FamilyAlbum",
+    "Quantity":"5",
+    "Customer": "Abhi",
+    "Street":"BTM",
+    "City":"Bangalore",
+    "Zip":"560076",
+    "Card":"123456789",
+    "Expire":"12/22",
+    "Result":" New order has been successfully added. "
 }
 ]

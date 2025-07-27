@@ -8,7 +8,7 @@ test.describe('Hooks Example for Screenshot', () =>{
     await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
   })
 //To capture screenshot of particular element
-test.only('Login to Weborders @smoke', async ({ page }) => {
+  test.skip('Login to Weborders @smoke', async ({ page }) => {
 
   // Go to http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx
   //await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
@@ -19,7 +19,7 @@ test.only('Login to Weborders @smoke', async ({ page }) => {
 
 });
 //To capture the full page screenshot
-test('Capture Full page screenshot', async ({ page }) => {
+  test('Capture Full page screenshot', async ({ page }) => {
 
   // Go to http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx
   //await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');

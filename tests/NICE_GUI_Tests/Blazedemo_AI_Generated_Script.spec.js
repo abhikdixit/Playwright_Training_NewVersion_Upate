@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const data = JSON.parse(fs.readFileSync('./tests/TestData/data.json', 'utf8'));
 
-test('Purchase flight on Blazedemo', async ({ page }) => {
+test('Purchase flight on Blazedemo @dixit', async ({ page }) => {
   await page.goto('https://blazedemo.com/index.php');
 
   const fromPortSelector = 'select[name="fromPort"]';

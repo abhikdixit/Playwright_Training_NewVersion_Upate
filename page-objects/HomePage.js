@@ -45,5 +45,10 @@ export class HomePage {
     await this.usernameDropdown.click({setTimeout:30000})
     await this.logoutButton.click()
 }
+
+  async VerifyURL(url = string) {
+    await this.page.waitForURL(url)
+    await expect(this.page).toHaveURL(url)
+}
   
 }

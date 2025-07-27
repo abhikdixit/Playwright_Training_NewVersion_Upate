@@ -23,7 +23,7 @@ export class Login_LogoutPage {
   }
 
   async LogoutFromApp() {
-    await this.icon.click()
+    //await this.icon.click()
     await this.Logout.click()
   }
 

@@ -29,6 +29,11 @@ test.describe("Admin -OrangeHRM", () => {
       let pass = record.pass;
       let confirm = record.confirm;
 
+        const d = new Date();
+        let ms = d.getMilliseconds();
+
+        const ExpUserName = name + ms;
+
       await page.getByRole("link", { name: "Admin" }).click();
       await page.locator("//button[normalize-space()='Add']").click();
 
@@ -43,8 +48,8 @@ test.describe("Admin -OrangeHRM", () => {
       //filling name
       if (name) {
         await page.getByPlaceholder("Type for hints...").click();
-        await page.getByPlaceholder("Type for hints...").fill(name);
-        await page.getByRole("option", { name: name }).click();
+        await page.getByPlaceholder("Type for hints...").fill(ExpUserName);
+        await page.getByRole("option", { name: ExpUserName }).click();
       }
       //filling status
       if (status) {

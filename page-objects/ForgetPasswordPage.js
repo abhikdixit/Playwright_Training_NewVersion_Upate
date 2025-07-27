@@ -1,35 +1,36 @@
 //import { expect, Locator, Page } from '@playwright/test'
 import { expect, Locator, Page } from '@playwright/test';
-import { AbstractPage } from './AbstractPage';
 
-export class ForgotPasswordPage extends AbstractPage {
-  // Define selectors
-  // readonly page: Page
+//export class ForgetPasswordPage extends AbstractPage {
+exports.ForgetPasswordPage = class ForgetPasswordPage {
   emailInput = Locator
   sendPasswordButton = Locator
-  errorMessage = Locator
-  successMessage = Locator
+  confirmMessage = Locator
 
   // Init selectors using constructor
   constructor(page = Page) {
-    // this.page = page
-    super(page)
+    this.page = page
+    this.forgottenPasswordHeader = page.locator("//h3[text()='Forgotten Password']")
     this.emailInput = page.locator('#user_email')
-    this.sendPasswordButton = page.locator('text=Send Password')
-    //this.errorMessage = page.locator('.alert-error')
-    this.successMessage = page.locator('.page-header')
-       
+    this.sendPasswordButton = page.locator("//input[@value='Send Password']")
+    this.confirmMessage = page.locator("//div[@class='page-header']/parent::div")
   }
 
-  // Define login page methods
-  async forgotpassword(email = string) {
+  async forgotPasswordTitle() {
+    await expect(this.forgottenPasswordHeader).toContainText("Forgotten Password");
+  }
+  
+  async enterEmailAndSendRequest(email = string) {
     await this.emailInput.type(email)
+    //const emailID= await this.emailInput.inputText()
     await this.sendPasswordButton.click()
-    
+    let emailID= await this.confirmMessage.textContent()
+     emailID= emailID.split(":")[1]
+    return emailID
   }
 
-  async forgotPasswordSuccessMsg() {
-    await expect(this.successMessage).toBeVisible()
+  async assertConfirmationMessage(email = string) {
+    await expect(this.confirmMessage).toBeVisible()
+    await expect(this.confirmMessage).toContainText(`Your password will be sent to the following email: ${email}`)
   }
-
 }

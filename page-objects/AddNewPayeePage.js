@@ -1,5 +1,6 @@
 //import { expect, Locator, Page } from '@playwright/test'
 import { expect, Locator, Page } from "@playwright/test";
+
 export class AddNewPayeePage {
   page = Page;
   payeeNameInput = Locator;
@@ -9,6 +10,7 @@ export class AddNewPayeePage {
   addButton = Locator;
   addNewPayeeTitle = Locator;
   message = Locator;
+
   constructor(page = Page) {
     this.page = page;
     this.payeeNameInput = page.locator("#np_new_payee_name");

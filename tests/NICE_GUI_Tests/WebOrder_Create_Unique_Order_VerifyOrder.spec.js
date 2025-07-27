@@ -8,10 +8,12 @@ test('Create Order Unique Order- Verify Order @smoke', async ({ page }) => {
   //await page.pause();
   await page.getByLabel('Password:').fill('test');
   await page.getByRole('button', { name: 'Login' }).click();
+  await expect(page.getByText("List of All Orders")).toHaveText('List of All Orders');
   //Verify that user has logged in
   //await page.url().includes('/Default1.aspx')
   await expect(page).toHaveURL('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/default.aspx')
-  await page.getByRole('link', { name: 'Order' }).nth(1).click();
+  await page.getByRole('link', { name: 'Order', exact: true }).click();
+  await expect(page.locator("//h2[normalize-space()='Order']")).toBeVisible();
     //Verify that user has clicked on Order Link
   await page.url().includes('/Process.aspx')
   await page.getByRole('combobox', { name: 'Product:*' }).selectOption('FamilyAlbum');
@@ -22,7 +24,10 @@ test('Create Order Unique Order- Verify Order @smoke', async ({ page }) => {
   
   const d = new Date();
   let ms = d.getMilliseconds();
+
   const ExpUserName = 'Dixit' + ms;
+
+  //Dixit6546567
 
   await page.getByLabel('Customer name:*').fill(ExpUserName);
   //await page.pause()
@@ -44,7 +49,7 @@ test('Create Order Unique Order- Verify Order @smoke', async ({ page }) => {
 
   await page.getByRole('link', { name: 'View all orders' }).click();
   // Verify that user got created
-  await expect(page.locator("//td[normalize-space()='"+ExpUserName+"']")).toHaveText(ExpUserName)
+  await expect(page.locator("//td[text()='"+ExpUserName+"']")).toHaveText(ExpUserName)
   
   await page.getByRole('link', { name: 'Logout' }).click()
   await page.url().includes("/Login.aspx")

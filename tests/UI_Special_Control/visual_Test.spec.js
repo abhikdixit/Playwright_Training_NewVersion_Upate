@@ -15,4 +15,11 @@ test.describe('Visual Regression Testing Example', () => {
     const pageElement = page.locator("//button[@type='submit']")
     expect(await pageElement.screenshot()).toMatchSnapshot('LoginButton.png')
   })
+
+    test('Application Logo Snapshot', async ({ page }) => {
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    await page.waitForTimeout(5000) 
+    const LogoElement = page.locator("//img[@alt='company-branding']")
+    expect(await LogoElement.screenshot()).toMatchSnapshot('ApplicationLogo.png')
+  })
 })

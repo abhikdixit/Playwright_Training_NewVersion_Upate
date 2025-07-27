@@ -5,7 +5,7 @@
         "role": "Admin",
         "name": "Ranga  Akunuri",
         "status": "Enable",
-        "username": "minhadmin",
+        "username": "minhadmin_101",
         "pass": "a123456",
         "confirm": "a123456"
     },
@@ -42,7 +42,7 @@
     {
         "test_case": "TC5",
         "expResult": "empty_username",
-        "role": "Admin",
+        "role": "ESS",
         "name": "Ranga  Akunuri",
         "status": "Enable",
         "username": "",
@@ -82,7 +82,7 @@
     {
         "test_case": "TC9",
         "expResult": "empty_confirm_pass",
-        "role": "Admin",
+        "role": "ESS",
         "name": "Ranga  Akunuri",
         "status": "Enable",
         "username": "minhadmin1",

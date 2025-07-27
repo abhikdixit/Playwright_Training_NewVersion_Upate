@@ -6,7 +6,8 @@ const connection = createConnection({
     Port: 3306,
     user: "root",
     password: "root",
-    database: "nopcom"
+    database: "weborder_db",
+    insecureAuth: true
 });
 
 // Connect to the database

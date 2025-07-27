@@ -1,7 +1,7 @@
-const fs = require('fs');
-const { test, expect } = require('@playwright/test');
+import { readFileSync } from 'fs';
+import { test, expect } from '@playwright/test';
 // Reads the JSON file and saves it  
-let objects = fs.readFileSync('./tests/TestData/WebOrder_Login.json')
+let objects = readFileSync('./tests/TestData/WebOrder_Login.json')
 const users = JSON.parse(objects);
 
 for (const record of users) {
@@ -12,6 +12,7 @@ for (const record of users) {
     await page.getByLabel('Password:').fill(record.password);
     await page.getByRole('button', { name: 'Login' }).click();
     await expect(page).toHaveURL('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/default.aspx');
+    await expect(page.locator('h2')).toContainText(record.exp_result);  
     await page.getByRole('link', { name: 'Logout' }).click();
     const login = page.locator('#ctl00_MainContent_login_button');
     await expect(login).toBeVisible();

@@ -9,5 +9,6 @@ test('test', async ({ page }) => {
   // await page.fill('input[name="fldLoginUserId"]', '1000');
   // await page.click('text=CONTINUE');
   await expect(page).toHaveURL('https://netportal.hdfcbank.com/nb-login/login.jsp');
-  await page.waitForTimeout(5000)
+  await page.waitForTimeout(5000) // Thread.sleep(5000)
+
 });

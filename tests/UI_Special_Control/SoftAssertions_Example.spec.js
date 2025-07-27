@@ -1,5 +1,5 @@
 //import { test, expect } from '@playwright/test';
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
 
 test('Create Order-Update Order- Verify Order@smoke', async ({ page }) => {
   await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
@@ -38,7 +38,7 @@ test('Create Order-Update Order- Verify Order@smoke', async ({ page }) => {
   // important, you don't want test execution to stop when a certain condition
   // is not matched, or an assertion fails. 
   // Removed . from the below text
-  await expect.soft(neworder).toHaveText('New order has been successfully added')
+  await expect(neworder).toHaveText('New order has been successfully added')
 
   await page.getByRole('link', { name: 'View all orders' }).click();
   // Verify that user got created

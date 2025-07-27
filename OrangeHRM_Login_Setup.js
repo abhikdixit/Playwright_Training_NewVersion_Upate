@@ -7,6 +7,7 @@ export default async config => {
     const browser = await chromium.launch();
     const page = await browser.newPage();
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    await page.waitForLoadState('networkidle');
     await page.getByPlaceholder('Username').click();
     await page.getByPlaceholder('Username').fill('Admin');
     await page.getByPlaceholder('Password').click();

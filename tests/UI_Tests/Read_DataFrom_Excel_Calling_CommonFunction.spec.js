@@ -36,15 +36,15 @@ test.describe('WebOrder All Test Scenario calling BaseClass', () => {
       const del = await page.$("#ctl00_MainContent_btnDelete");
       if (del) {
 
-        const name = await page.$eval("//h2[normalize-space()='List of All Orders']", el => el.textContent.trim())
-        expect(name).toBe('List of All Orders')
+        const headingText = await page.$eval("h2", el => el.textContent.trim());
+        expect(headingText).toBe(record.Exp_Result);
         // Click text=Logout
         await page.click('text=Logout');
         await page.waitForLoadState(); // The promise resolves after 'load' event.
 
       } else {
         const name = await page.$eval("#ctl00_MainContent_status", el => el.textContent.trim())
-        expect(name).toBe('Invalid Login or Password.')
+        expect(name).toBe(record.Exp_Result);
 
       }
 

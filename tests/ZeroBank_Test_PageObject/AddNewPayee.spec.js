@@ -23,10 +23,10 @@ test.describe("Add New Payee", () => {
     await homePage.clickOnSignIn();
     await loginPage.login("username", "password");
     //This is to bypass SSL error
-    await page.goto("http://zero.webappsecurity.com/bank/transfer-funds.html");
+    await page.goto("http://zero.webappsecurity.com/bank/transfer-funds.html",{waitUntil: "load"});
   });
   test("add new payee", async ({ page }) => {
-    await navbar.clickOnTab("Account Summary");
+    //await navbar.clickOnTab("Account Summary");
     await navbar.clickOnTab("Pay Bills");
     //await page.pause(3000);
     //    await payBillsPage.clickOnPayBillsTab("Add New Payee");

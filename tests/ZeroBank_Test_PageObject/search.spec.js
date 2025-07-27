@@ -2,9 +2,9 @@ const { test, expect } = require('@playwright/test');
 const { HomePage } = require('../../page-objects/HomePage')
 
 test.describe('Search Results @smoke', () => {
-  let homePage= HomePage
+  let homePage
   test('Should find search results', async ({ page }) => {
-    const homePage= new HomePage(page)
+    homePage = new HomePage(page)
     await homePage.visit()
     await homePage.searchFor('bank')
 

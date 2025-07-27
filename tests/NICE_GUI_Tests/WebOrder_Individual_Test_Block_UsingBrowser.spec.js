@@ -1,15 +1,18 @@
 //import { test, expect } from '@playwright/test';
 const { test, expect } = require('@playwright/test');
+//import { Login_LogoutPage } from './BaseTest.js';
 
 test.describe('E2E WebOrder Application', () => {
-  //Global variables declaration
   let page;
   let ExpUserName;
+  //let loginPage;
 
   test.beforeAll(async ({ browser }) => {
     //page = await browser.newPage({viewport: { width: 1920, height: 1080 }});
     page = await browser.newPage();
-
+    // loginPage = new Login_LogoutPage(page);
+    // await loginPage.gotoURL();
+    // await loginPage.LoginToApp("Tester", "test");
     await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
     //Browser.object.action
     await page.getByLabel('Username:').fill('Tester');
@@ -57,7 +60,7 @@ test.describe('E2E WebOrder Application', () => {
     // Update the Order details
     
     await page.locator("//td[normalize-space()='" + ExpUserName + "']//following-sibling::td/input").click();
-    await page.waitForTimeout(3000)
+    //await page.waitForTimeout(3000)
     await page.locator('#ctl00_MainContent_fmwOrder_TextBox3').clear()
     await page.locator('#ctl00_MainContent_fmwOrder_TextBox3').fill('Delhi');
     await page.locator("#ctl00_MainContent_fmwOrder_UpdateButton").click()

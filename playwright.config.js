@@ -19,11 +19,11 @@ const config = {
 
   // @ts-ignore
   //globalSetup: require.resolve('./OrangeHRM_Login_Setup'),
-  //globalSetup: require.resolve('./WebOrder_Login_Setup'),
+  globalSetup: require.resolve('./WebOrder_Login_Setup'),
   //globalSetup: "./global-setup",
   //testDir: './tests/',
-  testDir: './tests/UI_Tests/',
-
+  //testDir: './tests/UI_Tests/',
+  //testDir: './tests/WEBORDER/',
   //testDir: './tests/UI_Special_Control/',
   //testDir: './tests/NICE_GUI_Tests/',
   //testDir: './tests/Assignments/',
@@ -36,6 +36,7 @@ const config = {
   //testDir: './tests/Spreecom_API_Minh/API_test/',
   //testDir:'./tests/API_Test/Request_API/',
   //testDir:'./tests/API_Test/Notes_API/',
+  testDir:'./tests/API_Test/GraphQL_API_Test/',
   //testDir: './tests/Salesforce_Test',
   /* Maximum time one test can run for. */
   //timeout: 60000,
@@ -45,11 +46,11 @@ const config = {
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    //timeout: 7000
+   timeout: 10000
   },
   /* Run tests in files in parallel */
   fullyParallel: true,
-  workers:1,
+  workers: 1,
   //retries: 2,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   //forbidOnly: !!process.env.CI,
@@ -68,17 +69,18 @@ const config = {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
+    //baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
     //baseURL: 'http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx',
     //baseURL: 'https://practice.expandtesting.com/',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'retain-on-failure',
+    //trace: 'retain-on-failure',
     //video: 'on-first-retry',
     //video: 'retain-on-failure',
     screenshot: 'only-on-failure',
     // slowMo: 1000, // Moved to launchOptions in project config if needed
     // Tell all tests to load signed-in state from 'storageState.json'.
-    //storageState: './tests/OrangeHRM/WebOrderState.json',
+    baseURL: 'http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders',
+    storageState: './tests/OrangeHRM/WebOrderState.json',
     //storageState: './tests/OrangeHRM/storageState.json',
     video: 'retain-on-failure',
     //screenshot: 'only-on-failure',
@@ -86,7 +88,8 @@ const config = {
     //storageState: "./LoginAuth.json"
     //viewport: { width: 1920, height: 1080 },
     headless: false,
-    //trace : 'on',
+    
+    trace : 'on',
     // To bypass Certificate error.
     ignoreHTTPSErrors:true
     //viewport: { width: 680, height: 520 }
@@ -94,7 +97,7 @@ const config = {
   },
 
   /* Configure projects for major browsers */
-  projects: [
+   projects: [
    {
       name: 'chrome',
       use: {
@@ -102,7 +105,7 @@ const config = {
         viewport:{width:1536,height:864},
         //colorScheme: 'dark',
         launchOptions: {
-          //slowMo: 1000,
+          //slowMo: 2000,
            //args:["--start-fullscreen"]
            //args:["--start-maximized"]
         }

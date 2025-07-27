@@ -9,8 +9,6 @@ export class Navbar {
   myMoneyApp = Locator
   onlineStatements = Locator
 
-
-
   constructor(page = Page) {
 
     this.page = page

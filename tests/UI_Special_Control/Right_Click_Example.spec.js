@@ -7,6 +7,7 @@ test('Right Clieck', async ({ page }) => {
     
    // Right Click on Button
     //await page.pause()
+    //await page.dblclick("//span[text()='right click me']");
     await page.click("//span[text()='right click me']",{ button: 'right'});
     await page.waitForTimeout(5000)
     await page.locator('.context-menu-list.context-menu-root').click()

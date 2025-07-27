@@ -39,7 +39,7 @@ test.describe('Transfer Funds and Make Payment', () => {
     await loginPage.login('username', 'password');
     await page.waitForLoadState('networkidle');
     await page.goto('http://zero.webappsecurity.com/bank/transfer-funds.html');
-    await loginPage.wait(3000);
+    await loginPage.wait();
   });
 
   test('Purchase Foreign Currency Cash - Data Driven', async () => {
@@ -55,7 +55,7 @@ test.describe('Transfer Funds and Make Payment', () => {
       await purchaseCurrency.clickCalculateCostsButton();
       await purchaseCurrency.assertConversionAmount();
       await purchaseCurrency.clickPurchaseButton();
-      await purchaseCurrency.assertSuccessMessage();
+      await purchaseCurrency.assertSuccessMessage(record.Result);
     }
   });
 });

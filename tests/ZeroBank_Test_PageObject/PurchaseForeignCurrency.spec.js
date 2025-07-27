@@ -51,7 +51,7 @@ test.describe('Transfer Funds and Make Payment', () => {
     await purchaseCurrency.clickCalculateCostsButton();
     await purchaseCurrency.assertConversionAmount();
     await purchaseCurrency.clickPurchaseButton();
-    await purchaseCurrency.assertSuccessMessage();
+    await purchaseCurrency.assertSuccessMessage(record.Result);
     
   })
 

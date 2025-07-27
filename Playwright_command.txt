@@ -140,6 +140,10 @@ npx allure serve allure-results
   npm install csv
 
   npm install xlsx
+----------------------------------------------------------
+To update snapshots as latest one 
+npx playwright test visual_Test.spec --update-snapshots
+
 
   -----------------------------------------------Execution with Tag----------------
 If you have marked as Tags like Smoke and Sanity

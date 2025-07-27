@@ -1,4 +1,5 @@
 const fs = require('fs');
+import { test, expect } from '@playwright/test';
 export class Login_LogoutPage {
 
   constructor(page) {
@@ -9,6 +10,10 @@ export class Login_LogoutPage {
     this.Logout_O = this.page.getByRole('menuitem', { name: 'Logout' });
     this.Logout = this.page.locator("//a[text()='Logout']");
     this.icon = this.page.locator("//i[@class='oxd-icon bi-caret-down-fill oxd-userdropdown-icon']");
+  }
+
+   async verifyURL(url) {
+    await expect(this.page).toHaveURL(url);
   }
 
   async gotoURL() {

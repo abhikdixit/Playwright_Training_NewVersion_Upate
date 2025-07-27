@@ -11,6 +11,7 @@ export class FeedbackPage {
    feedbackTitle= Locator
 
   constructor(page= Page) {
+    //this.page = page
     this.page = page
     this.nameInput = page.locator('#name')
     this.emailInput = page.locator('#email')

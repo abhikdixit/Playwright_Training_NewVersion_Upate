@@ -45,10 +45,10 @@ test('test', async ({ page }) => {
   await page.locator('[placeholder="Type for hints\\.\\.\\."]').click();
 
   // Fill [placeholder="Type for hints\.\.\."]
-  await page.locator('[placeholder="Type for hints\\.\\.\\."]').fill('Fio');
+  await page.locator('[placeholder="Type for hints\\.\\.\\."]').fill('a');
 
   // Click text=Fiona Grace
-  await page.locator('text=Fiona  Grace').click();
+  await page.locator('text=Billekallaru Anil  Kumar').click();
 
   // Click input >> nth=2
   await page.locator('input').nth(2).click();

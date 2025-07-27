@@ -28,6 +28,11 @@ async function searchWebTable(page, tableSelector, targetValue, targetColumn, re
 
     const nextButton = page.locator(nextButtonSelector);
     const parentLi = nextButton.locator('xpath=..');
+    //xpath=.. is an XPath expression that means:
+    //.. → "go to the parent node" in the DOM.
+    //You often use this when:
+    //You start from a known child (like a button or span).
+    //You need to perform an action or extract data from the parent element.
     const parentClass = await parentLi.getAttribute('class');
 
     if (await nextButton.isDisabled() || (parentClass && parentClass.includes('disabled'))) {

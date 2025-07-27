@@ -7,7 +7,7 @@ test.describe('Create Notes API Testing', () => {
   test.beforeAll(async ({ request }) => {
     const response = await request.post(`${baseUrl}/notes/api/users/login`, {
         data: {
-          "email": "abhi@xyz.com",
+          "email": "testing@abc.com",
           "password": "test1234"
         },
       })

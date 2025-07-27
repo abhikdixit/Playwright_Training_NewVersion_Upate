@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { str } = require('ajv');
+//const { str } = require('ajv');
 
 test('Create Order - Update Order - Verify Order @smoke', async ({ page }) => {
   await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
@@ -54,6 +54,7 @@ await expect(
 
   // Change city
   const cityInput = page.locator('#ctl00_MainContent_fmwOrder_TextBox3');
+  await cityInput.clear();
 await cityInput.fill('Delhi');
 await page.locator('#ctl00_MainContent_fmwOrder_UpdateButton').click();
 

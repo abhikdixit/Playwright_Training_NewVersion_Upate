@@ -1,0 +1,24 @@
+{
+  "cards": [
+    {
+      "type": "Visa",
+      "number": "4111111111111111"
+    },
+    {
+      "type": "American Express",
+      "number": "378282246310005"
+    },
+    {
+      "type": "Diner's Club",
+      "number": "30569309025904"
+    }
+  ],
+  "user": {
+    "name": "John Doe",
+    "address": "123 Main St",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10001",
+    "nameOnCard": "John Doe"
+  }
+}

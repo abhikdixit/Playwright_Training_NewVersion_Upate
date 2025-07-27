@@ -6,6 +6,10 @@ import { test, expect, Page } from '@playwright/test';
 //const assert = require('assert')
 import { parse } from 'csv-parse/sync';
 
+// const records = parse(readFileSync('./tests/TestData/WebOrder_Login_All_Scenario.csv'), {
+//   columns: true,
+//   skip_empty_lines: true
+// });
 const records = parse(readFileSync(join('./tests/TestData', 'WebOrder_Login_All_Scenario.csv')), {
   columns: true,
   skip_empty_lines: true
@@ -37,16 +41,16 @@ test.describe('WebOrder All Test Scenario', () => {
         await expect(page.locator("div[class='content'] h2")).toContainText(record.Exp_Result)
         await page.click('text=Logout');
         await page.waitForLoadState(); // The promise resolves after 'load' event.
-      } else if ('Invalid Login or Password.' == record.Exp_Result) {
-        const name = await page.$eval("#ctl00_MainContent_status", el => el.textContent.trim())
+       //} else if ('Invalid Login or Password.' == record.Exp_Result) {
+      //   const name = await page.$eval("#ctl00_MainContent_status", el => el.textContent.trim())
         // const name = await page.locator("#ctl00_MainContent_status")
-        // await page.evaluate(name => name.textContent.trim(), name);
-        //expect(name).toBe('Invalid Login or Password.')
-        expect(name).toBe(record.Exp_Result)
+      } 
+      else 
+        // Check that the locator has the expected text
+        await expect(page.locator("span[id='ctl00_MainContent_status']")).toHaveText(record.Exp_Result)
+
 
       }
 
-    }
+   })
   })
-
-})

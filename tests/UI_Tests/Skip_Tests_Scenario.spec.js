@@ -12,7 +12,7 @@ test.describe('E2E Test - Hooks Example in Playwright', () => {
     await expect(page.getByRole('link', { name: 'Logout' })).toHaveText("Logout")
 
   })
-  test('Go to Order Page', async ({ page }) => {
+  test.only('Go to Order Page', async ({ page }) => {
     await page.getByRole('link', { name: 'Order' }).nth(1).click();
 
   });

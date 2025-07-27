@@ -47,10 +47,11 @@ test('Create Order-Update Order- Verify Order @smoke', async ({ page }) => {
   await page.locator('#ctl00_MainContent_fmwOrder_TextBox3').clear()
   await page.locator('#ctl00_MainContent_fmwOrder_TextBox3').fill('Delhi');
   await page.locator("#ctl00_MainContent_fmwOrder_UpdateButton").click()
-
+  await page.waitForTimeout(3000);
   //Verify that City value change to Delhi
   await expect(page.locator("//td[normalize-space()='"+ExpUserName+"']//following-sibling::td[text()='Delhi']")).toHaveText("Delhi")
 
+  
   await page.getByRole('link', { name: 'Logout' }).click()
   await page.url().includes("/Login.aspx")
 });

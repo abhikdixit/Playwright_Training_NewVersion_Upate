@@ -12,7 +12,8 @@ export class LoginPage extends AbstractPage {
   errorMessage = Locator
   keepmesignedin = Locator
   Forgetpassword = Locator
-
+  LogInToZeroBanktext = Locator
+  QuestionMarkIcon = Locator
   // Init selectors using constructor
   constructor(page = Page) {
     // this.page = page
@@ -22,15 +23,14 @@ export class LoginPage extends AbstractPage {
     this.submitButton = page.locator('text=Sign in')
     this.errorMessage = page.locator('.alert-error')
     this.Forgetpassword = page.locator("a[href='/forgot-password.html']") 
-       
+    this.LogInToZeroBanktext = page.locator('h3:has-text("Log in to ZeroBank")')
   }
 
   // Define login page methods
   async login(username = string, password = string) {
     await this.usernameInput.type(username)
     await this.passwordInput.type(password)
-    await this.submitButton.click()
-    
+    await this.submitButton.click()    
   }
 
    async loginwithSignedIn(username = string, password = string) {
@@ -41,11 +41,14 @@ export class LoginPage extends AbstractPage {
     
   }
 
+  async assertLoginTitleText() {
+    await expect(this.LogInToZeroBanktext).toHaveText('Log in to ZeroBank')
+  }
   async assertErrorMessage() {
     await expect(this.errorMessage).toContainText('Login and/or password are wrong.')
   }
   async snapshotLoginForm() {
-    await expect(this.loginForm.screenshot()).toMatchSnapshot('login-form.png')
+    await expect(this.page.screenshot()).toMatchSnapshot('login-form.png')
   }
 
   async snapshotErrorMessage() {
