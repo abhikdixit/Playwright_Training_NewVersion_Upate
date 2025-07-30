@@ -5,17 +5,16 @@ test.describe('Create Token - API Testing', () => {
 
     test('Login as an existing user', async ({ request }) => {
 
-    const response = await request.post(`${baseUrl}/notes/api/users/login`, {
+    const response = await request.post(`${baseUrl}/notes/api/users/register`, {
       data: {
-        "email": "testing@abc.com",
+        "name": "Test User",
+        "email": "testing2@abc.com",
         "password": "test1234"
       },
     })
     const responseBody = JSON.parse(await response.text())
-    expect(response.status()).toBe(200)
-    expect(responseBody.data.token).toBeTruthy()
-    const token = responseBody.data.token
-    console.log(token)
-    
+    expect(response.status()).toBe(201)
+    expect(responseBody.message).toBe("User account created successfully")
+    expect(responseBody.data.email).toBe("testing1@abc.com")
   })
 })

@@ -19,13 +19,12 @@ const config = {
 
   // @ts-ignore
   //globalSetup: require.resolve('./OrangeHRM_Login_Setup'),
-  globalSetup: require.resolve('./WebOrder_Login_Setup'),
+  //globalSetup: require.resolve('./WebOrder_Login_Setup'),
   //globalSetup: "./global-setup",
   //testDir: './tests/',
-  testDir: './tests/UI_Tests/',
-
+  //testDir: './tests/UI_Tests/',
   //testDir: './tests/UI_Special_Control/',
-  testDir: './tests/NICE_GUI_Tests/',
+  //testDir: './tests/NICE_GUI_Tests/',
   //testDir: './tests/Assignments/',
   //testDir: './tests/API_Test/',
   //testDir: './tests/API_Test/Restful-booker_API/',
@@ -35,8 +34,8 @@ const config = {
   //testDir: './tests/Spreecom_API_Framework/',
   //testDir: './tests/Spreecom_API_Minh/API_test/',
   //testDir:'./tests/API_Test/Request_API/',
-  //testDir:'./tests/API_Test/Notes_API/',
-  testDir:'./tests/API_Test/GraphQL_API_Test/',
+  testDir:'./tests/API_Test/Notes_API/',
+  //testDir:'./tests/API_Test/GraphQL_API_Test/',
   //testDir: './tests/Salesforce_Test',
   /* Maximum time one test can run for. */
   //timeout: 60000,

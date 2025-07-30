@@ -1,0 +1,26 @@
+[
+  {
+    "code": "IN",
+    "expected": {
+      "name": "India",
+      "currency": "INR",
+      "capital": "New Delhi"
+    }
+  },
+  {
+    "code": "US",
+    "expected": {
+      "name": "United States",
+      "currency": "USD,USN,USS",
+      "capital": "Washington D.C."
+    }
+  },
+  {
+    "code": "JP",
+    "expected": {
+      "name": "Japan",
+      "currency": "JPY",
+      "capital": "Tokyo"
+    }
+  }
+]
