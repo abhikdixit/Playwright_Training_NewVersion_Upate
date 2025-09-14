@@ -1,2 +1,0 @@
-Admin admin123 Dashboard
-locator('//h6[text()=\'Dashboard\']')

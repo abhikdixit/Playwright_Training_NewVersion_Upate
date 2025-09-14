@@ -1,0 +1,188 @@
+940ebee8eb3741a38aa39ea06ca86253b458d5490a0946889515511193612d15
+{
+  success: true,
+  status: 200,
+  message: 'Notes successfully retrieved',
+  data: [
+    {
+      id: '68b9686006ff22028be7cb6f',
+      title: 'Playwright_Updated_Notes',
+      description: 'Done via PUT API request',
+      category: 'Work',
+      completed: true,
+      created_at: '2025-09-04T10:22:24.955Z',
+      updated_at: '2025-09-04T10:22:25.618Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '68b964b706ff22028be7c918',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-09-04T10:06:47.241Z',
+      updated_at: '2025-09-04T10:06:47.241Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '689d86e0f501fc028aa78495',
+      title: 'Playwright_Updated_Notes',
+      description: 'Done via PUT API request',
+      category: 'Work',
+      completed: true,
+      created_at: '2025-08-14T06:49:04.951Z',
+      updated_at: '2025-08-14T06:49:05.330Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '689d86e0f501fc028aa7848f',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-08-14T06:49:04.129Z',
+      updated_at: '2025-08-14T06:49:04.129Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '689d86b2f501fc028aa7841b',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-08-14T06:48:18.126Z',
+      updated_at: '2025-08-14T06:48:18.126Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '68941fa1933a8d028a75f252',
+      title: 'Cypress_Notes_API',
+      description: 'Done via API',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-08-07T03:38:09.132Z',
+      updated_at: '2025-08-07T03:38:09.132Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '68941f44933a8d028a75f230',
+      title: 'Cypress_Notes_API',
+      description: 'Done via API',
+      category: 'Work',
+      completed: false,
+      created_at: '2025-08-07T03:36:36.534Z',
+      updated_at: '2025-08-07T03:36:36.534Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '689186ab99d200028b8f01f4',
+      title: 'Playwright_Updated_Notes',
+      description: 'Done via PUT API request',
+      category: 'Work',
+      completed: true,
+      created_at: '2025-08-05T04:20:59.355Z',
+      updated_at: '2025-08-05T04:20:59.767Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '689186aa99d200028b8f01ee',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-08-05T04:20:58.391Z',
+      updated_at: '2025-08-05T04:20:58.391Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6891868b99d200028b8f0169',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-08-05T04:20:27.266Z',
+      updated_at: '2025-08-05T04:20:27.266Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6891857799d200028b8f0086',
+      title: 'Playwright_Updated_Notes',
+      description: 'Done via PUT API request',
+      category: 'Work',
+      completed: true,
+      created_at: '2025-08-05T04:15:51.043Z',
+      updated_at: '2025-08-05T04:15:51.449Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6891857699d200028b8f0080',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-08-05T04:15:50.170Z',
+      updated_at: '2025-08-05T04:15:50.170Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '6891855699d200028b8efff7',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-08-05T04:15:18.688Z',
+      updated_at: '2025-08-05T04:15:18.688Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '689184ed99d200028b8eff8d',
+      title: 'Playwright_Updated_Notes',
+      description: 'Done via PUT API request',
+      category: 'Work',
+      completed: true,
+      created_at: '2025-08-05T04:13:33.909Z',
+      updated_at: '2025-08-05T04:13:34.330Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '689184ed99d200028b8eff83',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-08-05T04:13:33.037Z',
+      updated_at: '2025-08-05T04:13:33.037Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '689184e499d200028b8efefa',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-08-05T04:13:24.711Z',
+      updated_at: '2025-08-05T04:13:24.711Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '689183fb99d200028b8efe47',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-08-05T04:09:31.253Z',
+      updated_at: '2025-08-05T04:09:31.253Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    },
+    {
+      id: '68916eaa99d200028b8ef260',
+      title: 'Playwright_Notes',
+      description: 'Done via API',
+      category: 'Personal',
+      completed: false,
+      created_at: '2025-08-05T02:38:34.719Z',
+      updated_at: '2025-08-05T02:38:34.719Z',
+      user_id: '65f1cc0b55382801413dbc96'
+    }
+  ]
+}

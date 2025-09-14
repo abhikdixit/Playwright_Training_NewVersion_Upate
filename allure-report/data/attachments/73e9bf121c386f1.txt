@@ -1,0 +1,29 @@
+Getting Access Token....
+d1e295dabb914b35bb4ddcad6ec72d31152f3353051147e79f86f24bb46f5b64
+Deleting all notes...
+Deleted note ID: 68c6634b06ff22028be99556
+Deleted note ID: 68c6634706ff22028be99548
+Deleted note ID: 68c6634606ff22028be99542
+Deleted note ID: 68c6634606ff22028be9953e
+Deleted note ID: 68c6634506ff22028be9953a
+Deleted note ID: 68c6620706ff22028be9951e
+Deleted note ID: 68c6620606ff22028be99515
+Deleted note ID: 68c6620506ff22028be9950f
+Deleted note ID: 68c6620306ff22028be99506
+Deleted note ID: 68c661f406ff22028be994d2
+{
+  success: true,
+  status: 200,
+  message: 'Note successfully created',
+  data: {
+    id: '68c6635406ff22028be99582',
+    title: 'Playwright_Notes_26531',
+    description: 'Done via API',
+    category: 'Personal',
+    completed: false,
+    created_at: '2025-09-14T06:40:20.355Z',
+    updated_at: '2025-09-14T06:40:20.355Z',
+    user_id: '68b0018b6f7da0028a4b2976'
+  }
+}
+Playwright_Notes_26531

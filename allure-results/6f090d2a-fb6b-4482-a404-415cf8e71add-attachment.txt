@@ -1,2 +1,0 @@
-Clicked on Login button
-locator('#ctl00_MainContent_login_button')

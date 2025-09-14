@@ -1,2 +1,0 @@
-Admin  Required
-locator('//span[text()=\'Required\']')

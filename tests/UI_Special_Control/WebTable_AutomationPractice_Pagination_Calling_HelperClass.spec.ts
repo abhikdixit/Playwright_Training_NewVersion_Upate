@@ -1,0 +1,27 @@
+// webTablePagination.spec.js
+import { test, expect } from '@playwright/test';
+import { searchWebTable } from '../../helpers/webTableHelper';
+
+test.describe('WebTable Pagination and Price Check', () => {
+  const tgtProduct = 'Router';
+  const expPrice = '$24.99';
+
+  test('Search for a product and verify price using helper function', async ({ page }) => {
+    await page.goto('https://testautomationpractice.blogspot.com/');
+
+    const price = await searchWebTable(
+      page,
+      '#productTable',
+      tgtProduct,
+      1, // Product name is in the first column
+      4, // Price is in the fourth column
+      '#pagination li a[aria-label="Next"]' // Correct selector for the Next button
+    );
+
+    expect(price).not.toBeNull();
+    if (price !== null) {
+      console.log(`Found ${tgtProduct} with price: ${price.trim()}`);
+      expect(price.trim()).toBe(expPrice);
+    }
+  });
+});

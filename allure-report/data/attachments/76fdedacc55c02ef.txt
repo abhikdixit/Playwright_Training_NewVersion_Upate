@@ -1,2 +1,0 @@
-Admin11 admin123 Invalid credentials
-locator('//p[@class=\'oxd-text oxd-text--p oxd-alert-content-text\']')

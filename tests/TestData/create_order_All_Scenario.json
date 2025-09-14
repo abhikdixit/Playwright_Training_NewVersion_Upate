@@ -132,5 +132,18 @@
     "Card":"123456789",
     "Expire":"12/22",
     "Result":" New order has been successfully added. "
+},
+{
+        
+	"TestCaseID": "TC12",
+    "Product": "ScreenSaver",
+    "Quantity":"5",
+    "Customer": "Abhi",
+    "Street":"BTM",
+    "City":"Bangalore",
+    "Zip":"560076",
+    "Card":"123456789",
+    "Expire":"12/22",
+    "Result":" New order has been successfully added. "
 }
 ]

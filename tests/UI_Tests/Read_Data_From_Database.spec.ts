@@ -1,0 +1,38 @@
+import { test, expect } from '@playwright/test';
+import { Connection } from 'mysql2/typings/mysql/lib/Connection';
+
+test.describe('MYSQL Test', function() {
+        class ConnectDatabase {
+        constructor() {
+            var mysql = require("mysql2");
+            this.connection = mysql.createConnection({
+                host: "localhost",
+                port: 3306,
+                user: "root",
+                password: "root",
+                database: "weborder_db",
+                insecureAuth : true
+            });
+        }
+    }
+         
+    test('DataBase testing in Playwright', async ({ page }) => {
+        var connectDatabase = new ConnectDatabase()
+        connectDatabase.connection.connect();
+        
+        var sql = "select * from login"
+        connectDatabase.connection.query(sql,function(err, rows){
+            if(err){
+                console.log(err)
+            }else{
+                console.log(rows)
+            for (const row of rows)
+            {
+                console.log(row.uname +" "+ row.pass)
+                // Do whatever else you need
+            }
+            }
+            connectDatabase.connection.end()
+        })
+    });
+});

@@ -1,0 +1,20 @@
+Getting Access Token....
+ef3169cc0fca482fae50e58ab85352e41128a56e613f4ad38f144e8a4297ceb8
+ef3169cc0fca482fae50e58ab85352e41128a56e613f4ad38f144e8a4297ceb8
+Creating a new note and generating a unique id....
+{
+  success: true,
+  status: 200,
+  message: 'Note successfully created',
+  data: {
+    id: '68c6636106ff22028be99597',
+    title: 'Playwright_Notes_Newly_Created',
+    description: 'Done via API',
+    category: 'Work',
+    completed: false,
+    created_at: '2025-09-14T06:40:33.042Z',
+    updated_at: '2025-09-14T06:40:33.042Z',
+    user_id: '68259722674a2f0287d5c8aa'
+  }
+}
+{ success: true, status: 200, message: 'Note successfully deleted' }
