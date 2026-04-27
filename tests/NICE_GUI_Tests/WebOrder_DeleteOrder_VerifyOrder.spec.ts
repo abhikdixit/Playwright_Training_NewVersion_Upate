@@ -8,6 +8,7 @@ test('Delete Order - Verify Order got deleted @sanity', async ({ page }) => {
   //await page.pause();
   await page.getByLabel('Password:').fill('test');
   await page.getByRole('button', { name: 'Login' }).click();
+  //await page.pause()
   //Verify that user has logged in
   //await page.url().includes('/Default1.aspx')
   await expect(page).toHaveURL('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/default.aspx')
@@ -27,7 +28,7 @@ test('Delete Order - Verify Order got deleted @sanity', async ({ page }) => {
   await page.getByLabel('City:*').fill('Bangalore');
   await page.getByLabel('Zip:*').click();
   await page.getByLabel('Zip:*').fill('560076');
-  await page.waitForTimeout(2000)
+  //await page.waitForTimeout(2000)
   await page.getByLabel('Visa').check();
   await page.getByLabel('Card Nr:*').click();
   await page.getByLabel('Card Nr:*').fill('1234567891');
@@ -56,11 +57,15 @@ test('Delete Order - Verify Order got deleted @sanity', async ({ page }) => {
   await expect(page).toHaveURL('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Default.aspx')
   await page.locator("//td[normalize-space()='" + ExpUserName + "']//preceding-sibling::td/input").click();
   await page.locator("#ctl00_MainContent_btnDelete").click()
+
+  await page.waitForLoadState('networkidle');
   // Verify that user got deleted
   //await page.waitForTimeout(3000)
   // wait for element to be present before checking its text
   await page.waitForSelector('#ctl00_MainContent_orderGrid');
   await expect(page.locator('#ctl00_MainContent_orderGrid')).not.toContainText(ExpUserName)
+
+
 
   // Logout from Application
   await page.getByRole('link', { name: 'Logout' }).click()

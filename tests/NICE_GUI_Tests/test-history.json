@@ -1,0 +1,147 @@
+{
+  "runs": [
+    {
+      "runId": "run-1776934301291",
+      "timestamp": "2026-04-23T08:51:41.291Z"
+    }
+  ],
+  "tests": {
+    "[chromium] OrangeHRM_Add_Unique_User.spec.ts::Add Unique User and Verify Creation @smoke": [
+      {
+        "passed": false,
+        "duration": 44633,
+        "timestamp": "2026-04-23T08:57:41.435Z",
+        "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] OrangeHRM_Add_User.spec.ts::OrangeHRM Add User @smoke": [
+      {
+        "passed": false,
+        "duration": 43373,
+        "timestamp": "2026-04-23T08:57:41.435Z",
+        "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts::Create User and Verify Changes": [
+      {
+        "passed": true,
+        "duration": 32334,
+        "timestamp": "2026-04-23T08:57:41.435Z",
+        "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts::Update User and Verify Changes": [
+      {
+        "passed": true,
+        "duration": 25143,
+        "timestamp": "2026-04-23T08:57:41.435Z",
+        "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts::Delete User and Verify Deletion": [
+      {
+        "passed": true,
+        "duration": 537,
+        "timestamp": "2026-04-23T08:57:41.435Z",
+        "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] OrangeHRM_Update_User.spec.ts::OrangeHRM Update User and Verify Changes @smoke": [
+      {
+        "passed": false,
+        "duration": 84929,
+        "timestamp": "2026-04-23T08:57:41.435Z",
+        "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] ScrapData_BaseClass_Method.spec.ts::Create Order-Update Order- Verify Order@smoke": [
+      {
+        "passed": true,
+        "duration": 4093,
+        "timestamp": "2026-04-23T08:57:41.435Z",
+        "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] ViewPort_WebOrder_Login.spec.ts::View Port Test cases @sanity @smoke": [
+      {
+        "passed": true,
+        "duration": 6643,
+        "timestamp": "2026-04-23T08:57:41.435Z",
+        "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] WebOrder_Create_Unique_Order_VerifyOrder.spec.ts::Create Order Unique Order- Verify Order @smoke": [
+      {
+        "passed": true,
+        "duration": 14252,
+        "timestamp": "2026-04-23T08:57:41.435Z",
+        "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] WebOrder_Page_Element_Screenshot.spec.ts::Create Order Unique Order- Verify Order @smoke": [
+      {
+        "passed": true,
+        "duration": 17573,
+        "timestamp": "2026-04-23T08:57:41.435Z",
+        "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] WebOrder_Update_Order_Using_Filter_Locator.spec.ts::Create Order - Update Order - Verify Order @smoke": [
+      {
+        "passed": true,
+        "duration": 15978,
+        "timestamp": "2026-04-23T08:57:41.435Z",
+        "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] WebOrder_Update_Order_VerifyOrder.spec.ts::Create Order-Update Order- Verify Order @smoke": [
+      {
+        "passed": true,
+        "duration": 19741,
+        "timestamp": "2026-04-23T08:57:41.435Z",
+        "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      }
+    ]
+  },
+  "summaries": [
+    {
+      "runId": "run-1776934301291",
+      "timestamp": "2026-04-23T08:51:41.291Z",
+      "total": 12,
+      "passed": 9,
+      "failed": 3,
+      "skipped": 0,
+      "flaky": 0,
+      "slow": 0,
+      "duration": 360143,
+      "passRate": 75
+    }
+  ],
+  "runFiles": {
+    "run-1776934301291": "./history-runs/run-1776934301291.json"
+  }
+}

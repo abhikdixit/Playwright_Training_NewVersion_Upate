@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
+test('OrangeHRM - Add User and Verify User', async ({ page }) => {
 
   // Go to https://opensource-demo.orangehrmlive.com/index.php/auth/login
   await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');

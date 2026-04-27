@@ -1,0 +1,9 @@
+Connected to the database
+Database Query Results: [
+  { uname: 'Tester', pass: 'test' },
+  { uname: 'Tester', pass: 'test' },
+  { uname: 'Tester', pass: 'test' },
+  { uname: 'Tester', pass: 'test' },
+  { uname: 'Tester', pass: 'test' },
+  { uname: 'Tester', pass: 'test' }
+]

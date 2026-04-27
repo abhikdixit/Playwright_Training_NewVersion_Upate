@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { AccessToken, deleteAllNotes } from "./BaseTest";
-test.describe("Create Notes API Testing", () => {
+test.describe("Create Notes API Testing @sanity", () => {
   const baseUrl = "https://practice.expandtesting.com";
   let token: string;
   const random_title = `Playwright_Notes_${Math.floor(Math.random() * 100000)}`;

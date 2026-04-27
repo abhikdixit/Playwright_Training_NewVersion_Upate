@@ -1,0 +1,110 @@
+{
+  "testScenarios": [
+    {
+      "id": "scenario_1",
+      "description": "Basic booking from Boston to Paris",
+      "departureCity": "Boston",
+      "destinationCity": "Paris",
+      "passenger": {
+        "firstName": "John",
+        "lastName": "Doe"
+      },
+      "paymentDetails": {
+        "cardNumber": "4111111111111111",
+        "cardMonth": "12",
+        "cardYear": "2025",
+        "nameOnCard": "John Doe"
+      }
+    },
+    {
+      "id": "scenario_2",
+      "description": "Booking from New York to London",
+      "departureCity": "New York",
+      "destinationCity": "London",
+      "passenger": {
+        "firstName": "Jane",
+        "lastName": "Smith"
+      },
+      "paymentDetails": {
+        "cardNumber": "5555555555554444",
+        "cardMonth": "06",
+        "cardYear": "2026",
+        "nameOnCard": "Jane Smith"
+      }
+    },
+    {
+      "id": "scenario_3",
+      "description": "Booking from San Diego to Berlin",
+      "departureCity": "San Diego",
+      "destinationCity": "Berlin",
+      "passenger": {
+        "firstName": "Michael",
+        "lastName": "Johnson"
+      },
+      "paymentDetails": {
+        "cardNumber": "378282246310005",
+        "cardMonth": "03",
+        "cardYear": "2025",
+        "nameOnCard": "Michael Johnson"
+      }
+    },
+    {
+      "id": "scenario_4",
+      "description": "Booking from Phoenix to Madrid",
+      "departureCity": "Phoenix",
+      "destinationCity": "Madrid",
+      "passenger": {
+        "firstName": "Sarah",
+        "lastName": "Williams"
+      },
+      "paymentDetails": {
+        "cardNumber": "4012888888881881",
+        "cardMonth": "09",
+        "cardYear": "2027",
+        "nameOnCard": "Sarah Williams"
+      }
+    },
+    {
+      "id": "scenario_5",
+      "description": "Booking from Portland to Rome",
+      "departureCity": "Portland",
+      "destinationCity": "Rome",
+      "passenger": {
+        "firstName": "David",
+        "lastName": "Brown"
+      },
+      "paymentDetails": {
+        "cardNumber": "6011111111111117",
+        "cardMonth": "11",
+        "cardYear": "2026",
+        "nameOnCard": "David Brown"
+      }
+    }
+  ],
+  "validCreditCards": [
+    {
+      "type": "Visa",
+      "number": "4111111111111111",
+      "month": "12",
+      "year": "2025"
+    },
+    {
+      "type": "Discover",
+      "number": "6011111111111117",
+      "month": "11",
+      "year": "2026"
+    },
+    {
+      "type": "American Express",
+      "number": "378282246310005",
+      "month": "03",
+      "year": "2025"
+    },
+    {
+      "type": "Mastercard",
+      "number": "5555555555554444",
+      "month": "06",
+      "year": "2026"
+    }
+  ]
+}

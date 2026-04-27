@@ -1,0 +1,10 @@
+# Page snapshot
+
+```yaml
+- heading "This page isn’t working" [level=1]
+- paragraph:
+  - strong: zero.webappsecurity.com
+  - text: didn’t send any data.
+- text: ERR_EMPTY_RESPONSE
+- button "Reload"
+```

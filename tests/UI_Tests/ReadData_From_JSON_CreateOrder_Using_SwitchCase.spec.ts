@@ -2,7 +2,7 @@ import fs from "fs";
 import { test, expect } from "@playwright/test";
 
 // Reads the JSON file and saves it
-const objects = fs.readFileSync("./tests/TestData/create_order_All_Scenario.json", "utf-8");
+const objects = fs.readFileSync("./tests/TestData/create_order_All_Scenario_Switch.json", "utf-8");
 const orders = JSON.parse(objects);
 
 test("Create Order - All Scenario", async ({ page }) => {
@@ -16,7 +16,7 @@ test("Create Order - All Scenario", async ({ page }) => {
   );
 
   // Navigate to order page
-  await page.getByRole("link", { name: "Order" }).nth(1).click();
+  await page.getByRole("link", { name: "Order", exact: true }).click();
   await expect(page).toHaveURL(/Process\.aspx/);
 
   // Order Scenarios
@@ -42,10 +42,10 @@ test("Create Order - All Scenario", async ({ page }) => {
       case "New order has been successfully added.":
         await expect(
           page.locator("//strong[normalize-space()='New order has been successfully added.']")
-        ).toHaveText("New order has been successfully added.");
+        ).toHaveText(order.Result.trim());
         break;
 
-      case "Quantity must be greater than zero.":
+      case "Field 'Quantity' cannot be empty.":
         await expect(
           page.locator("#ctl00_MainContent_fmwOrder_RequiredFieldValidator1 em")
         ).toHaveText(order.Result.trim());
@@ -81,12 +81,17 @@ test("Create Order - All Scenario", async ({ page }) => {
         ).toHaveText(order.Result.trim());
         break;
 
-      case "Field 'Expire date' cannot be empty":
+      case "Field 'Expire date' cannot be empty.":
         await expect(
           page.locator("#ctl00_MainContent_fmwOrder_RequiredFieldValidator7")
         ).toHaveText(order.Result.trim());
         break;
 
+      case "Invalid format. Only digits allowed.":
+        await expect(
+          page.locator("#ctl00_MainContent_fmwOrder_rev1")
+        ).toHaveText(order.Result.trim());
+        break;        
       default:
         throw new Error(`Unexpected result: ${order.Result}`);
     }

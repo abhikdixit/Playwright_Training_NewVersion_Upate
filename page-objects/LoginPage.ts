@@ -26,16 +26,31 @@ export class LoginPage extends AbstractPage {
     this.LogInToZeroBanktext = page.locator('h3:has-text("Log in to ZeroBank")')
   }
 
+  // async enterTextToLoginTextBox(username: string): Promise<void> {
+  //   await this.usernameInput.fill(username)
+  // }
+
+  // async enterTextToPasswordTextBox(password: string): Promise<void> {
+  //   await this.passwordInput.fill(password)
+  // }
+
+  // async clickOnSubmitButton(): Promise<void> {
+  //   await this.submitButton.click()
+  // }
+
+  // async clickOnKeepMeSignedIn(): Promise<void> {
+  //   await this.keepmesignedin.check()
+  // }
   // Define login page methods
   async login(username: string, password: string): Promise<void> {
-    await this.usernameInput.type(username)
-    await this.passwordInput.type(password)
+    await this.usernameInput.fill(username)
+    await this.passwordInput.fill(password)
     await this.submitButton.click()    
   }
 
    async loginwithSignedIn(username: string, password: string): Promise<void> {
-    await this.usernameInput.type(username)
-    await this.passwordInput.type(password)
+    await this.usernameInput.fill(username)
+    await this.passwordInput.fill(password)
     await this.keepmesignedin.check()
     await this.submitButton.click()
     

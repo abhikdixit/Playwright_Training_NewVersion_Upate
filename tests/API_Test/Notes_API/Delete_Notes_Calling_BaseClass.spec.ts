@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 import { AccessToken, Creating_notes_and_generating_id } from './BaseTest'
-test.describe('Delete Notes API Testing', () => {
+test.describe('Delete Notes API Testing @sanity', () => {
   const baseUrl = 'https://practice.expandtesting.com'
   let token: string
   let id: string
@@ -14,7 +14,7 @@ test.describe('Delete Notes API Testing', () => {
   
   
 
-    test('Delete Request - Delete Notes', async ({ request }) => {
+    test('Delete Request - Delete Notes ', async ({ request }) => {
       const response = await request.delete(`${baseUrl}/notes/api/notes/${id}`, {
   
           headers: {

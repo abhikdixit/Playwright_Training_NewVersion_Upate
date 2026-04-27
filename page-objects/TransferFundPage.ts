@@ -75,8 +75,8 @@ async makePayment(selectFromAccount: string, toAccount: string, amount: string, 
   }
   async assertSamePage(): Promise<void> {
     await expect(this.fundTransferPage).toBeVisible();
-    await expect(this.fundTransferPage).toContainText(
-      "Transfer Money & Make Payments"
-    );
+    await expect(this.fundTransferPage).toContainText("Transfer Money & Make Payments");
+    await expect(this.amount).toBeEmpty();
+    await expect(this.descriptionInput).toBeEmpty();
   }
 }

@@ -1,38 +1,64 @@
 import { test, expect } from '@playwright/test';
-import { Connection } from 'mysql2/typings/mysql/lib/Connection';
+import * as db from './database';
 
-test.describe('MYSQL Test', function() {
-        class ConnectDatabase {
-        constructor() {
-            var mysql = require("mysql2");
-            this.connection = mysql.createConnection({
-                host: "localhost",
-                port: 3306,
-                user: "root",
-                password: "root",
-                database: "weborder_db",
-                insecureAuth : true
-            });
-        }
+interface LoginRecord {
+  uname: string;
+  pass: string;
+}
+
+const config = {
+  url: 'http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx',
+  selectors: {
+    username: 'input[name="ctl00$MainContent$username"]',
+    password: 'input[name="ctl00$MainContent$password"]',
+    loginButton: 'input[type="submit"][value="Login"]',
+    logoutLink: 'a:text("Logout")',
+    ordersHeading: "div[class='content'] h2",
+    errorMessage: "#ctl00_MainContent_status"
+  },
+  expectedResults: {
+    successHeading: 'List of All Orders',
+    errorMessage: 'Invalid Login or Password.'
+  }
+};
+
+test.describe('Database-driven Login Tests', () => {
+
+  let testRecords: LoginRecord[] = [];
+
+  test.beforeAll(async () => {
+    testRecords = await db.query<LoginRecord[]>('SELECT * FROM login');
+    console.log(`Loaded ${testRecords.length} records`);
+  });
+
+  test.beforeEach(async ({ page }) => {
+    await page.goto(config.url);
+  });
+
+  test('Execute Login Tests from DB', async ({ page }) => {
+
+    for (const data of testRecords) {
+      console.log(`Executing for user: ${data.uname}`);
+
+      await page.fill(config.selectors.username, data.uname);
+      await page.fill(config.selectors.password, data.pass);
+      await page.click(config.selectors.loginButton);
+
+      const successHeading = page.locator(config.selectors.ordersHeading);
+      const errorMsg = page.locator(config.selectors.errorMessage);
+
+      if (await successHeading.isVisible()) {
+        await expect(successHeading).toContainText(config.expectedResults.successHeading);
+
+        await page.click(config.selectors.logoutLink);
+      } else {
+        await expect(errorMsg).toContainText(config.expectedResults.errorMessage);
+      }
     }
-         
-    test('DataBase testing in Playwright', async ({ page }) => {
-        var connectDatabase = new ConnectDatabase()
-        connectDatabase.connection.connect();
-        
-        var sql = "select * from login"
-        connectDatabase.connection.query(sql,function(err, rows){
-            if(err){
-                console.log(err)
-            }else{
-                console.log(rows)
-            for (const row of rows)
-            {
-                console.log(row.uname +" "+ row.pass)
-                // Do whatever else you need
-            }
-            }
-            connectDatabase.connection.end()
-        })
-    });
+  });
+
+  test.afterAll(async () => {
+    await db.close();
+  });
+
 });

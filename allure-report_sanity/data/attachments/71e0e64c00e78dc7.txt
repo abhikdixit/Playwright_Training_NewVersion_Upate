@@ -1,0 +1,13 @@
+An error occurred: TypeError: scrap.scraper2 is not a function
+    at C:\Training_Scripts\Playwright_Training_NewVersion\tests\NICE_GUI_Tests\ScrapData_BaseClass_Method.spec.ts:14:17
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at processImmediate (node:internal/timers:454:9)
+    at process.callbackTrampoline (node:internal/async_hooks:130:17)
+    at C:\Training_Scripts\Playwright_Training_NewVersion\node_modules\playwright\lib\worker\workerMain.js:304:9
+    at C:\Training_Scripts\Playwright_Training_NewVersion\node_modules\playwright\lib\worker\testInfo.js:289:11
+    at TimeoutManager.withRunnable (C:\Training_Scripts\Playwright_Training_NewVersion\node_modules\playwright\lib\worker\timeoutManager.js:67:14)
+    at TestInfoImpl._runWithTimeout (C:\Training_Scripts\Playwright_Training_NewVersion\node_modules\playwright\lib\worker\testInfo.js:287:7)
+    at C:\Training_Scripts\Playwright_Training_NewVersion\node_modules\playwright\lib\worker\workerMain.js:302:7
+    at WorkerMain._runTest (C:\Training_Scripts\Playwright_Training_NewVersion\node_modules\playwright\lib\worker\workerMain.js:277:5)
+    at WorkerMain.runTestGroup (C:\Training_Scripts\Playwright_Training_NewVersion\node_modules\playwright\lib\worker\workerMain.js:193:11)
+    at process.<anonymous> (C:\Training_Scripts\Playwright_Training_NewVersion\node_modules\playwright\lib\common\process.js:65:22)

@@ -1,9 +1,0 @@
-❌ Schema mismatch as expected: [
-  {
-    instancePath: '',
-    schemaPath: '#/required',
-    keyword: 'required',
-    params: { missingProperty: 'data' },
-    message: "must have required property 'data'"
-  }
-]

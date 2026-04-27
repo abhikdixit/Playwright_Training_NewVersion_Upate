@@ -2,6 +2,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Create Order Unique Order- Verify Order @smoke', async ({ page }) => {
+  //tag:'@smoke'
   await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
   //Browser.object.action
   await page.getByLabel('Username:').fill('Tester');
@@ -9,6 +10,7 @@ test('Create Order Unique Order- Verify Order @smoke', async ({ page }) => {
   await page.getByLabel('Password:').fill('test');
   const loginbutton = page.getByRole('button', { name: 'Login' });
   await loginbutton.click();
+  await page.waitForLoadState();
   await expect(page.getByText("List of All Orders")).toHaveText('List of All Orders');
   //Verify that user has logged in
   //await page.url().includes('/Default1.aspx')
@@ -24,7 +26,8 @@ test('Create Order Unique Order- Verify Order @smoke', async ({ page }) => {
   //await page.getByLabel('Customer name:*').click();
   
   const d = new Date();
-  let ms = d.getMilliseconds();
+  let ms = d.getTime(); //use getTime to get milliseconds
+  
 
   const ExpUserName = 'Dixit' + ms;
 
@@ -33,8 +36,9 @@ test('Create Order Unique Order- Verify Order @smoke', async ({ page }) => {
   await page.getByLabel('Customer name:*').fill(ExpUserName);
   //await page.pause()
   await page.getByLabel('Street:*').fill('BTM')
-  await page.waitForTimeout(5000)
+ await page.waitForTimeout(3000)
   //await page.waitForLoadState();
+  //await page.waitForSelector(ExpUserName)
   //await page.getByLabel('Street:*').isEditable().fill('BTM');
   await page.getByLabel('City:*').fill('Bangalore');
   await page.getByLabel('Zip:*').click();

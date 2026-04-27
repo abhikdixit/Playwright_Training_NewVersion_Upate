@@ -24,11 +24,15 @@ test('BalzeDemo', async ({ page,browserName  }) => {
 
 test('TO Test Login Functionality-Writtern Scripts', async ({ page,browserName  }) => {
   //test.skip(browserName === 'webkit', 'Still working on it');
-  await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
-  await page.getByLabel('Username:').type('Tester')
-  await page.getByLabel('Password:').fill('test');
-  await page.getByRole('button', { name: 'Login' }).click();
-  await page.getByRole('link', { name: 'Logout' }).click();
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    await page.getByPlaceholder('Username').click();
+    await page.getByPlaceholder('Username').fill('Admin');
+    await page.getByPlaceholder('Password').click();
+    await page.getByPlaceholder('Password').fill('admin123');
+    await page.getByRole('button', { name: 'Login' }).click();
+    await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index');
+
+
 
 });
 

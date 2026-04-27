@@ -32,7 +32,7 @@ test('Login to OrangeHRM', async ({ page }) => {
   await page.locator('[placeholder="Type for hints..."]').click();
   await page.locator('[placeholder="Type for hints..."]').fill('A');
   await page.waitForTimeout(3000)
-
+  //await page.pause()
 // Click by Index
   //await page.locator('div.oxd-autocomplete-option').nth(0).click();
 
@@ -60,7 +60,10 @@ test('Login to OrangeHRM', async ({ page }) => {
 
   // Click text=Save
   await page.locator('text=Save').click();
-  await page.waitForTimeout(1000)
+  //await page.waitForTimeout(1000)
+  //await page.waitForURL("https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers")
+  await page.waitForSelector(".orangehrm-container")
+  await expect(page.locator(".orangehrm-container")).toContainText(ExpUserName)
   //await page.waitForTimeout(9000)
   await page.check("//div[text()='"+ExpUserName+"']/parent::div/preceding-sibling::div//i");
   //Click on Edit of Added user and Update the Role to ESS from Admin and Verify that it got updated

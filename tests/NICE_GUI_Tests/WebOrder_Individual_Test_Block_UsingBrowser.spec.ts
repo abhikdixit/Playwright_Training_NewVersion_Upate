@@ -1,9 +1,10 @@
 //import { test, expect } from '@playwright/test';
 import { test, expect, Page } from '@playwright/test';
 
-test.describe('E2E WebOrder Application', () => {
+test.describe.serial('E2E WebOrder Application', () => {
   let page: Page;
   let ExpUserName: string;
+  test.setTimeout(60000); // Set timeout for the entire test suite to 60 seconds
 
   test.beforeAll(async ({ browser }) => {
     page = await browser.newPage();
@@ -18,7 +19,7 @@ test.describe('E2E WebOrder Application', () => {
     await page.getByLabel('Username:').fill('Tester');
     await page.getByLabel('Password:').fill('test');
     await page.getByRole('button', { name: 'Login' }).click();
-
+    //await page.pause();
     // Verify successful login
     await expect(page).toHaveURL('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/default.aspx');
     // Additional verification that we're logged in

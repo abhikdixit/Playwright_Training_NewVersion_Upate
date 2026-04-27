@@ -1,30 +1,52 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, Page } from '@playwright/test';
 import db from './database';
 
-  test('test', async ({ page }) => {
+// Define Type for DB Result
+type LoginRecord = {
+  uname: string;
+  pass: string;
+};
 
-  // Example query to fetch data from the database
-  const query = 'SELECT * FROM login'; // replace with your SQL query
-  try {
-  const results = await db.queryDatabase(query) as any[];
-    console.log('Database Query Results:', results);
+test.describe('Database Driven Login Tests', () => {
 
-    // Use the data in your Playwright script
-    // Example: Navigate to a webpage and perform actions
-    await page.goto('https://example.com');
-    await page.fill('#input-field', results[0].your_column_name); // replace with your actual column name
-    await page.click('#submit-button');
+  test('Validate login using DB data', async ({ page }: { page: Page }) => {
 
-    // Perform assertions if needed
-    // Example: Check if the page URL contains a specific path
-    const pageUrl = await page.url();
-    console.log('Page URL:', pageUrl);
-  } catch (error) {
-    console.error('Error executing query:', error);
-  } finally {
-    // Close the database connection
-  db.connection.end();
+    const query = 'SELECT uname, pass FROM login';
 
-  // Playwright manages browser lifecycle automatically
-  }
+    try {
+      // Fetch data from DB
+      const results = await db.queryDatabase(query) as LoginRecord[];
+      console.log('Database Query Results:', results);
+
+      for (const row of results) {
+
+        await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
+
+        await page.getByLabel('Username:').fill(row.uname);
+        await page.getByLabel('Password:').fill(row.pass);
+        await page.getByRole('button', { name: 'Login' }).click();
+
+        // Validation (simple example)
+        await expect(page).toHaveURL(/WebOrders/);
+
+        // Logout (only if login successful)
+        const logoutLink = page.getByRole('link', { name: 'Logout' });
+        if (await logoutLink.isVisible()) {
+          await logoutLink.click();
+        }
+      }
+
+      const pageUrl = page.url();
+      console.log('Final Page URL:', pageUrl);
+
+    } catch (error) {
+      console.error('Error executing query:', error);
+      throw error; // fail test explicitly
+    } finally {
+      // Close DB connection safely
+      await db.connection.end();
+    }
+
+  });
+
 });

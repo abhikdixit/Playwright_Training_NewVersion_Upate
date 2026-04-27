@@ -13,6 +13,7 @@ test.describe('Login / Logout Flow @smoke', () => {
     homePage = new HomePage(page);
 
     await homePage.visit()
+    //await page.reload
   })
 
   // Negative Scenario
@@ -32,8 +33,13 @@ test.describe('Login / Logout Flow @smoke', () => {
       process.env.zeroBankPassword || 'password'
     )
     //This is to bypass SSL error
-    await page.goto('http://zero.webappsecurity.com/bank/transfer-funds.html')
-    await homePage.logout()
-    await homePage.VerifyURL('http://zero.webappsecurity.com/index.html')
+    //await page.waitForLoadState("networkidle");
+    await page.waitForLoadState("networkidle");
+    //This is to bypass SSL error
+    await page.goto("http://zero.webappsecurity.com");
+    await page.waitForLoadState("networkidle");
+    await homePage.logout();
+    await page.waitForLoadState("networkidle");
+    await homePage.VerifyURL('http://zero.webappsecurity.com/index.html');
   })
 })

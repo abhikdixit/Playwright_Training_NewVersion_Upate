@@ -1,0 +1,174 @@
+# Page snapshot
+
+```yaml
+- table:
+  - rowgroup:
+    - row:
+      - cell "Web Orders View all orders View all products Order":
+        - heading "Web Orders" [level=1]
+        - list:
+          - listitem:
+            - link "View all orders":
+              - /url: Default.aspx
+          - listitem:
+            - link "View all products":
+              - /url: Products.aspx
+          - listitem:
+            - link "Order":
+              - /url: Process.aspx
+      - cell:
+        - text: Welcome, Tester! |
+        - link "Logout":
+          - /url: javascript:__doPostBack('ctl00$logout','')
+        - heading "List of All Orders" [level=2]
+        - paragraph:
+          - link "Check All":
+            - /url: javascript:__doPostBack('ctl00$MainContent$btnCheckAll','')
+          - link "Uncheck All":
+            - /url: javascript:__doPostBack('ctl00$MainContent$btnUncheckAll','')
+        - table:
+          - rowgroup:
+            - 'row "Name Product # Date Street City State Zip Card Card Number Exp"':
+              - columnheader
+              - columnheader "Name"
+              - columnheader "Product"
+              - columnheader "#"
+              - columnheader "Date"
+              - columnheader "Street"
+              - columnheader "City"
+              - columnheader "State"
+              - columnheader "Zip"
+              - columnheader "Card"
+              - columnheader "Card Number"
+              - columnheader "Exp"
+              - columnheader
+            - row "Paul Brown ScreenSaver 2 03/12/2010 5, Ringer Street Las Vegas, NV US 748 MasterCard 123456789012 02/07 Edit":
+              - cell:
+                - checkbox
+              - cell "Paul Brown"
+              - cell "ScreenSaver"
+              - cell "2"
+              - cell "03/12/2010"
+              - cell "5, Ringer Street"
+              - cell "Las Vegas, NV"
+              - cell "US"
+              - cell "748"
+              - cell "MasterCard"
+              - cell "123456789012"
+              - cell "02/07"
+              - cell "Edit":
+                - button "Edit"
+            - row "Mark Smith FamilyAlbum 1 03/07/2010 9, Maple Valley Whitestone, British Canada 76743 VISA 770077007700 01/09 Edit":
+              - cell:
+                - checkbox
+              - cell "Mark Smith"
+              - cell "FamilyAlbum"
+              - cell "1"
+              - cell "03/07/2010"
+              - cell "9, Maple Valley"
+              - cell "Whitestone, British"
+              - cell "Canada"
+              - cell "76743"
+              - cell "VISA"
+              - cell "770077007700"
+              - cell "01/09"
+              - cell "Edit":
+                - button "Edit"
+            - row "Steve Johns ScreenSaver 1 02/26/2010 17, Park Avenue Salmon Island Canada 21233 MasterCard 444555444555 03/09 Edit":
+              - cell:
+                - checkbox
+              - cell "Steve Johns"
+              - cell "ScreenSaver"
+              - cell "1"
+              - cell "02/26/2010"
+              - cell "17, Park Avenue"
+              - cell "Salmon Island"
+              - cell "Canada"
+              - cell "21233"
+              - cell "MasterCard"
+              - cell "444555444555"
+              - cell "03/09"
+              - cell "Edit":
+                - button "Edit"
+            - row "Charles Dodgeson MyMoney 1 02/15/2010 45, Stone st. Bringtone, TX US 23233 American Express 333222333222 07/10 Edit":
+              - cell:
+                - checkbox
+              - cell "Charles Dodgeson"
+              - cell "MyMoney"
+              - cell "1"
+              - cell "02/15/2010"
+              - cell "45, Stone st."
+              - cell "Bringtone, TX"
+              - cell "US"
+              - cell "23233"
+              - cell "American Express"
+              - cell "333222333222"
+              - cell "07/10"
+              - cell "Edit":
+                - button "Edit"
+            - row "Susan McLaren MyMoney 1 01/05/2010 7, Flower Street Earlcastle Great Britain 21444 MasterCard 999888777888 04/10 Edit":
+              - cell:
+                - checkbox
+              - cell "Susan McLaren"
+              - cell "MyMoney"
+              - cell "1"
+              - cell "01/05/2010"
+              - cell "7, Flower Street"
+              - cell "Earlcastle"
+              - cell "Great Britain"
+              - cell "21444"
+              - cell "MasterCard"
+              - cell "999888777888"
+              - cell "04/10"
+              - cell "Edit":
+                - button "Edit"
+            - row "Bob Feather FamilyAlbum 1 12/31/2009 14, North av. Milltown, WI US 81734 VISA 111222111222 06/08 Edit":
+              - cell:
+                - checkbox
+              - cell "Bob Feather"
+              - cell "FamilyAlbum"
+              - cell "1"
+              - cell "12/31/2009"
+              - cell "14, North av."
+              - cell "Milltown, WI"
+              - cell "US"
+              - cell "81734"
+              - cell "VISA"
+              - cell "111222111222"
+              - cell "06/08"
+              - cell "Edit":
+                - button "Edit"
+            - row "Samuel Clemens MyMoney 2 12/21/2009 3, Garden st. Hillsberry, UT US 53665 MasterCard 398743242342 03/09 Edit":
+              - cell:
+                - checkbox
+              - cell "Samuel Clemens"
+              - cell "MyMoney"
+              - cell "2"
+              - cell "12/21/2009"
+              - cell "3, Garden st."
+              - cell "Hillsberry, UT"
+              - cell "US"
+              - cell "53665"
+              - cell "MasterCard"
+              - cell "398743242342"
+              - cell "03/09"
+              - cell "Edit":
+                - button "Edit"
+            - row "Clare Jefferson FamilyAlbum 2 12/04/2009 23, Owk Street Greentown, CA US 63325 MasterCard 770000770000 03/08 Edit":
+              - cell:
+                - checkbox
+              - cell "Clare Jefferson"
+              - cell "FamilyAlbum"
+              - cell "2"
+              - cell "12/04/2009"
+              - cell "23, Owk Street"
+              - cell "Greentown, CA"
+              - cell "US"
+              - cell "63325"
+              - cell "MasterCard"
+              - cell "770000770000"
+              - cell "03/08"
+              - cell "Edit":
+                - button "Edit"
+        - button "Delete Selected"
+```

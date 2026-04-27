@@ -23,28 +23,30 @@ const config = {
   //testDir: './tests/UI_Tests/',
   //testDir: './tests/UI_Special_Control/',
   //testDir: './tests/NICE_GUI_Tests/',
+  //testDir: './tests/HCL_Test/',
   //testDir: './tests/Assignments/',
   //testDir: './tests/API_Test/',
   //testDir: './tests/API_Test/Restful-booker_API/',
   //testDir: './tests/Mock_API_Test/',
   //testDir: './tests/OrangeHRM/',
-  //testDir: './tests/ZeroBank_Test_PageObject/',
+  testDir: './tests/ZeroBank_Test_PageObject/',
+  //testDir: './tests/WEBORDER/',
   //testDir: './tests/Spreecom_API_Framework/',
   //testDir: './tests/Spreecom_API_Minh/API_test/',
   //testDir:'./tests/API_Test/Request_API/',
-  testDir:'./tests/API_Test/Notes_API/',
-  testMatch: ['**/*.spec.ts', '**/*.test.ts'], // only run real test files
+  //testDir:'./tests/API_Test/Notes_API/',
+  //testMatch: ['**/*.spec.ts', '**/*.test.ts'], // only run real test files
   //testDir:'./tests/API_Test/GraphQL_API_Test/',
   //testDir: './tests/Salesforce_Test',
   /* Maximum time one test can run for. */
-  //timeout: 60000,
+  timeout: 80000,
   
   expect: {
     /**
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-   //timeout: 10000
+    //timeout: 80000
   },
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -57,10 +59,32 @@ const config = {
   /* Opt out of parallel tests on CI. */
   //workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  //reporter: 'html',
+  reporter: 'html',
   //reporter: [['html', { open: 'never' }]],
   //reporter: [["line"], ["allure-playwright"]],
-  reporter: [["html"], ["allure-playwright"]],
+  //reporter: [["html"], ["allure-playwright"]],
+  /* reporter: [
+    ['playwright-smart-reporter', {
+      outputFile: 'UI_Smoke_Test_Report.html',
+      historyFile: 'test-history.json',
+      maxHistoryRuns: 5,
+      performanceThreshold: 0.2,
+      slackWebhook: process.env.SLACK_WEBHOOK_URL,
+      teamsWebhook: process.env.TEAMS_WEBHOOK_URL,
+      // Feature flags
+      enableRetryAnalysis: true,
+      enableFailureClustering: true,
+      enableStabilityScore: true,
+      enableGalleryView: true,
+      enableComparison: true,
+      enableAIRecommendations: true,
+      enableTraceViewer: true,
+      enableHistoryDrilldown: true,
+      stabilityThreshold: 70,
+      retryFailureThreshold: 3,
+      baselineRunId: 'main-branch-baseline', // optional
+    }],
+  ],*/
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
 
@@ -71,23 +95,23 @@ const config = {
     //baseURL: 'http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx',
     //baseURL: 'https://practice.expandtesting.com/',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    //trace: 'retain-on-failure',
+    trace: 'retain-on-failure',
     //video: 'on-first-retry',
-    //video: 'retain-on-failure',
-    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+    screenshot:'only-on-failure',
     // slowMo: 1000, // Moved to launchOptions in project config if needed
     // Tell all tests to load signed-in state from 'storageState.json'.
     //baseURL: 'http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders',
-    //storageState: './tests/OrangeHRM/WebOrderState.json',// <--- loads the signed-in session
+   // storageState: './tests/OrangeHRM/WebOrderState.json',// <--- loads the signed-in session
     //storageState: './tests/OrangeHRM/storageState.json',   // <--- loads the signed-in session
-    video: 'retain-on-failure',
+    //video: 'retain-on-failure',
     //screenshot: 'only-on-failure',
     //screenshot: 'only-on-failure',
-    //storageState: "./LoginAuth.json"
+    //storageState: "./LoginAuth.json",
     //viewport: { width: 1920, height: 1080 },
     headless: false,
-    
-    trace : 'on',
+    //video: 'on',
+    //trace : 'on',
     // To bypass Certificate error.
     ignoreHTTPSErrors:true
     //viewport: { width: 680, height: 520 }
@@ -97,13 +121,13 @@ const config = {
   /* Configure projects for major browsers */
    projects: [
    {
-      name: 'chrome',
+      name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
         viewport:{width:1536,height:864},
         //colorScheme: 'dark',
         launchOptions: {
-          //slowMo: 2000,
+          //slowMo: 1000,
            //args:["--start-fullscreen"]
            //args:["--start-maximized"]
         }

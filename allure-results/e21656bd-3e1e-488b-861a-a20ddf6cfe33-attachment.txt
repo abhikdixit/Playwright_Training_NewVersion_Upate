@@ -1,0 +1,33 @@
+Getting Access Token....
+07e7431a1aab4090843ffaed30c2ef518e2097de1c1647e09ebc4cfdeabc1f11
+Deleting all notes...
+Deleted note ID: 68eba71f35835f0297d6be61
+Deleted note ID: 68eba71f35835f0297d6be5c
+Deleted note ID: 68eba71f35835f0297d6be5a
+Deleted note ID: 68eb972e35835f0297d6bdc4
+Deleted note ID: 68eb972d35835f0297d6bdbf
+Deleted note ID: 68eb972d35835f0297d6bdb9
+Deleted note ID: 68eb972c35835f0297d6bdb3
+Deleted note ID: 68eb972c35835f0297d6bdad
+Deleted note ID: 68eb972c35835f0297d6bda8
+Deleted note ID: 68eb972b35835f0297d6bda2
+Deleted note ID: 68eb972b35835f0297d6bd9c
+Deleted note ID: 68eb972a35835f0297d6bd95
+Deleted note ID: 68eb972a35835f0297d6bd8f
+Deleted note ID: 68eb96f535835f0297d6bd85
+{
+  success: true,
+  status: 200,
+  message: 'Note successfully created',
+  data: {
+    id: '69048cf445fcff029aa91835',
+    title: 'Playwright_Notes_12422',
+    description: 'Done via API',
+    category: 'Personal',
+    completed: false,
+    created_at: '2025-10-31T10:18:28.081Z',
+    updated_at: '2025-10-31T10:18:28.081Z',
+    user_id: '68b0018b6f7da0028a4b2976'
+  }
+}
+Playwright_Notes_12422

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
+test('Login TC1', async ({ page }) => {
   test.setTimeout(50000);
   await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
   await page.getByRole('textbox', { name: 'Username' }).fill('Admin');
@@ -13,3 +13,4 @@ test('test', async ({ page }) => {
   await expect(page.getByRole('button', { name: 'Login' })).toBeVisible();
   await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 });
+

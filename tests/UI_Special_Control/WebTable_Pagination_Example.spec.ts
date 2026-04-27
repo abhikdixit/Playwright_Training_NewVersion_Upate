@@ -4,7 +4,7 @@ test.describe('WebTable Pagination - Name and Salary Check', () => {
   // const tgtFName = 'Dixit';
   // const expSalary = '$163,500';
 
-    const tgtFName = 'Paul';
+  const tgtFName = 'Paul';
   const expSalary = '$725,000';
 
   // const tgtFName = 'Bruno';
@@ -21,6 +21,7 @@ test.describe('WebTable Pagination - Name and Salary Check', () => {
   }
 
   test('Search for a name and verify salary', async ({ page }) => {
+    //test.setTimeout(60000); // Set timeout to 60 seconds for this test
     await page.goto('https://datatables.net/examples/data_sources/server_side');
 
     let found = false;

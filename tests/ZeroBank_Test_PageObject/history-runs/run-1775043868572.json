@@ -1,0 +1,831 @@
+{
+  "runId": "run-1775043868572",
+  "timestamp": "2026-04-01T11:44:28.572Z",
+  "tests": {
+    "[chrome] ForgetPassword.spec.ts::Send Request for Forgotten password": {
+      "testId": "[chrome] ForgetPassword.spec.ts::Send Request for Forgotten password",
+      "title": "Send Request for Forgotten password",
+      "file": "ForgetPassword.spec.ts",
+      "status": "passed",
+      "duration": 6776,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Launch browser",
+          "duration": 333,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create context",
+          "duration": 15,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 262,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/index.html\"",
+          "duration": 4722,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Click locator('#signin_button')",
+          "duration": 408,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('a[href=\\'/forgot-password.html\\']')",
+          "duration": 420,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"abc@gmail.com\" locator('#user_email')",
+          "duration": 20,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('//input[@value=\\'Send Password\\']')",
+          "duration": 409,
+          "category": "pw:api"
+        },
+        {
+          "title": "Get text content locator('//div[@class=\\'page-header\\']/parent::div')",
+          "duration": 20,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chrome] ForgetPassword.spec.ts____Send Request for Forgotten password-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chrome] login_all_tcs_Calling_AbstractPage.spec.ts::Execute all login scenarios from JSON": {
+      "testId": "[chrome] login_all_tcs_Calling_AbstractPage.spec.ts::Execute all login scenarios from JSON",
+      "title": "Execute all login scenarios from JSON",
+      "file": "login_all_tcs_Calling_AbstractPage.spec.ts",
+      "status": "passed",
+      "duration": 27221,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 8,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 338,
+          "category": "pw:api"
+        },
+        {
+          "title": "Close context",
+          "duration": 73,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create context",
+          "duration": 43,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 458,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/index.html\"",
+          "duration": 7395,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Click locator('#signin_button')",
+          "duration": 512,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"username\" locator('#user_login')",
+          "duration": 79,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"password\" locator('#user_password')",
+          "duration": 43,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('text=Sign in')",
+          "duration": 2047,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 510,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/\"",
+          "duration": 565,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 473,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByText('username')",
+          "duration": 120,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Logout' })",
+          "duration": 761,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 474,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"load\"",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('#signin_button')",
+          "duration": 445,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"username\" locator('#user_login')",
+          "duration": 91,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"password1\" locator('#user_password')",
+          "duration": 40,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('text=Sign in')",
+          "duration": 790,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 524,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/\"",
+          "duration": 376,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 473,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('#signin_button')",
+          "duration": 421,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"username1\" locator('#user_login')",
+          "duration": 60,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"password\" locator('#user_password')",
+          "duration": 39,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('text=Sign in')",
+          "duration": 773,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 522,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/\"",
+          "duration": 426,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 469,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('#signin_button')",
+          "duration": 525,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"username\" locator('#user_login')",
+          "duration": 62,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"\" locator('#user_password')",
+          "duration": 39,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('text=Sign in')",
+          "duration": 821,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 482,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/\"",
+          "duration": 460,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 484,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('#signin_button')",
+          "duration": 447,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"\" locator('#user_login')",
+          "duration": 65,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"password\" locator('#user_password')",
+          "duration": 47,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('text=Sign in')",
+          "duration": 837,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 533,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/\"",
+          "duration": 428,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 454,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chrome] login_all_tcs_Calling_AbstractPage.spec.ts____Execute all login scenarios from JSON-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chrome] login_all_tcs.spec.ts::Login scenario #1 - TC1": {
+      "testId": "[chrome] login_all_tcs.spec.ts::Login scenario #1 - TC1",
+      "title": "Login scenario #1 - TC1",
+      "file": "login_all_tcs.spec.ts",
+      "status": "passed",
+      "duration": 22953,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 8,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 243,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/index.html\"",
+          "duration": 10302,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Click locator('#signin_button')",
+          "duration": 524,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"username\" locator('#user_login')",
+          "duration": 75,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"password\" locator('#user_password')",
+          "duration": 44,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('text=Sign in')",
+          "duration": 7403,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 423,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/\"",
+          "duration": 962,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 437,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByText('username')",
+          "duration": 107,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Logout' })",
+          "duration": 871,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 473,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"load\"",
+          "duration": 2,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chrome] login_all_tcs.spec.ts____Login scenario #1 - TC1-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chrome] login_all_tcs.spec.ts::Login scenario #2 - TC2": {
+      "testId": "[chrome] login_all_tcs.spec.ts::Login scenario #2 - TC2",
+      "title": "Login scenario #2 - TC2",
+      "file": "login_all_tcs.spec.ts",
+      "status": "passed",
+      "duration": 8059,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 7,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 261,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/index.html\"",
+          "duration": 4928,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Click locator('#signin_button')",
+          "duration": 539,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"username\" locator('#user_login')",
+          "duration": 65,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"password1\" locator('#user_password')",
+          "duration": 37,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('text=Sign in')",
+          "duration": 835,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 461,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chrome] login_all_tcs.spec.ts____Login scenario #2 - TC2-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chrome] login_all_tcs.spec.ts::Login scenario #3 - TC3": {
+      "testId": "[chrome] login_all_tcs.spec.ts::Login scenario #3 - TC3",
+      "title": "Login scenario #3 - TC3",
+      "file": "login_all_tcs.spec.ts",
+      "status": "passed",
+      "duration": 6381,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 16,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 254,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/index.html\"",
+          "duration": 3473,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Click locator('#signin_button')",
+          "duration": 517,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"username1\" locator('#user_login')",
+          "duration": 75,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"password\" locator('#user_password')",
+          "duration": 37,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('text=Sign in')",
+          "duration": 763,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 531,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chrome] login_all_tcs.spec.ts____Login scenario #3 - TC3-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chrome] login_all_tcs.spec.ts::Login scenario #4 - TC4": {
+      "testId": "[chrome] login_all_tcs.spec.ts::Login scenario #4 - TC4",
+      "title": "Login scenario #4 - TC4",
+      "file": "login_all_tcs.spec.ts",
+      "status": "passed",
+      "duration": 11211,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 13,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 295,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/index.html\"",
+          "duration": 8156,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Click locator('#signin_button')",
+          "duration": 467,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"username\" locator('#user_login')",
+          "duration": 66,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"\" locator('#user_password')",
+          "duration": 42,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('text=Sign in')",
+          "duration": 723,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 520,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chrome] login_all_tcs.spec.ts____Login scenario #4 - TC4-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chrome] login_all_tcs.spec.ts::Login scenario #5 - TC5": {
+      "testId": "[chrome] login_all_tcs.spec.ts::Login scenario #5 - TC5",
+      "title": "Login scenario #5 - TC5",
+      "file": "login_all_tcs.spec.ts",
+      "status": "passed",
+      "duration": 7114,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 9,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 235,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/index.html\"",
+          "duration": 4350,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Click locator('#signin_button')",
+          "duration": 527,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"\" locator('#user_login')",
+          "duration": 60,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"password\" locator('#user_password')",
+          "duration": 40,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('text=Sign in')",
+          "duration": 705,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 496,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chrome] login_all_tcs.spec.ts____Login scenario #5 - TC5-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chrome] login.spec.ts::Negative Scenario for login": {
+      "testId": "[chrome] login.spec.ts::Negative Scenario for login",
+      "title": "Negative Scenario for login",
+      "file": "login.spec.ts",
+      "status": "passed",
+      "duration": 10508,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 10,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 298,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/index.html\"",
+          "duration": 5110,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Click locator('#signin_button')",
+          "duration": 512,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"invalid username\" locator('#user_login')",
+          "duration": 53,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"invalid password\" locator('#user_password')",
+          "duration": 41,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('text=Sign in')",
+          "duration": 733,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for timeout",
+          "duration": 3028,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chrome] login.spec.ts____Negative Scenario for login-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chrome] login.spec.ts::Positive Scenario for login + logout": {
+      "testId": "[chrome] login.spec.ts::Positive Scenario for login + logout",
+      "title": "Positive Scenario for login + logout",
+      "file": "login.spec.ts",
+      "status": "passed",
+      "duration": 11973,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 8,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 264,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/index.html\"",
+          "duration": 4642,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Click locator('#signin_button')",
+          "duration": 537,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"username\" locator('#user_login')",
+          "duration": 63,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"password\" locator('#user_password')",
+          "duration": 43,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('text=Sign in')",
+          "duration": 2752,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 405,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/\"",
+          "duration": 494,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 473,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByText('username')",
+          "duration": 125,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Logout' })",
+          "duration": 775,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"networkidle\"",
+          "duration": 484,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"load\"",
+          "duration": 3,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chrome] login.spec.ts____Positive Scenario for login + logout-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chrome] search.spec.ts::Should find search results": {
+      "testId": "[chrome] search.spec.ts::Should find search results",
+      "title": "Should find search results",
+      "file": "search.spec.ts",
+      "status": "passed",
+      "duration": 4514,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 12,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 238,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/index.html\"",
+          "duration": 3090,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Fill \"bank\" locator('#searchTerm')",
+          "duration": 117,
+          "category": "pw:api"
+        },
+        {
+          "title": "Press \"Enter\"",
+          "duration": 14,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chrome] search.spec.ts____Should find search results-trace-0.zip"
+        ],
+        "custom": []
+      }
+    }
+  }
+}

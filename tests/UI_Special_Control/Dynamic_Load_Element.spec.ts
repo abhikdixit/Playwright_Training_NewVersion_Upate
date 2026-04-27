@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test('Dynamic Load Element- Wait for Selector', async ({ page }) => {
     await page.goto('https://practice.expandtesting.com/dynamic-loading/2');
     await page.getByRole('button', { name: 'Start' }).click();
-    await page.waitForSelector("//h4[normalize-space()='Hello World!']");
+    await page.waitForSelector("//h4[normalize-space()='Hello World!']",{ timeout: 10000 });
     await expect(page.locator("//h4[normalize-space()='Hello World!']")).toHaveText("Hello World!")
   });
 
@@ -14,8 +14,9 @@ test('Dynamic Load Element- Wait for Selector', async ({ page }) => {
     await expect(page.locator("//h4[normalize-space()='Hello World!']")).toHaveText("Hello World!")
   });
 
-  test('Dynamic Load Element- Wait for Load State with specific time', async ({ page }) => {
+  test.only('Dynamic Load Element- Wait for Load State with specific time', async ({ page }) => {
     await page.goto('https://practice.expandtesting.com/slow');
     await page.waitForTimeout(10000) // Forceful time 
+    //await page.waitForLoadState('domcontentloaded',{ timeout: 10000 }) // Wait for load state with specific time
     await expect(page.locator("//strong[normalize-space()='The slow task has finished. Thanks for waiting!']")).toHaveText("The slow task has finished. Thanks for waiting!")
   });

@@ -28,8 +28,8 @@ test.describe('WebOrder E2E Test tests @sanity', () => {
   });
 
   test.afterAll(async () => {
-    const page = (test.info().annotations as any).page;
-    const context = (test.info().annotations as any).context;
+    // const page = (test.info().annotations as any).page;
+    // const context = (test.info().annotations as any).context;
 
     // ✅ Logout after all tests
     await loginPage.logoutFromApp();

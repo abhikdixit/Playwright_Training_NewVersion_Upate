@@ -1,0 +1,1418 @@
+{
+  "runId": "run-1776934301291",
+  "timestamp": "2026-04-23T08:51:41.291Z",
+  "tests": {
+    "[chromium] OrangeHRM_Add_Unique_User.spec.ts::Add Unique User and Verify Creation @smoke": {
+      "testId": "[chromium] OrangeHRM_Add_Unique_User.spec.ts::Add Unique User and Verify Creation @smoke",
+      "title": "Add Unique User and Verify Creation @smoke",
+      "file": "OrangeHRM_Add_Unique_User.spec.ts",
+      "status": "failed",
+      "duration": 44633,
+      "retry": 0,
+      "error": "Error: Timed out 5000ms waiting for expect(locator).toContainText(expected)\n\nLocator: getByRole('table')\nExpected string: \"Dixit0.9841021757268704\"\nReceived: <element(s) not found>\nCall log:\n  - Expect \"toContainText\" with timeout 5000ms\n  - waiting for getByRole('table')\n\n    at C:\\Training_Scripts\\Playwright_Training_NewVersion\\tests\\NICE_GUI_Tests\\OrangeHRM_Add_Unique_User.spec.ts:30:41",
+      "steps": [
+        {
+          "title": "Launch browser",
+          "duration": 741,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create context",
+          "duration": 151,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 418,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/web/index.php/auth/login\"",
+          "duration": 5707,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Admin\" getByRole('textbox', { name: 'Username' })",
+          "duration": 1499,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"admin123\" getByRole('textbox', { name: 'Password' })",
+          "duration": 37,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: 'Login' })",
+          "duration": 6066,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Admin' })",
+          "duration": 5867,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: ' Add' })",
+          "duration": 7386,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Click locator('.oxd-icon.bi-caret-down-fill.oxd-select-text--arrow').first()",
+          "duration": 3196,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('option', { name: 'Admin' })",
+          "duration": 88,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('div:nth-child(3) > .oxd-input-group > div:nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text--after > .oxd-icon')",
+          "duration": 59,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByText('Enabled')",
+          "duration": 80,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('textbox', { name: 'Type for hints...' })",
+          "duration": 88,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"a\" getByRole('textbox', { name: 'Type for hints...' })",
+          "duration": 44,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for timeout",
+          "duration": 5027,
+          "category": "pw:api"
+        },
+        {
+          "title": "Press \"ArrowDown\"",
+          "duration": 34,
+          "category": "pw:api"
+        },
+        {
+          "title": "Press \"Enter\"",
+          "duration": 22,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Dixit0.9841021757268704\" getByRole('textbox').nth(2)",
+          "duration": 51,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Admin123\" getByRole('textbox').nth(3)",
+          "duration": 48,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Admin123\" getByRole('textbox').nth(4)",
+          "duration": 37,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: 'Save' })",
+          "duration": 67,
+          "category": "pw:api"
+        },
+        {
+          "title": "Screenshot",
+          "duration": 313,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [
+          "C:\\Training_Scripts\\Playwright_Training_NewVersion\\test-results\\OrangeHRM_Add_Unique_User--73245-r-and-Verify-Creation-smoke-chromium\\video.webm"
+        ],
+        "traces": [
+          "./traces/[chromium] OrangeHRM_Add_Unique_User.spec.ts____Add Unique User and Verify Creation @smoke-trace-0.zip"
+        ],
+        "custom": [
+          {
+            "name": "error-context",
+            "contentType": "text/markdown",
+            "path": "C:\\Training_Scripts\\Playwright_Training_NewVersion\\test-results\\OrangeHRM_Add_Unique_User--73245-r-and-Verify-Creation-smoke-chromium\\error-context.md"
+          }
+        ]
+      }
+    },
+    "[chromium] OrangeHRM_Add_User.spec.ts::OrangeHRM Add User @smoke": {
+      "testId": "[chromium] OrangeHRM_Add_User.spec.ts::OrangeHRM Add User @smoke",
+      "title": "OrangeHRM Add User @smoke",
+      "file": "OrangeHRM_Add_User.spec.ts",
+      "status": "failed",
+      "duration": 43373,
+      "retry": 0,
+      "error": "Error: Timed out 5000ms waiting for expect(locator).toContainText(expected)\n\nLocator: getByRole('table')\nExpected string: \"dixit11\"\nReceived: <element(s) not found>\nCall log:\n  - Expect \"toContainText\" with timeout 5000ms\n  - waiting for getByRole('table')\n\n    at C:\\Training_Scripts\\Playwright_Training_NewVersion\\tests\\NICE_GUI_Tests\\OrangeHRM_Add_User.spec.ts:31:41",
+      "steps": [
+        {
+          "title": "Launch browser",
+          "duration": 392,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create context",
+          "duration": 146,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 313,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/web/index.php/auth/login\"",
+          "duration": 6680,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Admin\" getByRole('textbox', { name: 'Username' })",
+          "duration": 1979,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"admin123\" getByRole('textbox', { name: 'Password' })",
+          "duration": 86,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: 'Login' })",
+          "duration": 5609,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Admin' })",
+          "duration": 6968,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Click getByRole('button', { name: ' Add' })",
+          "duration": 4484,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('.oxd-icon.bi-caret-down-fill.oxd-select-text--arrow').first()",
+          "duration": 1549,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('option', { name: 'Admin' })",
+          "duration": 95,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('div:nth-child(3) > .oxd-input-group > div:nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text--after > .oxd-icon')",
+          "duration": 75,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByText('Enabled')",
+          "duration": 72,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('textbox', { name: 'Type for hints...' })",
+          "duration": 89,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"a\" getByRole('textbox', { name: 'Type for hints...' })",
+          "duration": 42,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for timeout",
+          "duration": 5030,
+          "category": "pw:api"
+        },
+        {
+          "title": "Press \"ArrowDown\"",
+          "duration": 24,
+          "category": "pw:api"
+        },
+        {
+          "title": "Press \"ArrowDown\"",
+          "duration": 26,
+          "category": "pw:api"
+        },
+        {
+          "title": "Press \"Enter\"",
+          "duration": 20,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"dixit11\" getByRole('textbox').nth(2)",
+          "duration": 53,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Admin123\" getByRole('textbox').nth(3)",
+          "duration": 34,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Admin123\" getByRole('textbox').nth(4)",
+          "duration": 42,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: 'Save' })",
+          "duration": 48,
+          "category": "pw:api"
+        },
+        {
+          "title": "Screenshot",
+          "duration": 317,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [
+          "C:\\Training_Scripts\\Playwright_Training_NewVersion\\test-results\\OrangeHRM_Add_User-OrangeHRM-Add-User-smoke-chromium\\video.webm"
+        ],
+        "traces": [
+          "./traces/[chromium] OrangeHRM_Add_User.spec.ts____OrangeHRM Add User @smoke-trace-0.zip"
+        ],
+        "custom": [
+          {
+            "name": "error-context",
+            "contentType": "text/markdown",
+            "path": "C:\\Training_Scripts\\Playwright_Training_NewVersion\\test-results\\OrangeHRM_Add_User-OrangeHRM-Add-User-smoke-chromium\\error-context.md"
+          }
+        ]
+      }
+    },
+    "[chromium] OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts::Create User and Verify Changes": {
+      "testId": "[chromium] OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts::Create User and Verify Changes",
+      "title": "Create User and Verify Changes",
+      "file": "OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts",
+      "status": "passed",
+      "duration": 32334,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Launch browser",
+          "duration": 447,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 427,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/web/index.php/auth/login\"",
+          "duration": 5617,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByPlaceholder('Username')",
+          "duration": 3036,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Admin\" getByPlaceholder('Username')",
+          "duration": 37,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByPlaceholder('Password')",
+          "duration": 93,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"admin123\" getByPlaceholder('Password')",
+          "duration": 29,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: 'Login' })",
+          "duration": 6705,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Admin' })",
+          "duration": 9678,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: ' Add' })",
+          "duration": 3955,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('form i').first()",
+          "duration": 923,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('option', { name: 'Admin' }).getByText('Admin')",
+          "duration": 70,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('form i').nth(1)",
+          "duration": 77,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByText('Enabled')",
+          "duration": 80,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByPlaceholder('Type for hints...')",
+          "duration": 78,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"a\" getByRole('textbox', { name: 'Type for hints...' })",
+          "duration": 47,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for timeout",
+          "duration": 5030,
+          "category": "pw:api"
+        },
+        {
+          "title": "Press \"ArrowDown\"",
+          "duration": 26,
+          "category": "pw:api"
+        },
+        {
+          "title": "Press \"Enter\"",
+          "duration": 23,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Abhi846.2543828596006\" getByRole('textbox').nth(2)",
+          "duration": 48,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('textbox').nth(3)",
+          "duration": 79,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Admin@123\" getByRole('textbox').nth(3)",
+          "duration": 28,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('textbox').nth(4)",
+          "duration": 76,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Admin@123\" getByRole('textbox').nth(4)",
+          "duration": 28,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: 'Save' })",
+          "duration": 69,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for selector locator('//i[@class=\\'oxd-icon bi-plus oxd-button-icon\\']')",
+          "duration": 9792,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts____Create User and Verify Changes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts::Update User and Verify Changes": {
+      "testId": "[chromium] OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts::Update User and Verify Changes",
+      "title": "Update User and Verify Changes",
+      "file": "OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts",
+      "status": "passed",
+      "duration": 25143,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Click locator('//div[normalize-space()=\\'Abhi846.2543828596006\\']/following-sibling::div//i[@class=\\'oxd-icon bi-pencil-fill\\']')",
+          "duration": 2187,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('text=User Role-- Select --').locator('i')",
+          "duration": 4097,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('div[role=\"option\"]:has-text(\"ESS\")')",
+          "duration": 81,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for timeout",
+          "duration": 1016,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('text=Save')",
+          "duration": 52,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for selector locator('//i[@class=\\'oxd-icon bi-plus oxd-button-icon\\']')",
+          "duration": 13377,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Screenshot",
+          "duration": 302,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts____Update User and Verify Changes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts::Delete User and Verify Deletion": {
+      "testId": "[chromium] OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts::Delete User and Verify Deletion",
+      "title": "Delete User and Verify Deletion",
+      "file": "OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts",
+      "status": "passed",
+      "duration": 537,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Click locator('//div[normalize-space()=\\'Abhi846.2543828596006\\']/following-sibling::div//button[1]/i')",
+          "duration": 112,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('//i[@class=\\'oxd-icon bi-trash oxd-button-icon\\']')",
+          "duration": 107,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for selector locator('//i[@class=\\'oxd-icon bi-plus oxd-button-icon\\']')",
+          "duration": 30,
+          "category": "pw:api"
+        },
+        {
+          "title": "Screenshot",
+          "duration": 228,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('img', { name: 'profile picture' })",
+          "duration": 111,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('menuitem', { name: 'Logout' })",
+          "duration": 7371,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts____Delete User and Verify Deletion-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] OrangeHRM_Update_User.spec.ts::OrangeHRM Update User and Verify Changes @smoke": {
+      "testId": "[chromium] OrangeHRM_Update_User.spec.ts::OrangeHRM Update User and Verify Changes @smoke",
+      "title": "OrangeHRM Update User and Verify Changes @smoke",
+      "file": "OrangeHRM_Update_User.spec.ts",
+      "status": "timedOut",
+      "duration": 84929,
+      "retry": 0,
+      "error": "Test timeout of 80000ms exceeded.",
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 22,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 285,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/web/index.php/auth/login\"",
+          "duration": 5980,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByPlaceholder('Username')",
+          "duration": 2487,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Admin\" getByPlaceholder('Username')",
+          "duration": 38,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByPlaceholder('Password')",
+          "duration": 73,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"admin123\" getByPlaceholder('Password')",
+          "duration": 38,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: 'Login' })",
+          "duration": 11484,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Admin' })",
+          "duration": 14619,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: ' Add' })",
+          "duration": 6852,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('form i').first()",
+          "duration": 4598,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('option', { name: 'Admin' }).getByText('Admin')",
+          "duration": 53,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('form i').nth(1)",
+          "duration": 95,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByText('Enabled')",
+          "duration": 99,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('textbox', { name: 'Type for hints...' })",
+          "duration": 108,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"a\" getByRole('textbox', { name: 'Type for hints...' })",
+          "duration": 53,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for timeout",
+          "duration": 5025,
+          "category": "pw:api"
+        },
+        {
+          "title": "Press \"ArrowDown\"",
+          "duration": 22,
+          "category": "pw:api"
+        },
+        {
+          "title": "Press \"Enter\"",
+          "duration": 14,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Abhi570.640098879538\" getByRole('textbox').nth(2)",
+          "duration": 64,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('textbox').nth(3)",
+          "duration": 84,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Admin@123\" getByRole('textbox').nth(3)",
+          "duration": 39,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('textbox').nth(4)",
+          "duration": 86,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Admin@123\" getByRole('textbox').nth(4)",
+          "duration": 38,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: 'Save' })",
+          "duration": 81,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for selector locator('//i[@class=\\'oxd-icon bi-plus oxd-button-icon\\']')",
+          "duration": 29068,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Screenshot",
+          "duration": 353,
+          "category": "pw:api"
+        },
+        {
+          "title": "Screenshot",
+          "duration": 352,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [
+          "C:\\Training_Scripts\\Playwright_Training_NewVersion\\test-results\\OrangeHRM_Update_User-Oran-e3d90-er-and-Verify-Changes-smoke-chromium\\video.webm"
+        ],
+        "traces": [
+          "./traces/[chromium] OrangeHRM_Update_User.spec.ts____OrangeHRM Update User and Verify Changes @smoke-trace-0.zip"
+        ],
+        "custom": [
+          {
+            "name": "error-context",
+            "contentType": "text/markdown",
+            "path": "C:\\Training_Scripts\\Playwright_Training_NewVersion\\test-results\\OrangeHRM_Update_User-Oran-e3d90-er-and-Verify-Changes-smoke-chromium\\error-context.md"
+          }
+        ]
+      }
+    },
+    "[chromium] ScrapData_BaseClass_Method.spec.ts::Create Order-Update Order- Verify Order@smoke": {
+      "testId": "[chromium] ScrapData_BaseClass_Method.spec.ts::Create Order-Update Order- Verify Order@smoke",
+      "title": "Create Order-Update Order- Verify Order@smoke",
+      "file": "ScrapData_BaseClass_Method.spec.ts",
+      "status": "passed",
+      "duration": 4093,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Launch browser",
+          "duration": 433,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create context",
+          "duration": 148,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 336,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/examples/data_sources/server_side\"",
+          "duration": 2739,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Screenshot",
+          "duration": 466,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [
+          "C:\\Training_Scripts\\Playwright_Training_NewVersion\\test-results\\ScrapData_BaseClass_Method-5998b-e-Order--Verify-Order-smoke-chromium\\video.webm"
+        ],
+        "traces": [
+          "./traces/[chromium] ScrapData_BaseClass_Method.spec.ts____Create Order-Update Order- Verify Order@smoke-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] ViewPort_WebOrder_Login.spec.ts::View Port Test cases @sanity @smoke": {
+      "testId": "[chromium] ViewPort_WebOrder_Login.spec.ts::View Port Test cases @sanity @smoke",
+      "title": "View Port Test cases @sanity @smoke",
+      "file": "ViewPort_WebOrder_Login.spec.ts",
+      "status": "passed",
+      "duration": 6643,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 9,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 313,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/samples/TestComplete11/WebOrders/Login.aspx\"",
+          "duration": 1824,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Tester\" getByLabel('Username:')",
+          "duration": 104,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"test\" getByLabel('Password:')",
+          "duration": 35,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: 'Login' })",
+          "duration": 2009,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Logout' })",
+          "duration": 1776,
+          "category": "pw:api"
+        },
+        {
+          "title": "Screenshot",
+          "duration": 153,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [
+          "C:\\Training_Scripts\\Playwright_Training_NewVersion\\test-results\\ViewPort_WebOrder_Login-View-Port-Test-cases-sanity-smoke-chromium\\video.webm"
+        ],
+        "traces": [
+          "./traces/[chromium] ViewPort_WebOrder_Login.spec.ts____View Port Test cases @sanity @smoke-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] WebOrder_Create_Unique_Order_VerifyOrder.spec.ts::Create Order Unique Order- Verify Order @smoke": {
+      "testId": "[chromium] WebOrder_Create_Unique_Order_VerifyOrder.spec.ts::Create Order Unique Order- Verify Order @smoke",
+      "title": "Create Order Unique Order- Verify Order @smoke",
+      "file": "WebOrder_Create_Unique_Order_VerifyOrder.spec.ts",
+      "status": "passed",
+      "duration": 14252,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 12,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 287,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/samples/TestComplete11/WebOrders/Login.aspx\"",
+          "duration": 1514,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Tester\" getByLabel('Username:')",
+          "duration": 75,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"test\" getByLabel('Password:')",
+          "duration": 30,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: 'Login' })",
+          "duration": 2543,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for load state \"load\"",
+          "duration": 647,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Order', exact: true })",
+          "duration": 520,
+          "category": "pw:api"
+        },
+        {
+          "title": "Select option getByRole('combobox', { name: 'Product:*' })",
+          "duration": 35,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"5\" getByLabel('Quantity:*')",
+          "duration": 35,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Dixit1776934598784\" getByLabel('Customer name:*')",
+          "duration": 69,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"BTM\" getByLabel('Street:*')",
+          "duration": 39,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for timeout",
+          "duration": 3023,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Fill \"Bangalore\" getByLabel('City:*')",
+          "duration": 36,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByLabel('Zip:*')",
+          "duration": 87,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"560076\" getByLabel('Zip:*')",
+          "duration": 33,
+          "category": "pw:api"
+        },
+        {
+          "title": "Check getByLabel('Visa')",
+          "duration": 69,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByLabel('Card Nr:*')",
+          "duration": 48,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"1234567891\" getByLabel('Card Nr:*')",
+          "duration": 31,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"12/23\" getByLabel('Expire date (mm/yy):*')",
+          "duration": 38,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Process' })",
+          "duration": 970,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'View all orders' })",
+          "duration": 898,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Logout' })",
+          "duration": 1854,
+          "category": "pw:api"
+        },
+        {
+          "title": "Screenshot",
+          "duration": 184,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [
+          "C:\\Training_Scripts\\Playwright_Training_NewVersion\\test-results\\WebOrder_Create_Unique_Ord-7f00a-e-Order--Verify-Order-smoke-chromium\\video.webm"
+        ],
+        "traces": [
+          "./traces/[chromium] WebOrder_Create_Unique_Order_VerifyOrder.spec.ts____Create Order Unique Order- Verify Order @smoke-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] WebOrder_Page_Element_Screenshot.spec.ts::Create Order Unique Order- Verify Order @smoke": {
+      "testId": "[chromium] WebOrder_Page_Element_Screenshot.spec.ts::Create Order Unique Order- Verify Order @smoke",
+      "title": "Create Order Unique Order- Verify Order @smoke",
+      "file": "WebOrder_Page_Element_Screenshot.spec.ts",
+      "status": "passed",
+      "duration": 17573,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 11,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 270,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/samples/TestComplete11/WebOrders/Login.aspx\"",
+          "duration": 1607,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Tester\" getByLabel('Username:')",
+          "duration": 64,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"test\" getByLabel('Password:')",
+          "duration": 34,
+          "category": "pw:api"
+        },
+        {
+          "title": "Screenshot",
+          "duration": 180,
+          "category": "pw:api"
+        },
+        {
+          "title": "Screenshot getByRole('button', { name: 'Login' })",
+          "duration": 188,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: 'Login' })",
+          "duration": 4322,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Order', exact: true })",
+          "duration": 659,
+          "category": "pw:api"
+        },
+        {
+          "title": "Select option getByRole('combobox', { name: 'Product:*' })",
+          "duration": 36,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"5\" getByLabel('Quantity:*')",
+          "duration": 33,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Dixit914\" getByLabel('Customer name:*')",
+          "duration": 48,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"BTM\" getByLabel('Street:*')",
+          "duration": 44,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for timeout",
+          "duration": 5028,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Fill \"Bangalore\" getByLabel('City:*')",
+          "duration": 36,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByLabel('Zip:*')",
+          "duration": 68,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"560076\" getByLabel('Zip:*')",
+          "duration": 26,
+          "category": "pw:api"
+        },
+        {
+          "title": "Check getByLabel('Visa')",
+          "duration": 73,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByLabel('Card Nr:*')",
+          "duration": 83,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"1234567891\" getByLabel('Card Nr:*')",
+          "duration": 31,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"12/23\" getByLabel('Expire date (mm/yy):*')",
+          "duration": 39,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Process' })",
+          "duration": 924,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'View all orders' })",
+          "duration": 900,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Logout' })",
+          "duration": 1574,
+          "category": "pw:api"
+        },
+        {
+          "title": "Screenshot",
+          "duration": 148,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [
+          "C:\\Training_Scripts\\Playwright_Training_NewVersion\\test-results\\WebOrder_Page_Element_Scre-e58b0-e-Order--Verify-Order-smoke-chromium\\video.webm"
+        ],
+        "traces": [
+          "./traces/[chromium] WebOrder_Page_Element_Screenshot.spec.ts____Create Order Unique Order- Verify Order @smoke-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] WebOrder_Update_Order_Using_Filter_Locator.spec.ts::Create Order - Update Order - Verify Order @smoke": {
+      "testId": "[chromium] WebOrder_Update_Order_Using_Filter_Locator.spec.ts::Create Order - Update Order - Verify Order @smoke",
+      "title": "Create Order - Update Order - Verify Order @smoke",
+      "file": "WebOrder_Update_Order_Using_Filter_Locator.spec.ts",
+      "status": "passed",
+      "duration": 15978,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 9,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 286,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/samples/TestComplete11/WebOrders/Login.aspx\"",
+          "duration": 1535,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Tester\" getByLabel('Username:')",
+          "duration": 65,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"test\" getByLabel('Password:')",
+          "duration": 38,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: 'Login' })",
+          "duration": 3166,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Order', exact: true })",
+          "duration": 726,
+          "category": "pw:api"
+        },
+        {
+          "title": "Select option getByRole('combobox', { name: 'Product:*' })",
+          "duration": 873,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"5\" getByLabel('Quantity:*')",
+          "duration": 35,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Megha576062\" getByLabel('Customer name:*')",
+          "duration": 43,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"BTM\" getByLabel('Street:*')",
+          "duration": 48,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Bangalore\" getByLabel('City:*')",
+          "duration": 37,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"560076\" getByLabel('Zip:*')",
+          "duration": 41,
+          "category": "pw:api"
+        },
+        {
+          "title": "Check getByLabel('Visa')",
+          "duration": 62,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"1234567891\" getByLabel('Card Nr:*')",
+          "duration": 46,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"12/23\" getByLabel('Expire date (mm/yy):*')",
+          "duration": 40,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Process' })",
+          "duration": 466,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'View all orders' })",
+          "duration": 862,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('#ctl00_MainContent_orderGrid tr').filter({ has: locator('td').filter({ hasText: 'Megha576062' }) }).locator('input[alt=\"Edit\"]')",
+          "duration": 1512,
+          "category": "pw:api"
+        },
+        {
+          "title": "Clear locator('#ctl00_MainContent_fmwOrder_TextBox3')",
+          "duration": 71,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Delhi\" locator('#ctl00_MainContent_fmwOrder_TextBox3')",
+          "duration": 36,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('#ctl00_MainContent_fmwOrder_UpdateButton')",
+          "duration": 1191,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for timeout",
+          "duration": 2018,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Logout' })",
+          "duration": 1645,
+          "category": "pw:api"
+        },
+        {
+          "title": "Screenshot",
+          "duration": 167,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [
+          "C:\\Training_Scripts\\Playwright_Training_NewVersion\\test-results\\WebOrder_Update_Order_Usin-31729--Order---Verify-Order-smoke-chromium\\video.webm"
+        ],
+        "traces": [
+          "./traces/[chromium] WebOrder_Update_Order_Using_Filter_Locator.spec.ts____Create Order - Update Order - Verify Order @smoke-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] WebOrder_Update_Order_VerifyOrder.spec.ts::Create Order-Update Order- Verify Order @smoke": {
+      "testId": "[chromium] WebOrder_Update_Order_VerifyOrder.spec.ts::Create Order-Update Order- Verify Order @smoke",
+      "title": "Create Order-Update Order- Verify Order @smoke",
+      "file": "WebOrder_Update_Order_VerifyOrder.spec.ts",
+      "status": "passed",
+      "duration": 19741,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 12,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 282,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/samples/TestComplete11/WebOrders/Login.aspx\"",
+          "duration": 1442,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Tester\" getByLabel('Username:')",
+          "duration": 65,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"test\" getByLabel('Password:')",
+          "duration": 31,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: 'Login' })",
+          "duration": 2964,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Order', exact: true })",
+          "duration": 678,
+          "category": "pw:api"
+        },
+        {
+          "title": "Select option getByRole('combobox', { name: 'Product:*' })",
+          "duration": 911,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"5\" getByLabel('Quantity:*')",
+          "duration": 35,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Megha969921.4146920934\" getByLabel('Customer name:*')",
+          "duration": 51,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"BTM\" getByLabel('Street:*')",
+          "duration": 41,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Bangalore\" getByLabel('City:*')",
+          "duration": 35,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByLabel('Zip:*')",
+          "duration": 69,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"560076\" getByLabel('Zip:*')",
+          "duration": 31,
+          "category": "pw:api"
+        },
+        {
+          "title": "Check getByLabel('Visa')",
+          "duration": 96,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByLabel('Card Nr:*')",
+          "duration": 75,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"1234567891\" getByLabel('Card Nr:*')",
+          "duration": 29,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"12/23\" getByLabel('Expire date (mm/yy):*')",
+          "duration": 47,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Process' })",
+          "duration": 473,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'View all orders' })",
+          "duration": 937,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('//td[normalize-space()=\\'Megha969921.4146920934\\']//following-sibling::td/input')",
+          "duration": 827,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for timeout",
+          "duration": 3032,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Clear locator('#ctl00_MainContent_fmwOrder_TextBox3')",
+          "duration": 63,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"Delhi\" locator('#ctl00_MainContent_fmwOrder_TextBox3')",
+          "duration": 32,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('#ctl00_MainContent_fmwOrder_UpdateButton')",
+          "duration": 1133,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for timeout",
+          "duration": 3029,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Logout' })",
+          "duration": 2158,
+          "category": "pw:api"
+        },
+        {
+          "title": "Screenshot",
+          "duration": 195,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [
+          "C:\\Training_Scripts\\Playwright_Training_NewVersion\\test-results\\WebOrder_Update_Order_Veri-e8940-e-Order--Verify-Order-smoke-chromium\\video.webm"
+        ],
+        "traces": [
+          "./traces/[chromium] WebOrder_Update_Order_VerifyOrder.spec.ts____Create Order-Update Order- Verify Order @smoke-trace-0.zip"
+        ],
+        "custom": []
+      }
+    }
+  }
+}

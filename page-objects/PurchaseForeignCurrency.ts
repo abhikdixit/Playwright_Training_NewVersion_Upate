@@ -26,7 +26,6 @@ export class PurchaseForeignCurrencyCash {
   }
 
   async selectCurrency(selectCurrencyValue: string): Promise<void> {
-    //add variable
     await this.currency.selectOption(selectCurrencyValue);
   }
 
@@ -35,7 +34,6 @@ export class PurchaseForeignCurrencyCash {
   }
 
   async selectRadioButton(radioButtonValue: string): Promise<void> {
-    //add variable
     if(radioButtonValue == 'Selected currency'){
         await this.currencyRadioButtonSelectedCurrency.check();
     }else{

@@ -1,0 +1,12 @@
+# Page snapshot
+
+```yaml
+- paragraph
+- text: "Username:"
+- textbox "Username:"
+- text: "Password:"
+- textbox "Password:"
+- button "Login"
+- paragraph: "In order to log in Orders sample use the following information:"
+- paragraph: Username - Tester Password - test
+```

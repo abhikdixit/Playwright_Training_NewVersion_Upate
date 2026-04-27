@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 import { AccessToken } from './BaseTest'
-test.describe('Create Notes API Testing', () => {
+test.describe('Create Notes API Testing @smoke', () => {
   const baseUrl = 'https://practice.expandtesting.com'
   let token: string
   let id: string

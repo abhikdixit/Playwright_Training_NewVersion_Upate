@@ -1,7 +1,7 @@
 //import { Page } from '@playwright/test'
 import { Page } from '@playwright/test';
-const fs = require('fs');
-const xlsx = require('xlsx');
+import fs from 'fs';
+import xlsx from 'xlsx';
 import { parse } from 'csv-parse/sync';
 
 export class AbstractPage {
@@ -18,7 +18,7 @@ export class AbstractPage {
 
   async readDataFromJSONFile(fileName: string): Promise<any> {
     // Reads the JSON file and returns the parsed data
-    const data = fs.readFileSync(fileName);
+    let data: string = fs.readFileSync(fileName, 'utf-8');
     return JSON.parse(data);
   }
 
@@ -41,4 +41,6 @@ export class AbstractPage {
     return records;
   }
 
+  
+  
 }

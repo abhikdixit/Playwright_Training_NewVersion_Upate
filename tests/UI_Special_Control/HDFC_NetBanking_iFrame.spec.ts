@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
+test('test - Frame', async ({ page }) => {
   await page.goto('https://netbanking.hdfcbank.com/netbanking/');
   const loginFrame = await page.frame({ name: 'login_page' });
   if (loginFrame) {
@@ -10,6 +10,16 @@ test('test', async ({ page }) => {
   } else {
     throw new Error('login_page frame not found');
   }
+  await expect(page).toHaveURL('https://netportal.hdfcbank.com/nb-login/login.jsp');
+  await page.waitForTimeout(5000) // Thread.sleep(5000)
+
+});
+
+test.skip('test- Without Frame/iFrame', async ({ page }) => {
+  await page.goto('https://netbanking.hdfcbank.com/netbanking/');
+  await page.waitForLoadState('load');
+  await page.fill('input[name="fldLoginUserId"]', '1000');
+  await page.click('text=CONTINUE');
   await expect(page).toHaveURL('https://netportal.hdfcbank.com/nb-login/login.jsp');
   await page.waitForTimeout(5000) // Thread.sleep(5000)
 

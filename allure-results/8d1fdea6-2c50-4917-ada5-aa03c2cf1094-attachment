@@ -1,0 +1,421 @@
+# Page snapshot
+
+```yaml
+- link "Tricentis Demo Web Shop":
+  - /url: /
+  - img "Tricentis Demo Web Shop"
+- list:
+  - listitem:
+    - link "Register":
+      - /url: /register
+  - listitem:
+    - link "Log in":
+      - /url: /login
+  - listitem:
+    - link "Shopping cart (1)":
+      - /url: /cart
+  - listitem:
+    - link "Wishlist (0)":
+      - /url: /wishlist
+- status
+- textbox: Search store
+- button "Search"
+- list:
+  - listitem:
+    - link "Books":
+      - /url: /books
+  - listitem:
+    - link "Computers":
+      - /url: /computers
+  - listitem:
+    - link "Electronics":
+      - /url: /electronics
+  - listitem:
+    - link "Apparel & Shoes":
+      - /url: /apparel-shoes
+  - listitem:
+    - link "Digital downloads":
+      - /url: /digital-downloads
+  - listitem:
+    - link "Jewelry":
+      - /url: /jewelry
+  - listitem:
+    - link "Gift Cards":
+      - /url: /gift-cards
+- heading "Shopping cart" [level=1]
+- table:
+  - rowgroup:
+    - row "Remove Product(s) Price Qty. Total":
+      - cell "Remove"
+      - cell
+      - cell "Product(s)"
+      - cell "Price"
+      - cell "Qty."
+      - cell "Total"
+  - rowgroup:
+    - row "Picture of 14.1-inch Laptop 14.1-inch Laptop 1590.00 1 1590.00":
+      - cell:
+        - checkbox [checked]
+      - cell "Picture of 14.1-inch Laptop":
+        - img "Picture of 14.1-inch Laptop"
+      - cell "14.1-inch Laptop":
+        - link "14.1-inch Laptop":
+          - /url: /141-inch-laptop
+      - cell "1590.00"
+      - cell "1":
+        - textbox: "1"
+      - cell "1590.00"
+- button "Update shopping cart"
+- button "Continue shopping"
+- strong: Discount Code
+- text: Enter your coupon here
+- textbox
+- button "Apply coupon"
+- strong: Gift Cards
+- text: Enter gift card code
+- textbox
+- button "Add gift card"
+- strong: Estimate shipping
+- text: "Enter your destination to get a shipping estimate Country:"
+- combobox "Country:":
+  - option "Select country" [selected]
+  - option "United States"
+  - option "Canada"
+  - option "Afghanistan"
+  - option "Albania"
+  - option "Algeria"
+  - option "American Samoa"
+  - option "Andorra"
+  - option "Angola"
+  - option "Anguilla"
+  - option "Antarctica"
+  - option "Antigua and Barbuda"
+  - option "Argentina"
+  - option "Armenia"
+  - option "Aruba"
+  - option "Australia"
+  - option "Austria"
+  - option "Azerbaijan"
+  - option "Bahamas"
+  - option "Bahrain"
+  - option "Bangladesh"
+  - option "Barbados"
+  - option "Belarus"
+  - option "Belgium"
+  - option "Belize"
+  - option "Benin"
+  - option "Bermuda"
+  - option "Bhutan"
+  - option "Bolivia"
+  - option "Bosnia and Herzegowina"
+  - option "Botswana"
+  - option "Bouvet Island"
+  - option "Brazil"
+  - option "British Indian Ocean Territory"
+  - option "Brunei Darussalam"
+  - option "Bulgaria"
+  - option "Burkina Faso"
+  - option "Burundi"
+  - option "Cambodia"
+  - option "Cameroon"
+  - option "Cape Verde"
+  - option "Cayman Islands"
+  - option "Central African Republic"
+  - option "Chad"
+  - option "Chile"
+  - option "China"
+  - option "Christmas Island"
+  - option "Cocos (Keeling) Islands"
+  - option "Colombia"
+  - option "Comoros"
+  - option "Congo"
+  - option "Cook Islands"
+  - option "Costa Rica"
+  - option "Cote D'Ivoire"
+  - option "Croatia"
+  - option "Cuba"
+  - option "Cyprus"
+  - option "Czech Republic"
+  - option "Denmark"
+  - option "Djibouti"
+  - option "Dominica"
+  - option "Dominican Republic"
+  - option "Ecuador"
+  - option "Egypt"
+  - option "El Salvador"
+  - option "Equatorial Guinea"
+  - option "Eritrea"
+  - option "Estonia"
+  - option "Ethiopia"
+  - option "Falkland Islands (Malvinas)"
+  - option "Faroe Islands"
+  - option "Fiji"
+  - option "Finland"
+  - option "France"
+  - option "French Guiana"
+  - option "French Polynesia"
+  - option "French Southern Territories"
+  - option "Gabon"
+  - option "Gambia"
+  - option "Georgia"
+  - option "Germany"
+  - option "Ghana"
+  - option "Gibraltar"
+  - option "Greece"
+  - option "Greenland"
+  - option "Grenada"
+  - option "Guadeloupe"
+  - option "Guam"
+  - option "Guatemala"
+  - option "Guinea"
+  - option "Guinea-bissau"
+  - option "Guyana"
+  - option "Haiti"
+  - option "Heard and Mc Donald Islands"
+  - option "Honduras"
+  - option "Hong Kong"
+  - option "Hungary"
+  - option "Iceland"
+  - option "India"
+  - option "Indonesia"
+  - option "Iran (Islamic Republic of)"
+  - option "Iraq"
+  - option "Ireland"
+  - option "Israel"
+  - option "Italy"
+  - option "Jamaica"
+  - option "Japan"
+  - option "Jordan"
+  - option "Kazakhstan"
+  - option "Kenya"
+  - option "Kiribati"
+  - option "Korea"
+  - option "Korea, Democratic People's Republic of"
+  - option "Kuwait"
+  - option "Kyrgyzstan"
+  - option "Lao People's Democratic Republic"
+  - option "Latvia"
+  - option "Lebanon"
+  - option "Lesotho"
+  - option "Liberia"
+  - option "Libyan Arab Jamahiriya"
+  - option "Liechtenstein"
+  - option "Lithuania"
+  - option "Luxembourg"
+  - option "Macau"
+  - option "Macedonia"
+  - option "Madagascar"
+  - option "Malawi"
+  - option "Malaysia"
+  - option "Maldives"
+  - option "Mali"
+  - option "Malta"
+  - option "Marshall Islands"
+  - option "Martinique"
+  - option "Mauritania"
+  - option "Mauritius"
+  - option "Mayotte"
+  - option "Mexico"
+  - option "Micronesia"
+  - option "Moldova"
+  - option "Monaco"
+  - option "Mongolia"
+  - option "Montenegro"
+  - option "Montserrat"
+  - option "Morocco"
+  - option "Mozambique"
+  - option "Myanmar"
+  - option "Namibia"
+  - option "Nauru"
+  - option "Nepal"
+  - option "Netherlands"
+  - option "Netherlands Antilles"
+  - option "New Caledonia"
+  - option "New Zealand"
+  - option "Nicaragua"
+  - option "Niger"
+  - option "Nigeria"
+  - option "Niue"
+  - option "Norfolk Island"
+  - option "Northern Mariana Islands"
+  - option "Norway"
+  - option "Oman"
+  - option "Pakistan"
+  - option "Palau"
+  - option "Panama"
+  - option "Papua New Guinea"
+  - option "Paraguay"
+  - option "Peru"
+  - option "Philippines"
+  - option "Pitcairn"
+  - option "Poland"
+  - option "Portugal"
+  - option "Puerto Rico"
+  - option "Qatar"
+  - option "Reunion"
+  - option "Romania"
+  - option "Russia"
+  - option "Rwanda"
+  - option "Saint Kitts and Nevis"
+  - option "Saint Lucia"
+  - option "Saint Vincent and the Grenadines"
+  - option "Samoa"
+  - option "San Marino"
+  - option "Sao Tome and Principe"
+  - option "Saudi Arabia"
+  - option "Senegal"
+  - option "Serbia"
+  - option "Seychelles"
+  - option "Sierra Leone"
+  - option "Singapore"
+  - option "Slovakia (Slovak Republic)"
+  - option "Slovenia"
+  - option "Solomon Islands"
+  - option "Somalia"
+  - option "South Africa"
+  - option "South Georgia & South Sandwich Islands"
+  - option "Spain"
+  - option "Sri Lanka"
+  - option "St. Helena"
+  - option "St. Pierre and Miquelon"
+  - option "Sudan"
+  - option "Suriname"
+  - option "Svalbard and Jan Mayen Islands"
+  - option "Swaziland"
+  - option "Sweden"
+  - option "Switzerland"
+  - option "Syrian Arab Republic"
+  - option "Taiwan"
+  - option "Tajikistan"
+  - option "Tanzania"
+  - option "Thailand"
+  - option "Togo"
+  - option "Tokelau"
+  - option "Tonga"
+  - option "Trinidad and Tobago"
+  - option "Tunisia"
+  - option "Turkey"
+  - option "Turkmenistan"
+  - option "Turks and Caicos Islands"
+  - option "Tuvalu"
+  - option "Uganda"
+  - option "Ukraine"
+  - option "United Arab Emirates"
+  - option "United Kingdom"
+  - option "United States minor outlying islands"
+  - option "Uruguay"
+  - option "Uzbekistan"
+  - option "Vanuatu"
+  - option "Vatican City State (Holy See)"
+  - option "Venezuela"
+  - option "Viet Nam"
+  - option "Virgin Islands (British)"
+  - option "Virgin Islands (U.S.)"
+  - option "Wallis and Futuna Islands"
+  - option "Western Sahara"
+  - option "Yemen"
+  - option "Zambia"
+  - option "Zimbabwe"
+- text: "* State / province:"
+- combobox "State / province:":
+  - option "Other (Non US)" [selected]
+- text: "Zip / postal code:"
+- textbox "Zip / postal code:"
+- button "Estimate shipping"
+- table:
+  - rowgroup:
+    - 'row "Sub-Total: 1590.00"':
+      - cell "Sub-Total:"
+      - cell "1590.00"
+    - 'row "Shipping: 0.00"':
+      - cell "Shipping:"
+      - cell "0.00"
+    - 'row "Tax: 0.00"':
+      - cell "Tax:"
+      - cell "0.00"
+    - 'row "Total: 1590.00"':
+      - cell "Total:"
+      - cell "1590.00":
+        - strong: "1590.00"
+- checkbox
+- text: I agree with the terms of service and I adhere to them unconditionally (read)
+- button "Checkout"
+- heading "Information" [level=3]
+- list:
+  - listitem:
+    - link "Sitemap":
+      - /url: /sitemap
+  - listitem:
+    - link "Shipping & Returns":
+      - /url: /shipping-returns
+  - listitem:
+    - link "Privacy Notice":
+      - /url: /privacy-policy
+  - listitem:
+    - link "Conditions of Use":
+      - /url: /conditions-of-use
+  - listitem:
+    - link "About us":
+      - /url: /about-us
+  - listitem:
+    - link "Contact us":
+      - /url: /contactus
+- heading "Customer service" [level=3]
+- list:
+  - listitem:
+    - link "Search":
+      - /url: /search
+  - listitem:
+    - link "News":
+      - /url: /news
+  - listitem:
+    - link "Blog":
+      - /url: /blog
+  - listitem:
+    - link "Recently viewed products":
+      - /url: /recentlyviewedproducts
+  - listitem:
+    - link "Compare products list":
+      - /url: /compareproducts
+  - listitem:
+    - link "New products":
+      - /url: /newproducts
+- heading "My account" [level=3]
+- list:
+  - listitem:
+    - link "My account":
+      - /url: /customer/info
+  - listitem:
+    - link "Orders":
+      - /url: /customer/orders
+  - listitem:
+    - link "Addresses":
+      - /url: /customer/addresses
+  - listitem:
+    - link "Shopping cart":
+      - /url: /cart
+  - listitem:
+    - link "Wishlist":
+      - /url: /wishlist
+- heading "Follow us" [level=3]
+- list:
+  - listitem:
+    - link "Facebook":
+      - /url: http://www.facebook.com/nopCommerce
+  - listitem:
+    - link "Twitter":
+      - /url: https://twitter.com/nopCommerce
+  - listitem:
+    - link "RSS":
+      - /url: /news/rss/1
+  - listitem:
+    - link "YouTube":
+      - /url: http://www.youtube.com/user/nopCommerce
+  - listitem:
+    - link "Google+":
+      - /url: https://plus.google.com/+nopcommerce
+- text: Powered by
+- link "nopCommerce":
+  - /url: http://www.nopcommerce.com/
+- text: Copyright © 2025 Tricentis Demo Web Shop. All rights reserved.
+```

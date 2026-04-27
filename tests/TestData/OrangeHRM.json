@@ -8,6 +8,7 @@
     },
     { 
         "test_case": "TC2",
+         "url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
         "name": "Admin", 
         "password": "admin123",
         "exp_result":"Dashboard"

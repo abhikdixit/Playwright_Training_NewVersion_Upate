@@ -21,7 +21,7 @@ export class ForgetPasswordPage {
   }
   
   async enterEmailAndSendRequest(email: string): Promise<string> {
-    await this.emailInput.type(email);
+    await this.emailInput.fill(email);
     await this.sendPasswordButton.click();
     const text = await this.confirmMessage.textContent();
     const emailID = text ? text.split(":")[1]?.trim() ?? '' : '';

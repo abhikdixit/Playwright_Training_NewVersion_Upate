@@ -51,7 +51,7 @@ test('Create Order-Update Order- Verify Order @smoke', async ({ page }) => {
   //Verify that City value change to Delhi
   await expect(page.locator("//td[normalize-space()='"+ExpUserName+"']//following-sibling::td[text()='Delhi']")).toHaveText("Delhi")
 
-  
+  //Logout
   await page.getByRole('link', { name: 'Logout' }).click()
   await page.url().includes("/Login.aspx")
 });

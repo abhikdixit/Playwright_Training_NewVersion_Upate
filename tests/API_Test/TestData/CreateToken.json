@@ -2,7 +2,7 @@
     "testCases": [
         {
             "TestCase_ID": "TC_001",
-            "email": "abhi@xyz.com",
+            "email": "testing@abc.com",
             "password": "test1234",
             "exp_res": "Login successful",
             "exp_status_code": 200

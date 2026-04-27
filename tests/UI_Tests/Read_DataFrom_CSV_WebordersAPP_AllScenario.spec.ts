@@ -5,18 +5,20 @@ import { join } from 'path';
 import { test, expect, Page } from '@playwright/test';
 //const assert = require('assert')
 import { parse } from 'csv-parse/sync';
-
+//Read the CSV file and convert to JS object in terms of JSON
 const records = parse(readFileSync('./tests/TestData/WebOrder_Login_All_Scenario.csv'), {
   columns: true,
   skip_empty_lines: true
 });
+
+
 
 // const records = parse(readFileSync(join('./tests/TestData', 'WebOrder_Login_All_Scenario.csv')), {
 //   columns: true,
 //   skip_empty_lines: true
 // });
 test.describe('WebOrder All Test Scenario', () => {
-  let page = Page;
+  let page: Page;
   //Page can be directly used in test not in hooks, in hooks we can use browser and assign new page to page
   test.beforeAll(async ({ browser }) => {
     //const browser = await chromium.launch();

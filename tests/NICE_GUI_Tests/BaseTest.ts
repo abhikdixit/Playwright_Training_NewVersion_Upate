@@ -6,6 +6,9 @@ export class Login_LogoutPage {
   private readonly InputUserName: Locator;
   private readonly InputPassword: Locator;
   private readonly LoginButton: Locator;
+  private readonly InputUserName_O: Locator;
+  private readonly InputPassword_O: Locator;
+  private readonly LoginButton_O: Locator;
   private readonly Logout_O: Locator;
   private readonly Logout: Locator;
   private readonly icon: Locator;
@@ -15,6 +18,9 @@ export class Login_LogoutPage {
     this.InputUserName = this.page.getByLabel("Username:");
     this.InputPassword = this.page.getByLabel("Password:");
     this.LoginButton = this.page.locator("//input[@id='ctl00_MainContent_login_button']");
+    this.InputUserName_O = this.page.getByPlaceholder('Username');
+    this.InputPassword_O = this.page.getByPlaceholder('Password');
+    this.LoginButton_O = this.page.getByRole('button', { name: 'Login' });
     this.Logout_O = this.page.getByRole('menuitem', { name: 'Logout' });
     this.Logout = this.page.locator("//a[text()='Logout']");
     this.icon = this.page.locator("//i[@class='oxd-icon bi-caret-down-fill oxd-userdropdown-icon']");
@@ -52,6 +58,16 @@ Drop it if you prefer shorter and cleaner code.
     }
   }
 
+    async gotoURLAPP(url: string): Promise<void> {
+    try {
+      await this.page.goto(url, {
+        waitUntil: 'networkidle'
+      });
+    } catch (error) {
+      console.error('Failed to navigate to URL:', error);
+      throw error;
+    }
+  }
   /**
    * Login to the application with provided credentials
    * @param username - The username to login with
@@ -69,12 +85,35 @@ Drop it if you prefer shorter and cleaner code.
     }
   }
 
+    async loginToAppOrangeHRM(username: string, password: string): Promise<void> {
+    try {
+      await this.InputUserName_O.fill(username);
+      await this.InputPassword_O.fill(password);
+      await this.LoginButton_O.click();
+      await this.page.waitForLoadState('networkidle');
+    } catch (error) {
+      console.error('Failed to login:', error);
+      throw error;
+    }
+  }
+
   /**
    * Logout from the application
    */
   async logoutFromApp(): Promise<void> {
     try {
       await this.Logout.click();
+      await this.page.waitForLoadState('networkidle');
+    } catch (error) {
+      console.error('Failed to logout:', error);
+      throw error;
+    }
+  }
+
+    async logoutFromAppOrangeHRM(): Promise<void> {
+    try {
+      await this.icon.click();
+      await this.Logout_O.click();
       await this.page.waitForLoadState('networkidle');
     } catch (error) {
       console.error('Failed to logout:', error);

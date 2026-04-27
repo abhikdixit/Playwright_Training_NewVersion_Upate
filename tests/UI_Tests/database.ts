@@ -1,34 +1,23 @@
-import { createConnection } from "mysql2";
+import mysql from 'mysql2/promise';
 
-// Create a connection to the database
-const connection = createConnection({
-    host: "localhost",
-    Port: 3306,
-    user: "root",
-    password: "root",
-    database: "weborder_db",
-    insecureAuth: true
+const pool = mysql.createPool({
+  host: "localhost",
+  port: 3306,
+  user: "root",
+  password: "root",
+  database: "weborder_db",
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
 });
 
-// Connect to the database
-connection.connect((err) => {
-  if (err) {
-    console.error('Error connecting to the database:', err);
-    return;
-  }
-  console.log('Connected to the database');
-});
-
-// Function to query the database
-const queryDatabase = (query) => {
-  return new Promise((resolve, reject) => {
-    connection.query(query, (error, results) => {
-      if (error) {
-        return reject(error);
-      }
-      resolve(results);
-    });
-  });
+// Generic query function
+export const query = async <T>(sql: string): Promise<T> => {
+  const [rows] = await pool.execute(sql);
+  return rows as T;
 };
 
-export default { queryDatabase, connection };
+// Close DB pool
+export const close = async () => {
+  await pool.end();
+};

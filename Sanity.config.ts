@@ -22,7 +22,7 @@ const config = {
   //globalSetup: require.resolve('./WebOrder_Login_Setup'),
   //globalSetup: "./global-setup",
   //testDir: './tests/',
-  testDir: './tests/UI_Tests/',
+  //testDir: './tests/UI_Tests/',
 
   //testDir: './tests/UI_Special_Control/',
   //testDir: './tests/NICE_GUI_Tests/',
@@ -35,7 +35,7 @@ const config = {
   //testDir: './tests/Spreecom_API_Framework/',
   //testDir: './tests/Spreecom_API_Minh/API_test/',
   //testDir:'./tests/API_Test/Request_API/',
-  //testDir:'./tests/API_Test/Notes_API/',
+  testDir:'./tests/API_Test/Notes_API/',
   //testDir: './tests/Salesforce_Test',
   /* Maximum time one test can run for. */
   //timeout: 60000,

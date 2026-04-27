@@ -7,15 +7,15 @@ const users = JSON.parse(objects.toString());
 
 // for (const record of users) {
 // test(`WebOrder Login Functionality: ${record.test_case}`, async ({ page }) => {
-test('WebOrder Login Functionality: ${record.test_case}', async ({ page }) => {
-  for (const record of users) { 
-  //console.log(record.name, record.password, record.exp_result);
+for (const record of users) {
+  test(`WebOrder Login Functionality: ${record.test_case}`, async ({ page }) => {
+    //for (const record of users) {
+    //console.log(record.name, record.password, record.exp_result);
     await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
-    await page.getByLabel('Username:').click();
     await page.getByLabel('Username:').fill(record.uname);
-    await page.getByLabel('Password:').click();
     await page.getByLabel('Password:').fill(record.password);
     await page.getByRole('button', { name: 'Login' }).click();
+    
 
     if ('Logout' == record.exp_res) {
 
@@ -33,8 +33,9 @@ test('WebOrder Login Functionality: ${record.test_case}', async ({ page }) => {
       await expect(page.locator("span[id='ctl00_MainContent_status']")).toHaveText(record.exp_res)
 
     }
-  }
+
 });
+  }
 
 
 

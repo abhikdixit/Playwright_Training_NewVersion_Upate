@@ -13,9 +13,7 @@ for (const record of users) {
     await page.goto(
       "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
     );
-    await page.getByPlaceholder("Username").click();
     await page.getByPlaceholder("Username").fill(record.name);
-    await page.getByPlaceholder("Password").click();
     await page.getByPlaceholder("Password").fill(record.password);
     await page.getByRole("button", { name: "Login" }).click();
     let msg;

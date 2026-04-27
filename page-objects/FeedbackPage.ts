@@ -1,5 +1,5 @@
 import { expect, Locator, Page } from '@playwright/test';
-export class FeedbackPage {
+export class FeedbackPage  {
   page: Page;
   nameInput: Locator;
   emailInput: Locator;
@@ -26,10 +26,10 @@ export class FeedbackPage {
     subject: string,
     comment: string
   ): Promise<void> {
-    await this.nameInput.type(name);
-    await this.emailInput.type(email);
-    await this.subjectInput.type(subject);
-    await this.commentInput.type(comment);
+    await this.nameInput.fill(name);
+    await this.emailInput.fill(email);
+    await this.subjectInput.fill(subject);
+    await this.commentInput.fill(comment);
   }
 
   async resetForm(): Promise<void> {
@@ -41,13 +41,20 @@ export class FeedbackPage {
   }
 
   async assertReset(): Promise<void> {
-    await expect(this.nameInput).toHaveValue('');
-    await expect(this.emailInput).toHaveValue('');
-    await expect(this.subjectInput).toHaveValue('');
-    await expect(this.commentInput).toHaveValue('');
+    await expect(this.nameInput).toBeEmpty();
+    await expect(this.emailInput).toBeEmpty();
+    await expect(this.subjectInput).toBeEmpty();
+    await expect(this.commentInput).toBeEmpty();
   }
 
   async feedbackFormSent(): Promise<void> {
-    await expect(this.feedbackTitle).toBeVisible();
+    await expect(this.feedbackTitle).toBeVisible();    
   }
+
+//   async feedbackFormSent(expectedName: string): Promise<string> {
+//     const actualMessage = await this.feedbackTitle.textContent();
+//     const expectedMessage = `Thank you for your comments, ${expectedName}. They will be reviewed by our Customer Service staff and given the full attention that they deserve.`;
+//     await expect(this.feedbackTitle).toHaveText(expectedMessage);
+//     return actualMessage?.trim() || '';
+// }
 }

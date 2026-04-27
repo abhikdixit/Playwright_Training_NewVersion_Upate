@@ -1,0 +1,27 @@
+[
+    {
+	"TestCaseID": "TC1",
+    "login": "username",
+    "password":"password"
+},
+ {
+	"TestCaseID": "TC2",
+    "login": "username",
+    "password":"password1"
+},
+ {
+	"TestCaseID": "TC3",
+    "login": "username1",
+    "password":"password"
+},
+ {
+	"TestCaseID": "TC4",
+    "login": "username",
+    "password":""
+ },
+  {
+	"TestCaseID": "TC5",
+    "login": "",
+    "password":"password"
+  }
+]
