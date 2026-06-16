@@ -35,7 +35,7 @@ test('OrangeHRM - Delete User and Verify Deletion @sanity', async ({ page }) => 
     await page.locator('.oxd-icon.bi-caret-down-fill.oxd-select-text--arrow').first().click();
     await page.getByText('ESS').click();
     await page.getByRole('button', { name: 'Save' }).click();
-    await expect.soft(page.locator("//div[text()='" + ExpUserName + "']/parent::div/following-sibling::div/div[text()='ESS11']")).toContainText('ESS');
+    await expect.soft(page.locator("//div[text()='" + ExpUserName + "']/parent::div/following-sibling::div/div[text()='ESS']")).toHaveText('ESS11');
     
     // Delete the user and Verify that user got deleted from application
     await page.locator("//div[text()='" + ExpUserName + "']/parent::div/following-sibling::div//i[@class='oxd-icon bi-trash']").click();

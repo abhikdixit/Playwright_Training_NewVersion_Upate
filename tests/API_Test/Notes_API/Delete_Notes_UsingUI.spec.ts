@@ -6,7 +6,7 @@ test.describe('Create Notes API Testing', () => {
   let id: string
   let updated_id: string
   test.beforeAll(async ({ request }) => {
-    token = await AccessToken("abhinay.dixit@hotmail.com", "pass@1234", request)
+    token = await AccessToken("testing@abc.com", "pass1234", request)
     expect(token).toBeTruthy();
   })
   
@@ -36,8 +36,8 @@ test.describe('Create Notes API Testing', () => {
     test('Delete Notes using API', async ({ page }) => {
       await page.goto('https://practice.expandtesting.com/notes/app');
       await page.getByRole('link', { name: 'Login' }).click();
-      await page.getByTestId('login-email').fill('abhinay.dixit@hotmail.com');
-      await page.getByTestId('login-password').fill('pass@1234');
+      await page.getByTestId('login-email').fill('testing@abc.com');
+      await page.getByTestId('login-password').fill('pass1234');
       await page.getByTestId('login-submit').click();
       await page.getByTestId('category-work').click();
       await page.locator("//div[normalize-space()='Playwright_UI']/following-sibling::div[2]/div/button[2]").click()

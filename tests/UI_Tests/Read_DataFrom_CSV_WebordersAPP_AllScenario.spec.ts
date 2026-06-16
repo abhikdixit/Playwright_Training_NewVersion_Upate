@@ -1,59 +1,73 @@
-//Run "npm install csv" to install the full csv module or run npm install csv-parse 
-//if you are only interested by the CSV parser.
 import { readFileSync } from 'fs';
-import { join } from 'path';
-import { test, expect, Page } from '@playwright/test';
-//const assert = require('assert')
+import { test, expect } from '@playwright/test';
 import { parse } from 'csv-parse/sync';
-//Read the CSV file and convert to JS object in terms of JSON
-const records = parse(readFileSync('./tests/TestData/WebOrder_Login_All_Scenario.csv'), {
-  columns: true,
-  skip_empty_lines: true
-});
 
+// Read CSV file and convert to JSON
+const records = parse(
+  readFileSync('./tests/TestData/WebOrder_Login_All_Scenario.csv'),
+  {
+    columns: true,
+    skip_empty_lines: true,
+  }
+);
 
+// TypeScript Interface for CSV Data
+interface LoginTestData {
+  test_case: string;
+  uname: string;
+  pass: string;
+  Exp_Result: string;
+}
 
-// const records = parse(readFileSync(join('./tests/TestData', 'WebOrder_Login_All_Scenario.csv')), {
-//   columns: true,
-//   skip_empty_lines: true
-// });
-test.describe('WebOrder All Test Scenario', () => {
-  let page: Page;
-  //Page can be directly used in test not in hooks, in hooks we can use browser and assign new page to page
-  test.beforeAll(async ({ browser }) => {
-    //const browser = await chromium.launch();
-    page = await browser.newPage();
+// Convert records into typed array
+const testData: LoginTestData[] = records;
 
-    await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
-  })
+test.describe('WebOrder All Test Scenarios', () => {
 
-  test('WebOrder App', async () => {
-    for (const record of records) {
-      //console.log(records)
-      //console.log(record.uname, record.pass);
-      await page.locator('input[name="ctl00\\$MainContent\\$username"]').clear();
-      await page.fill('input[name="ctl00\\$MainContent\\$username"]', record.uname);
-      await page.locator('input[name="ctl00\\$MainContent\\$password"]').clear();
-      // Fill input[name="ctl00\$MainContent\$password"]
-      await page.fill('input[name="ctl00\\$MainContent\\$password"]', record.pass);
+  // Using for loop OUTSIDE test
+  for (const data of testData) {
 
-      // Click text=Login
-      await page.click('text=Login');
-      if ('List of All Orders' == record.Exp_Result) {
+    test(`Test Case ID: ${data.test_case} | Verify Login with user: ${data.uname}`, async ({ page }) => {
 
-        await expect(page.locator("div[class='content'] h2")).toContainText(record.Exp_Result)
-        await page.click('text=Logout');
-        await page.waitForLoadState(); // The promise resolves after 'load' event.
-       //} else if ('Invalid Login or Password.' == record.Exp_Result) {
-      //   const name = await page.$eval("#ctl00_MainContent_status", el => el.textContent.trim())
-        // const name = await page.locator("#ctl00_MainContent_status")
-      } 
-      else 
-        // Check that the locator has the expected text
-        await expect(page.locator("span[id='ctl00_MainContent_status']")).toHaveText(record.Exp_Result)
+      // Navigate to application
+      await page.goto(
+        'http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx'
+      );
 
+      // Enter Username
+      await page
+        .locator('input[name="ctl00\\$MainContent\\$username"]')
+        .fill(data.uname);
+
+      // Enter Password
+      await page
+        .locator('input[name="ctl00\\$MainContent\\$password"]')
+        .fill(data.pass);
+
+      // Click Login button
+      await page.locator('text=Login').click();
+
+      // Validation
+      if (data.Exp_Result === 'List of All Orders') {
+
+        await expect(
+          page.locator("div[class='content'] h2")
+        ).toContainText(data.Exp_Result);
+
+        console.log(`✅ ${data.test_case} Passed`);
+
+        // Logout
+        await page.locator('text=Logout').click();
+
+      } else {
+
+        await expect(
+          page.locator('#ctl00_MainContent_status')
+        ).toHaveText(data.Exp_Result);
+
+        console.log(`✅ ${data.test_case} Passed`);
 
       }
-
-   })
-  })
+    });
+  }
+});

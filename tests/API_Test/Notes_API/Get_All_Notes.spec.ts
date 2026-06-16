@@ -7,8 +7,8 @@ test.describe('GET ALL Notes API Testing', () => {
   test.beforeAll(async ({ request }) => {
     const response = await request.post(`${baseUrl}/notes/api/users/login`, {
         data: {
-          "email": "abhinay.dixit@hotmail.com",
-          "password": "pass@1234"
+          "email": "testing@abc.com",
+          "password": "pass1234"
         },
       })
       const responseBody = JSON.parse(await response.text())

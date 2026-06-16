@@ -3,6 +3,14 @@
     {
       "runId": "run-1776934301291",
       "timestamp": "2026-04-23T08:51:41.291Z"
+    },
+    {
+      "runId": "run-1779183649338",
+      "timestamp": "2026-05-19T09:40:49.338Z"
+    },
+    {
+      "runId": "run-1779185846496",
+      "timestamp": "2026-05-19T10:17:26.496Z"
     }
   ],
   "tests": {
@@ -12,6 +20,14 @@
         "duration": 44633,
         "timestamp": "2026-04-23T08:57:41.435Z",
         "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      },
+      {
+        "passed": false,
+        "duration": 31513,
+        "timestamp": "2026-05-19T09:44:29.681Z",
+        "runId": "run-1779183649338",
         "skipped": false,
         "retry": 0
       }
@@ -24,6 +40,14 @@
         "runId": "run-1776934301291",
         "skipped": false,
         "retry": 0
+      },
+      {
+        "passed": false,
+        "duration": 18179,
+        "timestamp": "2026-05-19T09:44:29.681Z",
+        "runId": "run-1779183649338",
+        "skipped": false,
+        "retry": 0
       }
     ],
     "[chromium] OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts::Create User and Verify Changes": [
@@ -32,6 +56,14 @@
         "duration": 32334,
         "timestamp": "2026-04-23T08:57:41.435Z",
         "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      },
+      {
+        "passed": true,
+        "duration": 20667,
+        "timestamp": "2026-05-19T09:44:29.681Z",
+        "runId": "run-1779183649338",
         "skipped": false,
         "retry": 0
       }
@@ -44,6 +76,14 @@
         "runId": "run-1776934301291",
         "skipped": false,
         "retry": 0
+      },
+      {
+        "passed": true,
+        "duration": 9155,
+        "timestamp": "2026-05-19T09:44:29.681Z",
+        "runId": "run-1779183649338",
+        "skipped": false,
+        "retry": 0
       }
     ],
     "[chromium] OrangeHRM_Individual_Test_Block_Using_Browser.spec.ts::Delete User and Verify Deletion": [
@@ -52,6 +92,14 @@
         "duration": 537,
         "timestamp": "2026-04-23T08:57:41.435Z",
         "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      },
+      {
+        "passed": true,
+        "duration": 335,
+        "timestamp": "2026-05-19T09:44:29.681Z",
+        "runId": "run-1779183649338",
         "skipped": false,
         "retry": 0
       }
@@ -64,6 +112,14 @@
         "runId": "run-1776934301291",
         "skipped": false,
         "retry": 0
+      },
+      {
+        "passed": false,
+        "duration": 31715,
+        "timestamp": "2026-05-19T09:44:29.681Z",
+        "runId": "run-1779183649338",
+        "skipped": false,
+        "retry": 0
       }
     ],
     "[chromium] ScrapData_BaseClass_Method.spec.ts::Create Order-Update Order- Verify Order@smoke": [
@@ -72,6 +128,14 @@
         "duration": 4093,
         "timestamp": "2026-04-23T08:57:41.435Z",
         "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      },
+      {
+        "passed": true,
+        "duration": 4562,
+        "timestamp": "2026-05-19T09:44:29.681Z",
+        "runId": "run-1779183649338",
         "skipped": false,
         "retry": 0
       }
@@ -84,6 +148,14 @@
         "runId": "run-1776934301291",
         "skipped": false,
         "retry": 0
+      },
+      {
+        "passed": true,
+        "duration": 7212,
+        "timestamp": "2026-05-19T09:44:29.681Z",
+        "runId": "run-1779183649338",
+        "skipped": false,
+        "retry": 0
       }
     ],
     "[chromium] WebOrder_Create_Unique_Order_VerifyOrder.spec.ts::Create Order Unique Order- Verify Order @smoke": [
@@ -92,6 +164,14 @@
         "duration": 14252,
         "timestamp": "2026-04-23T08:57:41.435Z",
         "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      },
+      {
+        "passed": true,
+        "duration": 13960,
+        "timestamp": "2026-05-19T09:44:29.681Z",
+        "runId": "run-1779183649338",
         "skipped": false,
         "retry": 0
       }
@@ -104,6 +184,14 @@
         "runId": "run-1776934301291",
         "skipped": false,
         "retry": 0
+      },
+      {
+        "passed": true,
+        "duration": 19076,
+        "timestamp": "2026-05-19T09:44:29.681Z",
+        "runId": "run-1779183649338",
+        "skipped": false,
+        "retry": 0
       }
     ],
     "[chromium] WebOrder_Update_Order_Using_Filter_Locator.spec.ts::Create Order - Update Order - Verify Order @smoke": [
@@ -114,6 +202,14 @@
         "runId": "run-1776934301291",
         "skipped": false,
         "retry": 0
+      },
+      {
+        "passed": true,
+        "duration": 14180,
+        "timestamp": "2026-05-19T09:44:29.681Z",
+        "runId": "run-1779183649338",
+        "skipped": false,
+        "retry": 0
       }
     ],
     "[chromium] WebOrder_Update_Order_VerifyOrder.spec.ts::Create Order-Update Order- Verify Order @smoke": [
@@ -122,6 +218,14 @@
         "duration": 19741,
         "timestamp": "2026-04-23T08:57:41.435Z",
         "runId": "run-1776934301291",
+        "skipped": false,
+        "retry": 0
+      },
+      {
+        "passed": true,
+        "duration": 18001,
+        "timestamp": "2026-05-19T09:44:29.681Z",
+        "runId": "run-1779183649338",
         "skipped": false,
         "retry": 0
       }
@@ -139,9 +243,35 @@
       "slow": 0,
       "duration": 360143,
       "passRate": 75
+    },
+    {
+      "runId": "run-1779183649338",
+      "timestamp": "2026-05-19T09:40:49.338Z",
+      "total": 12,
+      "passed": 9,
+      "failed": 3,
+      "skipped": 0,
+      "flaky": 0,
+      "slow": 0,
+      "duration": 220342,
+      "passRate": 75
+    },
+    {
+      "runId": "run-1779185846496",
+      "timestamp": "2026-05-19T10:17:26.496Z",
+      "total": 0,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "slow": 0,
+      "duration": 45,
+      "passRate": 0
     }
   ],
   "runFiles": {
-    "run-1776934301291": "./history-runs/run-1776934301291.json"
+    "run-1776934301291": "./history-runs/run-1776934301291.json",
+    "run-1779183649338": "./history-runs/run-1779183649338.json",
+    "run-1779185846496": "./history-runs/run-1779185846496.json"
   }
 }

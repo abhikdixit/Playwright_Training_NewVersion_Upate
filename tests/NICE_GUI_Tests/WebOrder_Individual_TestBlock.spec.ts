@@ -50,7 +50,7 @@ test('Create Order - Verify Order', async ({ page }) => {
 
 test('Update Order - Verify Order', async ({ page }) => {
   // Update the Order details
-  await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
+  //await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
   
   await page.locator("//td[normalize-space()='" + ExpUserName + "']//following-sibling::td/input").click();
   await page.waitForTimeout(3000)
@@ -65,7 +65,7 @@ test('Update Order - Verify Order', async ({ page }) => {
 
 test('Delete Order - Verify Order', async ({ page }) => {
   // Delete the Order and Verify that Order got deleted
-  await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
+  //await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx');
   
   await page.locator("//td[normalize-space()='" + ExpUserName + "']//preceding-sibling::td/input").click();
   await page.locator("#ctl00_MainContent_btnDelete").click()

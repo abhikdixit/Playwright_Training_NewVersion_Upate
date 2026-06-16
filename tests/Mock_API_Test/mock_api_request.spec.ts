@@ -1,4 +1,4 @@
-const { test, expect }= require('@playwright/test')
+import { test, expect } from '@playwright/test';
 
 test("mocks a fruit and doesn't call api", async ({ page }) => {
     // Mock the api call before navigating

@@ -1,0 +1,34 @@
+import { test, expect } from '@playwright/test'
+import { AccessToken } from './BaseTest'
+test.describe('Create Notes API Testing', () => {
+  const baseUrl = 'https://practice.expandtesting.com'
+  let token: string
+
+  let uniqueTitle: string = `Playwright_Notes_${Date.now()}`; // Generate a unique title using timestamp
+
+  test.beforeAll(async ({ request }) => {
+    token = await AccessToken("testing@abc.com", "pass1234", request)
+    expect(token).toBeTruthy()
+  })
+  
+  test('POST Request - Create Notes', async ({ request }) => {
+    const response = await request.post(`${baseUrl}/notes/api/notes`, {
+
+        headers: {
+          'x-auth-token': `${token}`,
+        },
+        data:
+        {         
+            title: uniqueTitle,
+            description: "Done via API",
+            category: "Personal"
+          },
+    })
+    expect(response.status()).toBe(200)
+    const responseBody = JSON.parse(await response.text())
+    console.log(responseBody)
+    expect(responseBody.message).toBe('Note successfully created')
+    expect(responseBody.data.title).toBe(uniqueTitle)
+
+    })
+})

@@ -1,5 +1,5 @@
-const { test, expect } = require('@playwright/test');
-const fs = require('fs');
+import { test, expect } from '@playwright/test';
+import fs from 'fs';
 
 const data = JSON.parse(fs.readFileSync('./tests/TestData/data.json', 'utf8'));
 

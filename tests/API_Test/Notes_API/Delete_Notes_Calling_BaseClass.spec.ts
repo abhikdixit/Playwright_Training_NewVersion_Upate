@@ -6,7 +6,7 @@ test.describe('Delete Notes API Testing @sanity', () => {
   let id: string
  
   test.beforeAll(async ({ request }) => {
-    token = await AccessToken("abhi@xyz.com", "test1234", request)
+    token = await AccessToken("testing@abc.com", "pass1234", request)
     expect(token).toBeTruthy();
     console.log(token);
     id = await Creating_notes_and_generating_id(token,request);

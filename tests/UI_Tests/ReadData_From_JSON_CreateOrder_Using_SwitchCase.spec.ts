@@ -5,14 +5,14 @@ import { test, expect } from "@playwright/test";
 const objects = fs.readFileSync("./tests/TestData/create_order_All_Scenario_Switch.json", "utf-8");
 const orders = JSON.parse(objects);
 
-test("Create Order - All Scenario", async ({ page }) => {
+ for (const order of orders) {
+test(`WebOrder Login Functionality Create Order: ${order.TestCaseID}`, async ({ page }) => {
   // Login
   await page.goto("http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx");
   await page.getByLabel("Username:").fill("Tester");
   await page.getByLabel("Password:").fill("test");
   await page.getByRole("button", { name: "Login" }).click();
-  await expect(page).toHaveURL(
-    "http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/default.aspx"
+  await expect(page).toHaveURL("http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/default.aspx"
   );
 
   // Navigate to order page
@@ -20,7 +20,7 @@ test("Create Order - All Scenario", async ({ page }) => {
   await expect(page).toHaveURL(/Process\.aspx/);
 
   // Order Scenarios
-  for (const order of orders) {
+  //for (const order of orders) {
     await page.locator("//input[@value='Reset']").click();
 
     if (order.Product) await page.locator("#ctl00_MainContent_fmwOrder_ddlProduct").selectOption(order.Product);
@@ -95,9 +95,10 @@ test("Create Order - All Scenario", async ({ page }) => {
       default:
         throw new Error(`Unexpected result: ${order.Result}`);
     }
-  }
+ // }
 
   // Logout verification
   await page.getByRole("link", { name: "Logout" }).click();
   await expect(page.locator("#ctl00_MainContent_login_button")).toBeVisible();
 });
+ }

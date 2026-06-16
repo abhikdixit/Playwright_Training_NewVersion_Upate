@@ -1,78 +1,50 @@
-import { chromium, expect, test } from "@playwright/test";
-test("Multiple Window ", async ({page}) => {
+import { test, expect } from "@playwright/test";
 
-    await page.goto("https://www.lambdatest.com/selenium-playground/window-popup-modal-demo");
-    console.log(page.url());
-    // Multiple Windows
-    const [multiPage] = await Promise.all([
-        //Wait for popup window: this is not javascript alert or window alert
-        page.waitForEvent("popup"),
-        page.click("#followboth")
-    ])
-    //It often happens that before all the pages get loaded completely,
-    // the browsers get closed. To fix this issue, use a function that 
-    //says “waitForLoadState.” This function ensures that the browser 
-    //waits until all the pages are loaded
-    await multiPage.waitForLoadState();
- 
-    const pages = multiPage.context().pages();
-    // console.log('No.of tabs: ' + pages.length);
- 
-    // pages.forEach(tab => {
-    //     console.log(tab.url());
-    // })
+test.only("OrangeHRM Window Handling - Contact Sales", async ({ page }) => {
 
-    //Interacting with multiple pages in Playwright
-    let facebookPage
-    for (let index = 0; index < pages.length; index++) {
-        const url = pages[index].url()
-        if (url == "https://www.facebook.com/lambdatest/") {
-            facebookPage = pages[index];
-        }
-    }
-    if (facebookPage) {
-        const text = await facebookPage.textContent("//h1");
-        console.log(text);
-    } else {
-        console.error("facebookPage not found.");
-    }
-});
-
-test.only("OrangeHRM Window ", async ({page}) => {
-
+    // Open OrangeHRM Login Page
     await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-    console.log(page.url());
-    // Multiple Windows
-    const [multiPage] = await Promise.all([
-        //Wait for popup window: this is not javascript alert or window alert
+
+    console.log("Parent Page URL:", page.url());
+
+    // Handle new window/tab
+    const [newPage] = await Promise.all([
         page.waitForEvent("popup"),
         page.click("a[href='http://www.orangehrm.com']")
-    ])
-    //It often happens that before all the pages get loaded completely,
-    // the browsers get closed. To fix this issue, use a function that 
-    //says “waitForLoadState.” This function ensures that the browser 
-    //waits until all the pages are loaded
-    await multiPage.waitForLoadState();
- 
-    const pages = multiPage.context().pages();
+    ]);
 
-    //Interacting with multiple pages in Playwright
-    let OrangeHRMPage
-    for (let index = 0; index < pages.length; index++) {
-        const url = pages[index].url()
-        if (url == "https://www.orangehrm.com/") {
-            OrangeHRMPage = pages[index];
-            
-        }
-    }
-    if (OrangeHRMPage) {
-        const text = await OrangeHRMPage.textContent("//h1");
-        console.log(OrangeHRMPage.url());
-        console.log(text);
-        await OrangeHRMPage.close();
-    } else {
-        console.error("OrangeHRMPage not found.");
-    }
-    await page.waitForTimeout(5000);
-    
+    // Wait for child page to load
+    await newPage.waitForLoadState("domcontentloaded");
+
+    console.log("Child Page URL:", newPage.url());
+
+    // Verify OrangeHRM site opened
+    await expect(newPage).toHaveURL(/orangehrm\.com/);
+
+    // Click Contact Sales link from navbar
+    await newPage.locator('#navbarNav')
+        .getByRole('link', { name: 'Contact Sales' })
+        .click();
+
+    // Wait for Contact Sales page
+    await newPage.waitForLoadState("networkidle");
+
+    // Verify navigation happened
+    await expect(newPage).toHaveURL(/contact-sales/);
+
+    // Verify correct heading displayed
+    const heading = newPage.locator("h1");
+
+    await expect(heading)
+        .toContainText(/talk to our experts/i);
+
+    console.log("Successfully navigated to Contact Sales page");
+    console.log("Final URL:", newPage.url());
+
+    // Close child window
+    await newPage.close();
+
+    // Verify parent page still exists
+    await expect(page).toHaveURL(/orangehrmlive/);
+
 });

@@ -1,0 +1,23 @@
+[
+        {
+            "TestCase_ID": "TC_001",
+            "email": "testing@abc.com",
+            "password": "pass1234",
+            "exp_res": "Login successful",
+            "exp_status_code": 200
+        },
+        {
+            "TestCase_ID": "TC_002",
+            "email": "testing1@abc.com",
+            "password": "test1234",
+            "exp_res": "Login successful",
+            "exp_status_code": 200
+        },
+        {
+            "TestCase_ID": "TC_003",
+            "email": "testing2@abc.com",
+            "password": "test1234",
+            "exp_res": "Login successful",
+            "exp_status_code": 200
+        }
+    ]

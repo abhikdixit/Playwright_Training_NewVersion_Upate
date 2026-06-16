@@ -1,0 +1,477 @@
+{
+  "runs": [
+    {
+      "runId": "run-1781579464303",
+      "timestamp": "2026-06-16T03:11:04.303Z"
+    }
+  ],
+  "tests": {
+    "[chromium] Authenticate_Access_Token.spec.ts::POST Request - Access Token": [
+      {
+        "passed": true,
+        "duration": 456,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Authenticate_AToken_Negative_BadRequest.spec.ts::POST Request - Access Token": [
+      {
+        "passed": true,
+        "duration": 472,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Authenticate_AToken_Negative.spec.ts::POST Request - Access Token": [
+      {
+        "passed": true,
+        "duration": 325,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_New_Account.spec.ts::Login as an existing user": [
+      {
+        "passed": true,
+        "duration": 237,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_New_User.spec.ts::Register user with unique email": [
+      {
+        "passed": true,
+        "duration": 362,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Notes_Calling_Data_From_JSON.spec.ts::POST Request - Create Note 1: Note 1": [
+      {
+        "passed": true,
+        "duration": 258,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Notes_Calling_Data_From_JSON.spec.ts::POST Request - Create Note 2: Note 2": [
+      {
+        "passed": true,
+        "duration": 450,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Notes_Calling_Data_From_JSON.spec.ts::POST Request - Create Note 3: Note 3": [
+      {
+        "passed": true,
+        "duration": 260,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Notes_CallingToken.spec.ts::POST Request - Create Notes": [
+      {
+        "passed": true,
+        "duration": 252,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 1: abc": [
+      {
+        "passed": true,
+        "duration": 250,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 2: This title is way too long and exceeds the maximum allowed length of one hundred characters which is not valid at all and should fail.": [
+      {
+        "passed": true,
+        "duration": 247,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 3: Valid Title": [
+      {
+        "passed": true,
+        "duration": 257,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 4: Valid Title": [
+      {
+        "passed": true,
+        "duration": 250,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 5: ": [
+      {
+        "passed": true,
+        "duration": 235,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 6: Valid Title": [
+      {
+        "passed": true,
+        "duration": 238,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Notes.spec.ts::POST Request - Create Notes": [
+      {
+        "passed": true,
+        "duration": 244,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_001": [
+      {
+        "passed": true,
+        "duration": 344,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_002": [
+      {
+        "passed": true,
+        "duration": 235,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_003": [
+      {
+        "passed": true,
+        "duration": 319,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_004": [
+      {
+        "passed": true,
+        "duration": 235,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_005": [
+      {
+        "passed": true,
+        "duration": 231,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_006": [
+      {
+        "passed": true,
+        "duration": 236,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Create_Token.spec.ts::Login as an existing user": [
+      {
+        "passed": true,
+        "duration": 332,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] CreateNotes_Using_API_Delete_Using_UI.spec.ts::POST Request - Create Notes": [
+      {
+        "passed": true,
+        "duration": 258,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] CreateNotes_Using_API_Delete_Using_UI.spec.ts::Delete Notes via UI": [
+      {
+        "passed": true,
+        "duration": 6050,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Delete_All_Notes_Before_Creating.spec.ts::Create Notes": [
+      {
+        "passed": true,
+        "duration": 260,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Delete_Notes_Calling_BaseClass.spec.ts::Delete Request - Delete Notes ": [
+      {
+        "passed": true,
+        "duration": 268,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Delete_Notes_CallingToken.spec.ts::POST Request - Create Notes": [
+      {
+        "passed": true,
+        "duration": 246,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Delete_Notes_CallingToken.spec.ts::Update Request - Update Notes": [
+      {
+        "passed": true,
+        "duration": 248,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Delete_Notes_CallingToken.spec.ts::Delete Request - Delete Notes": [
+      {
+        "passed": true,
+        "duration": 262,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Delete_Notes_UsingUI.spec.ts::POST Request - Create Notes": [
+      {
+        "passed": true,
+        "duration": 262,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Delete_Notes_UsingUI.spec.ts::Delete Notes using API": [
+      {
+        "passed": true,
+        "duration": 5415,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Delete_Notes.spec.ts::POST Request - Create Notes": [
+      {
+        "passed": true,
+        "duration": 310,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Delete_Notes.spec.ts::Delete Request - Delete Notes": [
+      {
+        "passed": true,
+        "duration": 472,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Get_All_Notes.spec.ts::GET Request - GET All Notes": [
+      {
+        "passed": true,
+        "duration": 255,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] note-api_negative_schema.spec.ts::Validate Create Note API response schema": [
+      {
+        "passed": true,
+        "duration": 287,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] note-api_schema_both_scenario.spec.ts::✅ Positive - Valid note creation": [
+      {
+        "passed": true,
+        "duration": 254,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] note-api_schema_both_scenario.spec.ts::❌ Negative - Missing title": [
+      {
+        "passed": true,
+        "duration": 241,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] note-api_schema_both_scenario.spec.ts::❌ Negative - Empty category": [
+      {
+        "passed": true,
+        "duration": 242,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] note-api_schema_both_scenario.spec.ts::❌ Negative - All fields missing": [
+      {
+        "passed": true,
+        "duration": 247,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] note-api_schema.spec.ts::Validate Create Note API response schema": [
+      {
+        "passed": true,
+        "duration": 252,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Update_Notes_CallingToken.spec.ts::POST Request - Create Notes": [
+      {
+        "passed": true,
+        "duration": 253,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Update_Notes_CallingToken.spec.ts::Update Request - Update Notes": [
+      {
+        "passed": true,
+        "duration": 257,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Update_Notes.spec.ts::POST Request - Create Notes": [
+      {
+        "passed": true,
+        "duration": 265,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Update_Notes.spec.ts::PUT Request - Update Notes": [
+      {
+        "passed": true,
+        "duration": 252,
+        "timestamp": "2026-06-16T03:11:39.404Z",
+        "runId": "run-1781579464303",
+        "skipped": false,
+        "retry": 0
+      }
+    ]
+  },
+  "summaries": [
+    {
+      "runId": "run-1781579464303",
+      "timestamp": "2026-06-16T03:11:04.303Z",
+      "total": 45,
+      "passed": 45,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "slow": 0,
+      "duration": 35101,
+      "passRate": 100
+    }
+  ],
+  "runFiles": {
+    "run-1781579464303": "./history-runs/run-1781579464303.json"
+  }
+}

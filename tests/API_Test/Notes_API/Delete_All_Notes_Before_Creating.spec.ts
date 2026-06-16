@@ -8,7 +8,7 @@ let rand_title: string;
 
 test.describe('Delete All Notes Before Creating', () => {
   test.beforeAll(async ({ request }) => {
-    outh_token = await AccessToken('testing@abc.com', 'test1234', request);
+    outh_token = await AccessToken('testing@abc.com', 'pass1234', request);
     await deleteAllNotes(outh_token, request);
   });
 

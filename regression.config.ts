@@ -25,7 +25,7 @@ const config = {
   //testDir: './tests/UI_Tests/',
   //testDir: './tests/WEBORDER/',
   //testDir: './tests/UI_Special_Control/',
-  testDir: './tests/NICE_GUI_Tests/',
+  //testDir: './tests/NICE_GUI_Tests/',
   //testDir: './tests/Assignments/',
   //testDir: './tests/API_Test/',
   //testDir: './tests/API_Test/Restful-booker_API/',
@@ -35,7 +35,7 @@ const config = {
   //testDir: './tests/Spreecom_API_Framework/',
   //testDir: './tests/Spreecom_API_Minh/API_test/',
   //testDir:'./tests/API_Test/Request_API/',
-  //testDir:'./tests/API_Test/Notes_API/',
+  testDir:'./tests/API_Test/Notes_API',
   //testDir: './tests/Salesforce_Test',
   /* Maximum time one test can run for. */
   //timeout: 60000,
@@ -58,8 +58,8 @@ const config = {
   /* Opt out of parallel tests on CI. */
   //workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  //reporter: 'html',
-  reporter: [['html', { open: 'never' }]],
+  reporter: 'html',
+  //reporter: [['html', { open: 'never' }]],
   //reporter: [["line"], ["allure-playwright"]],
   //reporter: [["html"], ["allure-playwright"]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -124,16 +124,16 @@ const config = {
   //        }
   //      },
   //     },
-   {
-      name: 'webkit',
-      use: {
-        ...devices['Desktop Safari'],
-        //viewport:{width:1536,height:864}
-        // launchOptions:{
-        //   args:["--start-maximized"]
-        //  }
-       },
-      },
+  //  {
+  //     name: 'webkit',
+  //     use: {
+  //       ...devices['Desktop Safari'],
+  //       //viewport:{width:1536,height:864}
+  //       // launchOptions:{
+  //       //   args:["--start-maximized"]
+  //       //  }
+  //      },
+  //     },
     
      // Test against mobile viewports. */
       //  {

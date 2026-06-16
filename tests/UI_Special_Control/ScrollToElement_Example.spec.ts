@@ -14,7 +14,7 @@ test.skip('Scroll To Particular Element Example @sanity', async ({ page }) => {
 
 test('Scroll To Element Example - DemoWeb Shop @sanity', async ({ page }) => {
  
-  test.setTimeout(80000)
+  //test.setTimeout(80000)
   await page.goto('https://demowebshop.tricentis.com/');
   //await page.pause()
   const element = page.locator(".account")

@@ -48,6 +48,7 @@ test.describe('Date Picker Tests', () => {
       // Wait for and click the target date
       await targetDateElement.waitFor({ state: 'visible' });
       await targetDateElement.click();
+      await page.waitForTimeout(8000); // Wait for the date to be selected
 
       // Wait for the date to be selected and verify
       const selectedValue = await frameElement.locator(config.selectors.datePicker).inputValue();

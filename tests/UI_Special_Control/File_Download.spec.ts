@@ -26,7 +26,7 @@ test('Download and verify content of sample.txt', async ({ page, context }) => {
     // Start waiting for the download
     const [download] = await Promise.all([
         newPage.waitForEvent('download'),
-        newPage.click('a:text("sample.txt")')
+        newPage.click("//a[text()='test.txt']")
     ]);
 
     const fileName = download.suggestedFilename();
@@ -43,7 +43,7 @@ test('Download and verify content of sample.txt', async ({ page, context }) => {
     console.log(`Downloaded file content:\n${fileContent}`);
 
     // ✅ Assert content includes expected text
-    expect(fileContent).toContain('Sample file for upload test');
+    expect(fileContent).toContain('Test file');
 
     // Cleanup (optional)
     // fs.unlinkSync(filePath);

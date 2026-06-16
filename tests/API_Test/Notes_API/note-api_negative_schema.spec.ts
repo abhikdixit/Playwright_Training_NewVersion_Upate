@@ -9,7 +9,7 @@ test.describe('Create Notes API Testing', () => {
   let token: string
 
   test.beforeAll(async ({ request }) => {
-    token = await AccessToken("testing@abc.com", "test1234", request)
+    token = await AccessToken("testing@abc.com", "pass1234", request)
     expect(token).toBeTruthy()
   })
 

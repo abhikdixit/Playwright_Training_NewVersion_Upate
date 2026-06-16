@@ -32,7 +32,7 @@ test.describe.serial('Validate Products with Single Login', () => {
   for (const Product of testParameters) {
     test(`Validate and order product: ${Product}`, async () => {
       // Navigate to Order Page
-      await page.getByRole('link', { name: 'Order' ,exact: true }).click();
+      await page.getByRole('link', { name: 'Order', exact: true }).click();
       await expect(page).toHaveURL(/.*Process\.aspx/);
 
       // Select product and validate price
@@ -42,26 +42,6 @@ test.describe.serial('Validate Products with Single Login', () => {
 
       const expectedPrice = productPriceMap[Product];
       expect(actualPrice).toBe(expectedPrice);
-
-      // Fill and submit order
-      // await page.getByLabel('Quantity:*').fill('5');
-      // const randomNum = Math.floor(1000 + Math.random() * 9000);
-      // const customerName = `Dixit${randomNum}`;
-      // await page.getByLabel('Customer name:*').fill(customerName);
-      // await page.getByLabel('Street:*').fill('BTM');
-      // await page.getByLabel('City:*').fill('Bangalore');
-      // await page.getByLabel('Zip:*').fill('560076');
-      // await page.getByLabel('Visa').check();
-      // await page.getByLabel('Card Nr:*').fill('1234567891');
-      // await page.getByLabel('Expire date (mm/yy):*').fill('12/23');
-      // await page.getByRole('link', { name: 'Process' }).click();
-
-      // const newOrder = page.locator("//strong[normalize-space()='New order has been successfully added.']");
-      // await expect(newOrder).toContainText('New order has been successfully added.');
-
-      // // Verify new order
-      // await page.getByRole('link', { name: 'View all orders' }).click();
-      // await expect(page.locator("//td[text()='" + customerName + "']")).toHaveText(customerName);
     });
   }
 

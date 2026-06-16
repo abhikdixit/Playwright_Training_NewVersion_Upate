@@ -3,9 +3,9 @@ import { test, expect } from '@playwright/test';
 //const MultipleFile = ["tests/TestData/Images/Abhi.jpg","tests/TestData/WebOrder_Login.json"]
 test('Flight Upload', async ({ page }) => {
         await page.goto('https://the-internet.herokuapp.com/upload')
-        await page.waitForLoadState()
+        await page.waitForLoadState("domcontentloaded")
         //Loading Image file
-        const filepath = 'tests/TestData/Images/Abhi.jpg'
+        const filepath = './tests/TestData/Images/Abhi.jpg'
         //console.log(filepath)
         await page.locator('#file-upload').setInputFiles(filepath)
         await page.locator('#file-submit').click()

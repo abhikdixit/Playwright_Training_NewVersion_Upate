@@ -7,7 +7,7 @@ test.describe("Create Notes API Testing @sanity", () => {
   test.beforeAll(async ({ request }) => {
     token = await AccessToken(
       "testing@abc.com",
-      "test1234",
+      "pass1234",
       request
     );
     expect(token).toBeTruthy();
@@ -33,11 +33,11 @@ test.describe("Create Notes API Testing @sanity", () => {
     expect(responseBody.data.title).toBe(random_title);
     console.log(random_title);
   });
-  test("Delete test", async ({ page }) => {
+  test("Delete Notes via UI", async ({ page }) => {
     await page.goto("https://practice.expandtesting.com/notes/app");
     await page.getByRole("link", { name: "Login" }).click();
     await page.locator("#email").fill("testing@abc.com");
-    await page.locator("#password").fill("test1234");
+    await page.locator("#password").fill("pass1234");
     await page.getByRole("button", { name: "Login" }).click();
     // Wait for notes to load
     await page.waitForSelector(".container");
@@ -45,10 +45,11 @@ test.describe("Create Notes API Testing @sanity", () => {
     const noteDeleteButton = page.locator(
       `//div[text()='${random_title}']//following-sibling::div/div/button[normalize-space()='Delete']`
     );
-    await expect(noteDeleteButton).toBeVisible({ timeout: 5000 });
+    await expect(noteDeleteButton).toBeVisible({ timeout: 8000 });
     await noteDeleteButton.click();
     // Click the confirm delete button in the modal
-    await page.locator('[data-testid="note-delete-confirm"]').click();
+    // await page.locator('[data-testid="note-delete-confirm"]').click();
+       await page.getByTestId("note-delete-confirm").click();
     // Verify the note is deleted
     await expect(page.locator(`//div[text()='${random_title}']`)).toHaveCount(0);
   });

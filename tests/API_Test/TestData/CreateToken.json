@@ -3,14 +3,14 @@
         {
             "TestCase_ID": "TC_001",
             "email": "testing@abc.com",
-            "password": "test1234",
+            "password": "pass1234",
             "exp_res": "Login successful",
             "exp_status_code": 200
         },
-        {
+        {   
             "TestCase_ID": "TC_002",
             "email": "invalid@xyz.com",
-            "password": "test1234",
+            "password": "pass1234",
             "exp_res": "Incorrect email address or password",
             "exp_status_code": 401
         },
@@ -39,6 +39,13 @@
             "TestCase_ID": "TC_006",
             "email": "abhi@xyz.com",
             "password": "",
+            "exp_res": "Password must be between 6 and 30 characters",
+            "exp_status_code": 400
+        },
+         {
+            "TestCase_ID": "TC_007",
+            "email": "abhi@xyz.com",
+            "password": "test1",
             "exp_res": "Password must be between 6 and 30 characters",
             "exp_status_code": 400
         }

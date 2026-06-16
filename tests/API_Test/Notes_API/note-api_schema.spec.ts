@@ -25,7 +25,7 @@ test.describe('Create Notes API Testing', () => {
   let token: string
 
   test.beforeAll(async ({ request }) => {
-    token = await AccessToken("testing@abc.com", "test1234", request)
+    token = await AccessToken("testing@abc.com", "pass1234", request)
     expect(token).toBeTruthy();
   })
   
@@ -55,5 +55,11 @@ test('Validate Create Note API response schema', async () => {
   const isValid = validate(body);
 
   expect(isValid, JSON.stringify(validate.errors, null, 2)).toBe(true);
+  /*JSON.stringify(value, replacer, space)
+value → object to convert
+replacer → usually null (no filtering)
+space → indentation for pretty printing
+
+ 2 = indent with 2 spaces*/
 });
 });

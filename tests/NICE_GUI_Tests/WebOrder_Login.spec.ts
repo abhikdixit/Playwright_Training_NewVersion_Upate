@@ -10,3 +10,4 @@ test('test', async ({ page }) => {
   await page.getByRole('link', { name: 'Logout' }).click();
   await expect(page.getByRole('button', { name: 'Login' })).toBeVisible();
 });
+

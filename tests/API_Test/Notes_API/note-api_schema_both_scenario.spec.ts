@@ -53,7 +53,7 @@ test.describe('🧪 Create Note API - Parametrized Tests', () => {
   test.beforeAll(async ({ request }) => {
     token = await AccessToken(
       'testing@abc.com',        // ✅ replace with your real test user
-      'test1234',
+      'pass1234',
       request
     );
   });

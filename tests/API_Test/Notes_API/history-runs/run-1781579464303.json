@@ -1,0 +1,1626 @@
+{
+  "runId": "run-1781579464303",
+  "timestamp": "2026-06-16T03:11:04.303Z",
+  "tests": {
+    "[chromium] Authenticate_Access_Token.spec.ts::POST Request - Access Token": {
+      "testId": "[chromium] Authenticate_Access_Token.spec.ts::POST Request - Access Token",
+      "title": "POST Request - Access Token",
+      "file": "Authenticate_Access_Token.spec.ts",
+      "status": "passed",
+      "duration": 456,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 3,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 415,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Authenticate_Access_Token.spec.ts____POST Request - Access Token-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Authenticate_AToken_Negative_BadRequest.spec.ts::POST Request - Access Token": {
+      "testId": "[chromium] Authenticate_AToken_Negative_BadRequest.spec.ts::POST Request - Access Token",
+      "title": "POST Request - Access Token",
+      "file": "Authenticate_AToken_Negative_BadRequest.spec.ts",
+      "status": "passed",
+      "duration": 472,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 450,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Authenticate_AToken_Negative_BadRequest.spec.ts____POST Request - Access Token-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Authenticate_AToken_Negative.spec.ts::POST Request - Access Token": {
+      "testId": "[chromium] Authenticate_AToken_Negative.spec.ts::POST Request - Access Token",
+      "title": "POST Request - Access Token",
+      "file": "Authenticate_AToken_Negative.spec.ts",
+      "status": "passed",
+      "duration": 325,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 310,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Authenticate_AToken_Negative.spec.ts____POST Request - Access Token-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_New_Account.spec.ts::Login as an existing user": {
+      "testId": "[chromium] Create_New_Account.spec.ts::Login as an existing user",
+      "title": "Login as an existing user",
+      "file": "Create_New_Account.spec.ts",
+      "status": "passed",
+      "duration": 237,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/register\"",
+          "duration": 220,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_New_Account.spec.ts____Login as an existing user-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_New_User.spec.ts::Register user with unique email": {
+      "testId": "[chromium] Create_New_User.spec.ts::Register user with unique email",
+      "title": "Register user with unique email",
+      "file": "Create_New_User.spec.ts",
+      "status": "passed",
+      "duration": 362,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/register\"",
+          "duration": 344,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_New_User.spec.ts____Register user with unique email-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Notes_Calling_Data_From_JSON.spec.ts::POST Request - Create Note 1: Note 1": {
+      "testId": "[chromium] Create_Notes_Calling_Data_From_JSON.spec.ts::POST Request - Create Note 1: Note 1",
+      "title": "POST Request - Create Note 1: Note 1",
+      "file": "Create_Notes_Calling_Data_From_JSON.spec.ts",
+      "status": "passed",
+      "duration": 258,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 320,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 243,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Notes_Calling_Data_From_JSON.spec.ts____POST Request - Create Note 1__ Note 1-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Notes_Calling_Data_From_JSON.spec.ts::POST Request - Create Note 2: Note 2": {
+      "testId": "[chromium] Create_Notes_Calling_Data_From_JSON.spec.ts::POST Request - Create Note 2: Note 2",
+      "title": "POST Request - Create Note 2: Note 2",
+      "file": "Create_Notes_Calling_Data_From_JSON.spec.ts",
+      "status": "passed",
+      "duration": 450,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 434,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Notes_Calling_Data_From_JSON.spec.ts____POST Request - Create Note 2__ Note 2-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Notes_Calling_Data_From_JSON.spec.ts::POST Request - Create Note 3: Note 3": {
+      "testId": "[chromium] Create_Notes_Calling_Data_From_JSON.spec.ts::POST Request - Create Note 3: Note 3",
+      "title": "POST Request - Create Note 3: Note 3",
+      "file": "Create_Notes_Calling_Data_From_JSON.spec.ts",
+      "status": "passed",
+      "duration": 260,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 244,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Notes_Calling_Data_From_JSON.spec.ts____POST Request - Create Note 3__ Note 3-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Notes_CallingToken.spec.ts::POST Request - Create Notes": {
+      "testId": "[chromium] Create_Notes_CallingToken.spec.ts::POST Request - Create Notes",
+      "title": "POST Request - Create Notes",
+      "file": "Create_Notes_CallingToken.spec.ts",
+      "status": "passed",
+      "duration": 252,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 534,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 236,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Notes_CallingToken.spec.ts____POST Request - Create Notes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 1: abc": {
+      "testId": "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 1: abc",
+      "title": "POST Request - Create Note 1: abc",
+      "file": "Create_Notes_Negative_Tcs_JSON.spec.ts",
+      "status": "passed",
+      "duration": 250,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 314,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 234,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts____POST Request - Create Note 1__ abc-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 2: This title is way too long and exceeds the maximum allowed length of one hundred characters which is not valid at all and should fail.": {
+      "testId": "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 2: This title is way too long and exceeds the maximum allowed length of one hundred characters which is not valid at all and should fail.",
+      "title": "POST Request - Create Note 2: This title is way too long and exceeds the maximum allowed length of one hundred characters which is not valid at all and should fail.",
+      "file": "Create_Notes_Negative_Tcs_JSON.spec.ts",
+      "status": "passed",
+      "duration": 247,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 232,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts____POST Request - Create Note 2__ This title is way too long and exceeds the maximum allowed length of one hundred characters which is not val-87e01b1-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 3: Valid Title": {
+      "testId": "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 3: Valid Title",
+      "title": "POST Request - Create Note 3: Valid Title",
+      "file": "Create_Notes_Negative_Tcs_JSON.spec.ts",
+      "status": "passed",
+      "duration": 257,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 241,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts____POST Request - Create Note 3__ Valid Title-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 4: Valid Title": {
+      "testId": "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 4: Valid Title",
+      "title": "POST Request - Create Note 4: Valid Title",
+      "file": "Create_Notes_Negative_Tcs_JSON.spec.ts",
+      "status": "passed",
+      "duration": 250,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 233,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts____POST Request - Create Note 4__ Valid Title-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 5: ": {
+      "testId": "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 5: ",
+      "title": "POST Request - Create Note 5: ",
+      "file": "Create_Notes_Negative_Tcs_JSON.spec.ts",
+      "status": "passed",
+      "duration": 235,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 222,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts____POST Request - Create Note 5__ -trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 6: Valid Title": {
+      "testId": "[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts::POST Request - Create Note 6: Valid Title",
+      "title": "POST Request - Create Note 6: Valid Title",
+      "file": "Create_Notes_Negative_Tcs_JSON.spec.ts",
+      "status": "passed",
+      "duration": 238,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 226,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Notes_Negative_Tcs_JSON.spec.ts____POST Request - Create Note 6__ Valid Title-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Notes.spec.ts::POST Request - Create Notes": {
+      "testId": "[chromium] Create_Notes.spec.ts::POST Request - Create Notes",
+      "title": "POST Request - Create Notes",
+      "file": "Create_Notes.spec.ts",
+      "status": "passed",
+      "duration": 244,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 309,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 230,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Notes.spec.ts____POST Request - Create Notes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_001": {
+      "testId": "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_001",
+      "title": "Login API Test - TC_001",
+      "file": "Create_Token_All_Tcs.spec.ts",
+      "status": "passed",
+      "duration": 344,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 329,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Token_All_Tcs.spec.ts____Login API Test - TC_001-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_002": {
+      "testId": "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_002",
+      "title": "Login API Test - TC_002",
+      "file": "Create_Token_All_Tcs.spec.ts",
+      "status": "passed",
+      "duration": 235,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 222,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Token_All_Tcs.spec.ts____Login API Test - TC_002-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_003": {
+      "testId": "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_003",
+      "title": "Login API Test - TC_003",
+      "file": "Create_Token_All_Tcs.spec.ts",
+      "status": "passed",
+      "duration": 319,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 307,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Token_All_Tcs.spec.ts____Login API Test - TC_003-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_004": {
+      "testId": "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_004",
+      "title": "Login API Test - TC_004",
+      "file": "Create_Token_All_Tcs.spec.ts",
+      "status": "passed",
+      "duration": 235,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 223,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Token_All_Tcs.spec.ts____Login API Test - TC_004-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_005": {
+      "testId": "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_005",
+      "title": "Login API Test - TC_005",
+      "file": "Create_Token_All_Tcs.spec.ts",
+      "status": "passed",
+      "duration": 231,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 218,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Token_All_Tcs.spec.ts____Login API Test - TC_005-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_006": {
+      "testId": "[chromium] Create_Token_All_Tcs.spec.ts::Login API Test - TC_006",
+      "title": "Login API Test - TC_006",
+      "file": "Create_Token_All_Tcs.spec.ts",
+      "status": "passed",
+      "duration": 236,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 223,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Token_All_Tcs.spec.ts____Login API Test - TC_006-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Create_Token.spec.ts::Login as an existing user": {
+      "testId": "[chromium] Create_Token.spec.ts::Login as an existing user",
+      "title": "Login as an existing user",
+      "file": "Create_Token.spec.ts",
+      "status": "passed",
+      "duration": 332,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 317,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Create_Token.spec.ts____Login as an existing user-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] CreateNotes_Using_API_Delete_Using_UI.spec.ts::POST Request - Create Notes": {
+      "testId": "[chromium] CreateNotes_Using_API_Delete_Using_UI.spec.ts::POST Request - Create Notes",
+      "title": "POST Request - Create Notes",
+      "file": "CreateNotes_Using_API_Delete_Using_UI.spec.ts",
+      "status": "passed",
+      "duration": 258,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 315,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "GET \"/notes/api/notes\"",
+          "duration": 243,
+          "category": "pw:api"
+        },
+        {
+          "title": "DELETE \"/notes/api/notes/6a30becfc760c30296c9f4d1\"",
+          "duration": 237,
+          "category": "pw:api"
+        },
+        {
+          "title": "DELETE \"/notes/api/notes/6a30beccc760c30296c9f4c3\"",
+          "duration": 248,
+          "category": "pw:api"
+        },
+        {
+          "title": "DELETE \"/notes/api/notes/6a30beccc760c30296c9f4bd\"",
+          "duration": 232,
+          "category": "pw:api"
+        },
+        {
+          "title": "DELETE \"/notes/api/notes/6a30becbc760c30296c9f4b9\"",
+          "duration": 251,
+          "category": "pw:api"
+        },
+        {
+          "title": "DELETE \"/notes/api/notes/6a30becbc760c30296c9f4b5\"",
+          "duration": 232,
+          "category": "pw:api"
+        },
+        {
+          "title": "DELETE \"/notes/api/notes/6a30be95c760c30296c9f4a5\"",
+          "duration": 246,
+          "category": "pw:api"
+        },
+        {
+          "title": "DELETE \"/notes/api/notes/6a30be94c760c30296c9f49c\"",
+          "duration": 230,
+          "category": "pw:api"
+        },
+        {
+          "title": "DELETE \"/notes/api/notes/6a30be93c760c30296c9f496\"",
+          "duration": 239,
+          "category": "pw:api"
+        },
+        {
+          "title": "DELETE \"/notes/api/notes/6a30be92c760c30296c9f48d\"",
+          "duration": 233,
+          "category": "pw:api"
+        },
+        {
+          "title": "DELETE \"/notes/api/notes/6a30be87c760c30296c9f450\"",
+          "duration": 237,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 242,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] CreateNotes_Using_API_Delete_Using_UI.spec.ts____POST Request - Create Notes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] CreateNotes_Using_API_Delete_Using_UI.spec.ts::Delete Notes via UI": {
+      "testId": "[chromium] CreateNotes_Using_API_Delete_Using_UI.spec.ts::Delete Notes via UI",
+      "title": "Delete Notes via UI",
+      "file": "CreateNotes_Using_API_Delete_Using_UI.spec.ts",
+      "status": "passed",
+      "duration": 6050,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Launch browser",
+          "duration": 192,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create context",
+          "duration": 16,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 527,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/notes/app\"",
+          "duration": 1977,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Login' })",
+          "duration": 383,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"testing@abc.com\" locator('#email')",
+          "duration": 910,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"pass1234\" locator('#password')",
+          "duration": 72,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByRole('button', { name: 'Login' })",
+          "duration": 93,
+          "category": "pw:api"
+        },
+        {
+          "title": "Wait for selector locator('.container')",
+          "duration": 30,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('//div[text()=\\'Playwright_Notes_21392\\']//following-sibling::div/div/button[normalize-space()=\\'Delete\\']')",
+          "duration": 81,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByTestId('note-delete-confirm')",
+          "duration": 63,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] CreateNotes_Using_API_Delete_Using_UI.spec.ts____Delete Notes via UI-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Delete_All_Notes_Before_Creating.spec.ts::Create Notes": {
+      "testId": "[chromium] Delete_All_Notes_Before_Creating.spec.ts::Create Notes",
+      "title": "Create Notes",
+      "file": "Delete_All_Notes_Before_Creating.spec.ts",
+      "status": "passed",
+      "duration": 260,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 317,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "GET \"/notes/api/notes\"",
+          "duration": 227,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 244,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Delete_All_Notes_Before_Creating.spec.ts____Create Notes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Delete_Notes_Calling_BaseClass.spec.ts::Delete Request - Delete Notes ": {
+      "testId": "[chromium] Delete_Notes_Calling_BaseClass.spec.ts::Delete Request - Delete Notes ",
+      "title": "Delete Request - Delete Notes ",
+      "file": "Delete_Notes_Calling_BaseClass.spec.ts",
+      "status": "passed",
+      "duration": 268,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 322,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 249,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "DELETE \"/notes/api/notes/6a30bedcc760c30296c9f512\"",
+          "duration": 255,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Delete_Notes_Calling_BaseClass.spec.ts____Delete Request - Delete Notes -trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Delete_Notes_CallingToken.spec.ts::POST Request - Create Notes": {
+      "testId": "[chromium] Delete_Notes_CallingToken.spec.ts::POST Request - Create Notes",
+      "title": "POST Request - Create Notes",
+      "file": "Delete_Notes_CallingToken.spec.ts",
+      "status": "passed",
+      "duration": 246,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 309,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 233,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Delete_Notes_CallingToken.spec.ts____POST Request - Create Notes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Delete_Notes_CallingToken.spec.ts::Update Request - Update Notes": {
+      "testId": "[chromium] Delete_Notes_CallingToken.spec.ts::Update Request - Update Notes",
+      "title": "Update Request - Update Notes",
+      "file": "Delete_Notes_CallingToken.spec.ts",
+      "status": "passed",
+      "duration": 248,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "PUT \"/notes/api/notes/6a30beddc760c30296c9f51b\"",
+          "duration": 234,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Delete_Notes_CallingToken.spec.ts____Update Request - Update Notes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Delete_Notes_CallingToken.spec.ts::Delete Request - Delete Notes": {
+      "testId": "[chromium] Delete_Notes_CallingToken.spec.ts::Delete Request - Delete Notes",
+      "title": "Delete Request - Delete Notes",
+      "file": "Delete_Notes_CallingToken.spec.ts",
+      "status": "passed",
+      "duration": 262,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "DELETE \"/notes/api/notes/6a30beddc760c30296c9f51b\"",
+          "duration": 247,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Delete_Notes_CallingToken.spec.ts____Delete Request - Delete Notes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Delete_Notes_UsingUI.spec.ts::POST Request - Create Notes": {
+      "testId": "[chromium] Delete_Notes_UsingUI.spec.ts::POST Request - Create Notes",
+      "title": "POST Request - Create Notes",
+      "file": "Delete_Notes_UsingUI.spec.ts",
+      "status": "passed",
+      "duration": 262,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 332,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 249,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Delete_Notes_UsingUI.spec.ts____POST Request - Create Notes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Delete_Notes_UsingUI.spec.ts::Delete Notes using API": {
+      "testId": "[chromium] Delete_Notes_UsingUI.spec.ts::Delete Notes using API",
+      "title": "Delete Notes using API",
+      "file": "Delete_Notes_UsingUI.spec.ts",
+      "status": "passed",
+      "duration": 5415,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create context",
+          "duration": 5,
+          "category": "pw:api"
+        },
+        {
+          "title": "Create page",
+          "duration": 98,
+          "category": "pw:api"
+        },
+        {
+          "title": "Navigate to \"/notes/app\"",
+          "duration": 1869,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Click getByRole('link', { name: 'Login' })",
+          "duration": 323,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"testing@abc.com\" getByTestId('login-email')",
+          "duration": 908,
+          "category": "pw:api"
+        },
+        {
+          "title": "Fill \"pass1234\" getByTestId('login-password')",
+          "duration": 46,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByTestId('login-submit')",
+          "duration": 104,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByTestId('category-work')",
+          "duration": 870,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('//div[normalize-space()=\\'Playwright_UI\\']/following-sibling::div[2]/div/button[2]')",
+          "duration": 75,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click locator('//button[@type=\\'button\\'][normalize-space()=\\'Delete\\']')",
+          "duration": 83,
+          "category": "pw:api"
+        },
+        {
+          "title": "Click getByTestId('logout')",
+          "duration": 79,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Delete_Notes_UsingUI.spec.ts____Delete Notes using API-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Delete_Notes.spec.ts::POST Request - Create Notes": {
+      "testId": "[chromium] Delete_Notes.spec.ts::POST Request - Create Notes",
+      "title": "POST Request - Create Notes",
+      "file": "Delete_Notes.spec.ts",
+      "status": "passed",
+      "duration": 310,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 521,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 269,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Delete_Notes.spec.ts____POST Request - Create Notes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Delete_Notes.spec.ts::Delete Request - Delete Notes": {
+      "testId": "[chromium] Delete_Notes.spec.ts::Delete Request - Delete Notes",
+      "title": "Delete Request - Delete Notes",
+      "file": "Delete_Notes.spec.ts",
+      "status": "passed",
+      "duration": 472,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "DELETE \"/notes/api/notes/6a30bee5c760c30296c9f539\"",
+          "duration": 442,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Delete_Notes.spec.ts____Delete Request - Delete Notes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Get_All_Notes.spec.ts::GET Request - GET All Notes": {
+      "testId": "[chromium] Get_All_Notes.spec.ts::GET Request - GET All Notes",
+      "title": "GET Request - GET All Notes",
+      "file": "Get_All_Notes.spec.ts",
+      "status": "passed",
+      "duration": 255,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 310,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "GET \"/notes/api/notes\"",
+          "duration": 224,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Get_All_Notes.spec.ts____GET Request - GET All Notes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] note-api_negative_schema.spec.ts::Validate Create Note API response schema": {
+      "testId": "[chromium] note-api_negative_schema.spec.ts::Validate Create Note API response schema",
+      "title": "Validate Create Note API response schema",
+      "file": "note-api_negative_schema.spec.ts",
+      "status": "passed",
+      "duration": 287,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 328,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 251,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] note-api_negative_schema.spec.ts____Validate Create Note API response schema-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] note-api_schema_both_scenario.spec.ts::✅ Positive - Valid note creation": {
+      "testId": "[chromium] note-api_schema_both_scenario.spec.ts::✅ Positive - Valid note creation",
+      "title": "✅ Positive - Valid note creation",
+      "file": "note-api_schema_both_scenario.spec.ts",
+      "status": "passed",
+      "duration": 254,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 316,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 235,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] note-api_schema_both_scenario.spec.ts____✅ Positive - Valid note creation-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] note-api_schema_both_scenario.spec.ts::❌ Negative - Missing title": {
+      "testId": "[chromium] note-api_schema_both_scenario.spec.ts::❌ Negative - Missing title",
+      "title": "❌ Negative - Missing title",
+      "file": "note-api_schema_both_scenario.spec.ts",
+      "status": "passed",
+      "duration": 241,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 223,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] note-api_schema_both_scenario.spec.ts____❌ Negative - Missing title-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] note-api_schema_both_scenario.spec.ts::❌ Negative - Empty category": {
+      "testId": "[chromium] note-api_schema_both_scenario.spec.ts::❌ Negative - Empty category",
+      "title": "❌ Negative - Empty category",
+      "file": "note-api_schema_both_scenario.spec.ts",
+      "status": "passed",
+      "duration": 242,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 225,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] note-api_schema_both_scenario.spec.ts____❌ Negative - Empty category-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] note-api_schema_both_scenario.spec.ts::❌ Negative - All fields missing": {
+      "testId": "[chromium] note-api_schema_both_scenario.spec.ts::❌ Negative - All fields missing",
+      "title": "❌ Negative - All fields missing",
+      "file": "note-api_schema_both_scenario.spec.ts",
+      "status": "passed",
+      "duration": 247,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 224,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] note-api_schema_both_scenario.spec.ts____❌ Negative - All fields missing-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] note-api_schema.spec.ts::Validate Create Note API response schema": {
+      "testId": "[chromium] note-api_schema.spec.ts::Validate Create Note API response schema",
+      "title": "Validate Create Note API response schema",
+      "file": "note-api_schema.spec.ts",
+      "status": "passed",
+      "duration": 252,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 335,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 235,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] note-api_schema.spec.ts____Validate Create Note API response schema-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Update_Notes_CallingToken.spec.ts::POST Request - Create Notes": {
+      "testId": "[chromium] Update_Notes_CallingToken.spec.ts::POST Request - Create Notes",
+      "title": "POST Request - Create Notes",
+      "file": "Update_Notes_CallingToken.spec.ts",
+      "status": "passed",
+      "duration": 253,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 309,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 238,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Update_Notes_CallingToken.spec.ts____POST Request - Create Notes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Update_Notes_CallingToken.spec.ts::Update Request - Update Notes": {
+      "testId": "[chromium] Update_Notes_CallingToken.spec.ts::Update Request - Update Notes",
+      "title": "Update Request - Update Notes",
+      "file": "Update_Notes_CallingToken.spec.ts",
+      "status": "passed",
+      "duration": 257,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "PUT \"/notes/api/notes/6a30bee9c760c30296c9f558\"",
+          "duration": 246,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Update_Notes_CallingToken.spec.ts____Update Request - Update Notes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Update_Notes.spec.ts::POST Request - Create Notes": {
+      "testId": "[chromium] Update_Notes.spec.ts::POST Request - Create Notes",
+      "title": "POST Request - Create Notes",
+      "file": "Update_Notes.spec.ts",
+      "status": "passed",
+      "duration": 265,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/users/login\"",
+          "duration": 320,
+          "category": "pw:api",
+          "isSlowest": true
+        },
+        {
+          "title": "Create request context",
+          "duration": 0,
+          "category": "pw:api"
+        },
+        {
+          "title": "POST \"/notes/api/notes\"",
+          "duration": 243,
+          "category": "pw:api"
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Update_Notes.spec.ts____POST Request - Create Notes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    },
+    "[chromium] Update_Notes.spec.ts::PUT Request - Update Notes": {
+      "testId": "[chromium] Update_Notes.spec.ts::PUT Request - Update Notes",
+      "title": "PUT Request - Update Notes",
+      "file": "Update_Notes.spec.ts",
+      "status": "passed",
+      "duration": 252,
+      "retry": 0,
+      "steps": [
+        {
+          "title": "Create request context",
+          "duration": 1,
+          "category": "pw:api"
+        },
+        {
+          "title": "PUT \"/notes/api/notes/6a30beeac760c30296c9f561\"",
+          "duration": 232,
+          "category": "pw:api",
+          "isSlowest": true
+        }
+      ],
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [
+          "./traces/[chromium] Update_Notes.spec.ts____PUT Request - Update Notes-trace-0.zip"
+        ],
+        "custom": []
+      }
+    }
+  }
+}

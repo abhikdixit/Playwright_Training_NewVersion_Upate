@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.skip('Flipcart Login Page Mouse Hover', async ({ page }) => {
+test('Flipcart Login Page Mouse Hover', async ({ page }) => {
   await page.goto('https://www.flipkart.com/');
   await page.waitForLoadState('networkidle');
   await page.hover("//span[normalize-space()='Login']")
@@ -11,12 +11,13 @@ test.skip('Flipcart Login Page Mouse Hover', async ({ page }) => {
 
 });
 
-test('Demo WebShop Mouse Hover Example', async ({ page }) => {
+test.only('Demo WebShop Mouse Hover Example', async ({ page }) => {
   await page.goto('https://demowebshop.tricentis.com/');
   await page.waitForLoadState('networkidle');
   await page.hover("//a[normalize-space()='Computers']")
   //await page.click("//a[normalize-space()='Notebooks']");
-  await page.locator("//a[normalize-space()='Notebooks']").click()
+  //await page.locator("//ul[@class='sublist firstLevel']//li//a[normalize-space()='Notebooks']").click()
+   await page.getByRole('link', { name: 'Notebooks' }).click();
   await expect(page).toHaveURL("https://demowebshop.tricentis.com/notebooks")
   await page.waitForTimeout(5000)
 

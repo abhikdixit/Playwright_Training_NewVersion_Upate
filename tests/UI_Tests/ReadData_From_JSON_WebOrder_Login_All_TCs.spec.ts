@@ -1,3 +1,4 @@
+//fs - file system module in Node.js, used for reading and writing files
 import fs from 'fs';
 import { test, expect } from '@playwright/test';
 
@@ -16,20 +17,16 @@ for (const record of users) {
     await page.getByLabel('Password:').fill(record.password);
     await page.getByRole('button', { name: 'Login' }).click();
     
-
     if ('Logout' == record.exp_res) {
 
       await expect(page.locator("a[id='ctl00_logout']")).toHaveText(record.exp_res)
-      //await page.getByRole('link', { name: 'Logout' }).click();
       await page.click('text=Logout');
       await page.waitForLoadState(); // The promise resolves after 'load' event.
 
     } //else if ('Invalid Login or Password.' == record.exp_res)
     else
     {
-      //const name = await page.$eval("#ctl00_MainContent_status", el => el.textContent.trim())
-      //expect(name).toBe('Invalid Login or Password.')
-      //expect(name).toBe(record.exp_res)
+
       await expect(page.locator("span[id='ctl00_MainContent_status']")).toHaveText(record.exp_res)
 
     }

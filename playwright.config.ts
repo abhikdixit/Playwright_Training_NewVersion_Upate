@@ -21,6 +21,7 @@ const config = {
   //globalSetup: "./global-setup",
   //testDir: './tests/',
   //testDir: './tests/UI_Tests/',
+  //testDir: './tests/AI_Test/',
   //testDir: './tests/UI_Special_Control/',
   //testDir: './tests/NICE_GUI_Tests/',
   //testDir: './tests/HCL_Test/',
@@ -29,24 +30,26 @@ const config = {
   //testDir: './tests/API_Test/Restful-booker_API/',
   //testDir: './tests/Mock_API_Test/',
   //testDir: './tests/OrangeHRM/',
-  testDir: './tests/ZeroBank_Test_PageObject/',
+  //testDir: './tests/ZeroBank_Test_PageObject/',
   //testDir: './tests/WEBORDER/',
   //testDir: './tests/Spreecom_API_Framework/',
   //testDir: './tests/Spreecom_API_Minh/API_test/',
   //testDir:'./tests/API_Test/Request_API/',
-  //testDir:'./tests/API_Test/Notes_API/',
+  //testDir:'./tests/API_Test/Mock_Test/',
+  testDir:'./tests/API_Test/Notes_API/',
+  //testDir:'./tests/API_Test/SOAP_Request/',
   //testMatch: ['**/*.spec.ts', '**/*.test.ts'], // only run real test files
   //testDir:'./tests/API_Test/GraphQL_API_Test/',
   //testDir: './tests/Salesforce_Test',
   /* Maximum time one test can run for. */
-  timeout: 80000,
+  //timeout: 120000,
   
   expect: {
     /**
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    //timeout: 80000
+    //timeout: 60000
   },
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -63,10 +66,10 @@ const config = {
   //reporter: [['html', { open: 'never' }]],
   //reporter: [["line"], ["allure-playwright"]],
   //reporter: [["html"], ["allure-playwright"]],
-  /* reporter: [
+   /*reporter: [
     ['playwright-smart-reporter', {
-      outputFile: 'UI_Smoke_Test_Report.html',
-      historyFile: 'test-history.json',
+    outputFile: './Reports/UI_Smoke_Test_Report.html',
+    historyFile: './Reports/test-history.json',
       maxHistoryRuns: 5,
       performanceThreshold: 0.2,
       slackWebhook: process.env.SLACK_WEBHOOK_URL,
@@ -95,14 +98,14 @@ const config = {
     //baseURL: 'http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx',
     //baseURL: 'https://practice.expandtesting.com/',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'retain-on-failure',
+    trace: 'on',
     //video: 'on-first-retry',
     video: 'retain-on-failure',
     screenshot:'only-on-failure',
     // slowMo: 1000, // Moved to launchOptions in project config if needed
     // Tell all tests to load signed-in state from 'storageState.json'.
     //baseURL: 'http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders',
-   // storageState: './tests/OrangeHRM/WebOrderState.json',// <--- loads the signed-in session
+    storageState: './tests/OrangeHRM/WebOrderState.json',// <--- loads the signed-in session
     //storageState: './tests/OrangeHRM/storageState.json',   // <--- loads the signed-in session
     //video: 'retain-on-failure',
     //screenshot: 'only-on-failure',
@@ -113,9 +116,14 @@ const config = {
     //video: 'on',
     //trace : 'on',
     // To bypass Certificate error.
-    ignoreHTTPSErrors:true
+    ignoreHTTPSErrors:true,
     //viewport: { width: 680, height: 520 }
-
+    // viewport: null, //Max size window: Do not force a fixed viewport; use the browser window size instead
+    // launchOptions: {
+    //   //Max size window
+    //   args: ['--start-maximized'],
+    //   slowMo: 800, // in milliseconds; slows down each action to better visualize interactions (useful for debugging, but increases test execution time)
+    // },
   },
 
   /* Configure projects for major browsers */

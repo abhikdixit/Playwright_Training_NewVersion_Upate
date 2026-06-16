@@ -2,17 +2,20 @@
     {
       "title": "Note 1",
       "description": "This is the first note",
-      "category": "Personal"
+      "category": "Personal",
+      "statuscode": 200
     },
     {
       "title": "Note 2",
       "description": "This is the second note",
-      "category": "Work"
+      "category": "Work",
+      "statuscode": 200
     },
     {
       "title": "Note 3",
       "description": "This is the third note",
-      "category": "Home"
+      "category": "Home",
+      "statuscode": 200
     }
   ]
   

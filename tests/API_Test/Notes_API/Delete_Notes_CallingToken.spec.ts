@@ -6,7 +6,7 @@ test.describe('Create Notes API Testing', () => {
   let id: string
   let updated_id: string
   test.beforeAll(async ({ request }) => {
-    token = await AccessToken("abhinay.dixit@hotmail.com", "pass@1234", request)
+    token = await AccessToken("testing@abc.com", "pass1234", request)
     expect(token).toBeTruthy();
   })
   

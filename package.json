@@ -6,6 +6,7 @@
   "scripts": {
     
     "UITest": "playwright test --config=UITest.config.ts --headed",
+    "Multiple_Scripts": "playwright test WebOrder_Create_Unique_Order_VerifyOrder.spec.ts WebOrder_DeleteOrder_VerifyOrder.spec.ts",
     "NICE_GUI_Tests_Headed": "playwright test --config=nice_ui_test.config.ts --headed",
     "NICE_GUI_Tests_Headless": "playwright test --config=nice_ui_test.config.ts",
     "Single_Script": "playwright test ReadData_From_JSON_WebOrder_Login_All_TCs.spec.ts --headed",
@@ -14,7 +15,7 @@
     "ZeroBank_Headless": "playwright test --config=ZeroBank.config.ts",
     "Smoke_Test": "playwright test --grep @smoke",
     "Smoke_Test_List": "playwright test --grep @smoke --list",
-    "Sanity_Test": "playwright test --grep @sanity",
+    "Sanity_Test": "playwright test --grep @sanity --list",
     "Restful_API_Test": "playwright test",
     "MyTest": "playwright test WebOrder_Create_Unique_Order_VerifyOrder.spec.ts --headed",
     "Sanity_Test_Config": "playwright test --config=Sanity.config.ts",
@@ -25,7 +26,7 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.30.0",
-    "@playwright/test": "^1.54.2",
+     "@playwright/test": "^1.59.1",
     "@types/jest": "^29.5.0",
     "@types/node": "^20.0.0",
     "allure-playwright": "^2.15.1",

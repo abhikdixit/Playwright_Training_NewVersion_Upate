@@ -8,7 +8,7 @@ test.describe('Create Token - API Testing @smoke', () => {
     const response = await request.post(`${baseUrl}/notes/api/users/login`, {
       data: {
         "email": "testing@abc.com",
-        "password": "test1234"
+        "password": "pass1234"
       },
     })
     const responseBody = JSON.parse(await response.text())

@@ -6,7 +6,7 @@ test.describe('Access Token', () => {
   test('POST Request - Access Token', async ({ request }) => {
     const response = await request.post(`${baseUrl}/notes/api/users/login`, {
       data: {
-        "email": "abhinay.dixit1@hotmail.com",
+        "email": "testing@abc.com",
         "password": "pass@1234"
       },
     })

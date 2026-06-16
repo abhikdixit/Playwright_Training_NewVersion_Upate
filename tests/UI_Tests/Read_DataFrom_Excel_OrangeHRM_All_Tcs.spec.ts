@@ -15,6 +15,7 @@ const filePath = path.join(__dirname, '../TestData/OrangeHRM_Login_All_Test.xlsx
 const workbook = readFile(filePath);
 const sheetName = workbook.SheetNames[0];
 const records: WebOrderData[] = utils.sheet_to_json(workbook.Sheets[sheetName]);
+//const records = utils.sheet_to_json(workbook.Sheets[sheetName]);
 
 test.describe('WebOrder All Test Scenario', () => {
 

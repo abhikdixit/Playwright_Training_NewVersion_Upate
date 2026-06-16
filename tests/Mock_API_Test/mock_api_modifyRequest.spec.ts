@@ -1,4 +1,4 @@
-const { test, expect }= require('@playwright/test')
+import { test, expect } from '@playwright/test';
 test('gets the json from api and adds a new fruit', async ({ page }) => {
   // Get the response and add to it
   await page.route('*/**/api/v1/fruits', async route => {

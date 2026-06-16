@@ -1,0 +1,110 @@
+[
+  {
+    "test_case": "Valid Registration",
+    "name": "Testing User",
+    "email": "dynamic",
+    "password": "test1234",
+    "expected_status": 201,
+    "expected_success": true,
+    "expected_message": "User account created successfully"
+  },
+  {
+    "test_case": "Blank Name",
+    "name": "",
+    "email": "dynamic",
+    "password": "test1234",
+    "expected_status": 400,
+    "expected_success": false,
+    "expected_message": "User name must be between 4 and 30 characters"
+  },
+  {
+    "test_case": "Blank Email",
+    "name": "Testing User",
+    "email": "",
+    "password": "test1234",
+    "expected_status": 400,
+    "expected_success": false,
+    "expected_message": "A valid email address is required"
+  },
+  {
+    "test_case": "Blank Password",
+    "name": "Testing User",
+    "email": "dynamic",
+    "password": "",
+    "expected_status": 400,
+    "expected_success": false,
+    "expected_message": "Password must be between 6 and 30 characters"
+  },
+  {
+    "test_case": "Invalid Email Format",
+    "name": "Testing User",
+    "email": "invalidemail",
+    "password": "test1234",
+    "expected_status": 400,
+    "expected_success": false,
+    "expected_message": "A valid email address is required"
+  },
+  {
+    "test_case": "Email Without Domain",
+    "name": "Testing User",
+    "email": "test@",
+    "password": "test1234",
+    "expected_status": 400,
+    "expected_success": false,
+    "expected_message": "A valid email address is required"
+  },
+  {
+    "test_case": "Password Less Than 6 Characters",
+    "name": "Testing User",
+    "email": "dynamic",
+    "password": "123",
+    "expected_status": 400,
+    "expected_success": false,
+    "expected_message": "Password must be between 6 and 30 characters"
+  },
+  {
+    "test_case": "Name With Special Characters",
+    "name": "@#$%^&*",
+    "email": "dynamic",
+    "password": "test1234",
+    "expected_status": 201,
+    "expected_success": true,
+    "expected_message": "User account created successfully"
+  },
+  {
+    "test_case": "Long Name",
+    "name": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "email": "dynamic",
+    "password": "test1234",
+    "expected_status": 400,
+    "expected_success": false,
+    "expected_message": "User name must be between 4 and 30 characters"
+  },
+  {
+    "test_case": "Null Name",
+    "name": null,
+    "email": "dynamic",
+    "password": "test1234",
+    "expected_status": 400,
+    "expected_success": false,
+    "expected_message": "User name must be between 4 and 30 characters"
+  },
+  {
+    "test_case": "Null Email",
+    "name": "Testing User",
+    "email": null,
+    "password": "test1234",
+    "expected_status": 400,
+    "expected_success": false,
+    "expected_message": "A valid email address is required"
+  },
+  {
+    "test_case": "Null Password",
+    "name": "Testing User",
+    "email": "dynamic",
+    "password": null,
+    "expected_status": 400,
+    "expected_success": false,
+    "expected_message": "Password must be between 6 and 30 characters"
+  }
+]

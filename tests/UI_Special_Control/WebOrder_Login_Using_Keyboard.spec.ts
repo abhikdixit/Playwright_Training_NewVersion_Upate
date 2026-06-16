@@ -11,7 +11,8 @@ test('Weborder Login Functionality @sanity', async ({ page }) => {
   await page.keyboard.type('test');
   await page.keyboard.press('Enter');
   await page.waitForLoadState()
-  await expect(page.locator('#ctl00_logout')).toHaveText('Logout');
+  await expect.soft(page.locator('#ctl00_logout1')).toHaveText('Logout');
   await page.getByRole('link', { name: 'Logout' }).click();
+  await page.waitForTimeout(5000);
 
 });

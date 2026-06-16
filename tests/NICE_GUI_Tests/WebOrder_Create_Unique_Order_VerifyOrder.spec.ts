@@ -25,11 +25,11 @@ test('Create Order Unique Order- Verify Order @smoke', async ({ page }) => {
   await page.getByLabel('Quantity:*').fill('5');
   //await page.getByLabel('Customer name:*').click();
   
-  const d = new Date();
-  let ms = d.getTime(); //use getTime to get milliseconds
+  // const d = new Date();
+  // let ms = d.getTime(); //use getTime to get milliseconds
   
-
-  const ExpUserName = 'Dixit' + ms;
+const randomDecimal: number = Math.random();
+  const ExpUserName = 'Dixit' + randomDecimal;
 
   //Dixit6546567
 

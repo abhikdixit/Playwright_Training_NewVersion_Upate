@@ -31,10 +31,6 @@ test.describe('Login to APP -> Add User -> Update User ->Delete User', async () 
         // await page.getByRole('textbox').nth(2).click();
         await page.locator('[placeholder="Type for hints..."]').fill('A');
         await page.waitForTimeout(3000)
-
-        // Click by Index
-        //await page.locator('div.oxd-autocomplete-option').nth(0).click();
-
         // await page.keyboard.press('ArrowDown');
         await page.keyboard.press('ArrowDown');
         await page.keyboard.press('Enter');
@@ -64,10 +60,11 @@ test.describe('Login to APP -> Add User -> Update User ->Delete User', async () 
     });
     test('Delete User', async () => {
         // Delete the user and Verify that user got deleted from application
-        await page.locator("//div[text()='" + ExpUserName + "']/parent::div/following-sibling::div//button[1]/i").click();
+        ////div[text()='Abhi19.24653252511166']/parent::div/following-sibling::div//i[@class='oxd-icon bi-pencil-fill']
+        await page.locator("//div[text()='" + ExpUserName + "']/parent::div/following-sibling::div//i[@class='oxd-icon bi-trash']").click();
         await page.locator("//i[@class='oxd-icon bi-trash oxd-button-icon']").click()
         await page.waitForSelector("//i[@class='oxd-icon bi-plus oxd-button-icon']");
-        //Identify the WebTable section using container option
+        //Identify the WebTable section using container option  
         const locator = page.locator("//div[@class='orangehrm-container']");
         await expect(locator).not.toContainText(ExpUserName);
     });

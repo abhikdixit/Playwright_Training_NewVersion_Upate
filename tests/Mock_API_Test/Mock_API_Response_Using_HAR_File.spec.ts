@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
 
 test('mocking api using the HAR file', async ({ page }) => {
     // Load the HAR file 

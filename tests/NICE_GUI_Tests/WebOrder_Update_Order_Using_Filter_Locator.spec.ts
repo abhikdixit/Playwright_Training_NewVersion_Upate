@@ -45,8 +45,7 @@ await expect(
   //await expect(userRow).toHaveText(ExpUserName, { timeout: 5000 });
 
   // Click Edit in the same row
-  await page
-  .locator('#ctl00_MainContent_orderGrid tr', {
+  await page.locator('#ctl00_MainContent_orderGrid tr', {
     has: page.locator('td', { hasText: ExpUserName })
   })
   .locator('input[alt="Edit"]')

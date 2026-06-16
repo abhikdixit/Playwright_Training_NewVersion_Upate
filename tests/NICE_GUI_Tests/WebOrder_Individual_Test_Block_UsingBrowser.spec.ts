@@ -1,14 +1,17 @@
 //import { test, expect } from '@playwright/test';
 import { test, expect, Page } from '@playwright/test';
 
-test.describe.serial('E2E WebOrder Application', () => {
+test.describe.serial('E2E WebOrder Application Test cases', () => {
   let page: Page;
   let ExpUserName: string;
-  test.setTimeout(60000); // Set timeout for the entire test suite to 60 seconds
+  //test.setTimeout(60000); // Set timeout for the entire test suite to 60 seconds
 
   test.beforeAll(async ({ browser }) => {
     page = await browser.newPage();
-    
+    // Create a new incognito browser context
+//     const context = await browser.newContext();
+// // Create a new page inside context.
+//     page = await context.newPage();
     // Navigate to login page and wait for load
     await page.goto('http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx', {
       waitUntil: 'networkidle'

@@ -24,7 +24,7 @@ const config = {
   //testDir: './tests/',
   //testDir: './tests/UI_Tests/',
 
-  //testDir: './tests/UI_Special_Control/',
+  testDir: './tests/UI_Special_Control/',
   //testDir: './tests/NICE_GUI_Tests/',
   //testDir: './tests/Assignments/',
   //testDir: './tests/API_Test/',
@@ -35,7 +35,7 @@ const config = {
   //testDir: './tests/Spreecom_API_Framework/',
   //testDir: './tests/Spreecom_API_Minh/API_test/',
   //testDir:'./tests/API_Test/Request_API/',
-  testDir:'./tests/API_Test/Notes_API/',
+  //testDir:'./tests/API_Test/Notes_API/',
   //testDir: './tests/Salesforce_Test',
   /* Maximum time one test can run for. */
   //timeout: 60000,
@@ -49,7 +49,7 @@ const config = {
   },
   /* Run tests in files in parallel */
   fullyParallel: true,
-  workers:1,
+  workers:3,
   //retries: 2,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   //forbidOnly: !!process.env.CI,
@@ -84,7 +84,7 @@ const config = {
     //screenshot: 'only-on-failure',
     //storageState: "./LoginAuth.json"
     //viewport: { width: 1920, height: 1080 },
-    headless: true,
+    headless: false,
     //trace : 'on',
     // To bypass Certificate error.
     ignoreHTTPSErrors:true
@@ -94,18 +94,18 @@ const config = {
 
   /* Configure projects for major browsers */
   projects: [
-   {
-      name: 'chrome',
-      use: {
-        ...devices['Desktop Chrome'],
-        viewport:{width:1536,height:864},
-        //colorScheme: 'dark',
-        // launchOptions:{
-        //   args:["--start-fullscreen"]
-        //   //args:["--start-maximized"]
-        // }
-      },
-    },
+  //  {
+  //     name: 'chrome',
+  //     use: {
+  //       ...devices['Desktop Chrome'],
+  //       viewport:{width:1536,height:864},
+  //       //colorScheme: 'dark',
+  //       // launchOptions:{
+  //       //   args:["--start-fullscreen"]
+  //       //   //args:["--start-maximized"]
+  //       // }
+  //     },
+  //   },
     
     // {
     //   name: 'Microsoft Edge',

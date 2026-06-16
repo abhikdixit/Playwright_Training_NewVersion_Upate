@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Valid credentials",
+    "username": "Admin",
+    "password": "admin123",
+    "expected": "dashboard",
+    "message": "Dashboard"
+  },
+  {
+    "name": "Invalid credentials",
+    "username": "Admin",
+    "password": "wrongpass",
+    "expected": "invalid",
+    "message": "Invalid credentials"
+  },
+  {
+    "name": "Blank username",
+    "username": "",
+    "password": "admin123",
+    "expected": "required",
+    "message": "Required"
+  },
+  {
+    "name": "Blank password",
+    "username": "Admin",
+    "password": "",
+    "expected": "required",
+    "message": "Required"
+  }
+
+]
