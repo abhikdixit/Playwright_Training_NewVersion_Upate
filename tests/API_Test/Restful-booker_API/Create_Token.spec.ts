@@ -21,7 +21,7 @@ test.describe('Create Token', () => {
     console.log(token)
   })
 
-  test.only('POST Request - Negative Scenario', async ({ request }) => {
+  test('POST Request - Negative Scenario', async ({ request }) => {
     const response = await request.post(`${baseUrl}/auth`, {
       headers: {
         'Content-Type': 'application/json',
