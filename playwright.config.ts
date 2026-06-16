@@ -27,7 +27,7 @@ const config = {
   //testDir: './tests/HCL_Test/',
   //testDir: './tests/Assignments/',
   //testDir: './tests/API_Test/',
-  testDir: './tests/API_Test/Restful-booker_API/',
+  //testDir: './tests/API_Test/Restful-booker_API/',
   //testDir: './tests/Mock_API_Test/',
   //testDir: './tests/OrangeHRM/',
   //testDir: './tests/ZeroBank_Test_PageObject/',
@@ -39,7 +39,7 @@ const config = {
   //testDir:'./tests/API_Test/Notes_API/',
   //testDir:'./tests/API_Test/SOAP_Request/',
   //testMatch: ['**/*.spec.ts', '**/*.test.ts'], // only run real test files
-  //testDir:'./tests/API_Test/GraphQL_API_Test/',
+  testDir:'./tests/API_Test/GraphQL_API_Test/',
   //testDir: './tests/Salesforce_Test',
   /* Maximum time one test can run for. */
   //timeout: 120000,

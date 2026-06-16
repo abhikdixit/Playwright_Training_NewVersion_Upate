@@ -20,12 +20,13 @@ test.describe('Countries GraphQL API', () => {
 
     expect(response.ok()).toBeTruthy();
     const body = await response.json();
+    console.log(body.data.countries[0]);
     expect(body.data?.countries).toHaveLength(250); // this API returns 250 countries :contentReference[oaicite:1]{index=1}
     expect(body.data.countries[0]).toHaveProperty('code');
     expect(body.data.countries[0]).toHaveProperty('name');
   });
 
-  test('filter specific country by code (DE)', async ({ request }) => {
+  test.only('filter specific country by code (DE)', async ({ request }) => {
     const response = await request.post(endpoint, {
       data: {
         query: `
@@ -50,6 +51,7 @@ test.describe('Countries GraphQL API', () => {
     const countries = body.data?.countries;
     expect(countries).toHaveLength(1);
     const de = countries[0];
+    console.log(de);
     expect(de.code).toBe('DE');
     expect(de.name).toBe('Germany');
     expect(de.capital).toBeDefined();

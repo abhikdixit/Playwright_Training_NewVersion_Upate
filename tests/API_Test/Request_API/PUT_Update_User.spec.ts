@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 test.describe.parallel('API Testing', () => {
   const baseUrl = 'https://reqres.in/api'
-  var cust_id
+  var cust_id : number
 
 test('POST Request - Login', async ({ request }) => {
     const response = await request.post(`${baseUrl}/users`, {
