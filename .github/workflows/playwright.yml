@@ -14,40 +14,62 @@ on:
 jobs:
   playwright:
     runs-on: ubuntu-latest
+
     timeout-minutes: 60
 
     steps:
+
+      # Download code
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+
+      # Setup Node
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'npm'
+          cache: npm
 
+
+      # Verify environment
       - name: Display Environment
         run: |
-          pwd
           node -v
           npm -v
+          pwd
           ls -la
 
-      - name: Verify package.json
-        run: cat package.json
 
+      # Install npm packages
       - name: Install Dependencies
         run: npm ci
 
+
+      # Install Playwright browsers
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Smoke Tests
-        run: npm run API_Test
 
-      - name: Upload Playwright Report
+      # Execute Smoke Tests
+      - name: Run Smoke Tests
+        run: npm run Smoke_Test
+        continue-on-error: false
+
+
+      # Check generated reports
+      - name: Verify Reports Folder
+        if: always()
+        run: |
+          echo "Checking Reports folder..."
+          ls -R Reports || echo "Reports folder not found"
+
+
+      # Upload Smart Report
+      - name: Upload Playwright Smart Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: Playwright-Report
-          path: playwright-report/
+          name: Playwright-Smart-Report
+          path: Reports/
+          retention-days: 30
