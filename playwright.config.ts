@@ -23,7 +23,7 @@ const config = {
   //testDir: './tests/UI_Tests/',
   //testDir: './tests/AI_Test/',
   //testDir: './tests/UI_Special_Control/',
-  //testDir: './tests/NICE_GUI_Tests/',
+  testDir: './tests/NICE_GUI_Tests/',
   //testDir: './tests/HCL_Test/',
   //testDir: './tests/Assignments/',
   //testDir: './tests/API_Test/',
@@ -35,14 +35,14 @@ const config = {
   //testDir: './tests/Spreecom_API_Framework/',
   //testDir: './tests/Spreecom_API_Minh/API_test/',
   //testDir:'./tests/API_Test/Request_API/',
-  //testDir:'./tests/API_Test/Mock_Test/',
+  testDir:'./tests/API_Test/Mock_Test/',
   //testDir:'./tests/API_Test/Notes_API/',
   //testDir:'./tests/API_Test/SOAP_Request/',
   //testMatch: ['**/*.spec.ts', '**/*.test.ts'], // only run real test files
-  testDir:'./tests/API_Test/GraphQL_API_Test/',
+  //testDir:'./tests/API_Test/GraphQL_API_Test/',
   //testDir: './tests/Salesforce_Test',
   /* Maximum time one test can run for. */
-  //timeout: 120000,
+  //timeout: 80000,
   
   expect: {
     /**
@@ -54,7 +54,7 @@ const config = {
   /* Run tests in files in parallel */
   fullyParallel: true,
   workers: 1,
-  //retries: 2,
+  //retries: 1,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   //forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -62,14 +62,14 @@ const config = {
   /* Opt out of parallel tests on CI. */
   //workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  //reporter: 'html',
   //reporter: [['html', { open: 'never' }]],
   //reporter: [["line"], ["allure-playwright"]],
   //reporter: [["html"], ["allure-playwright"]],
    /*reporter: [
     ['playwright-smart-reporter', {
-    outputFile: './Reports/UI_Smoke_Test_Report.html',
-    historyFile: './Reports/test-history.json',
+    outputFile: '../Reports/UI_Smoke_Test_Report.html',
+    historyFile: '../Reports/test-history.json',
       maxHistoryRuns: 5,
       performanceThreshold: 0.2,
       slackWebhook: process.env.SLACK_WEBHOOK_URL,
@@ -105,7 +105,7 @@ const config = {
     // slowMo: 1000, // Moved to launchOptions in project config if needed
     // Tell all tests to load signed-in state from 'storageState.json'.
     //baseURL: 'http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders',
-    storageState: './tests/OrangeHRM/WebOrderState.json',// <--- loads the signed-in session
+    //storageState: './tests/OrangeHRM/WebOrderState.json',// <--- loads the signed-in session
     //storageState: './tests/OrangeHRM/storageState.json',   // <--- loads the signed-in session
     //video: 'retain-on-failure',
     //screenshot: 'only-on-failure',

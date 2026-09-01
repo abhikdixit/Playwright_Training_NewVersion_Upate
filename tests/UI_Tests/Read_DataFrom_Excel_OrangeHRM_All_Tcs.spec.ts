@@ -27,8 +27,10 @@ test.describe('WebOrder All Test Scenario', () => {
         await page.goto(
           "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
         );
-        await page.getByPlaceholder("Username").fill(record.uname);
-        await page.getByPlaceholder("Password").fill(record.pass);
+        // await page.getByPlaceholder("Username").fill(record.uname);
+        // await page.getByPlaceholder("Password").fill(record.pass);
+        await page.getByPlaceholder("Username").fill(record.uname || "");
+        await page.getByPlaceholder("Password").fill(record.pass || "");
         await page.getByRole("button", { name: "Login" }).click();
         let msg;
         if ("Dashboard" == record.Exp_Result) {

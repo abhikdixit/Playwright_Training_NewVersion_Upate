@@ -47,14 +47,14 @@ export class FeedbackPage  {
     await expect(this.commentInput).toBeEmpty();
   }
 
-  async feedbackFormSent(): Promise<void> {
-    await expect(this.feedbackTitle).toBeVisible();    
-  }
+  // async feedbackFormSent(): Promise<void> {
+  //   await expect(this.feedbackTitle).toBeVisible();    
+  // }
 
-//   async feedbackFormSent(expectedName: string): Promise<string> {
-//     const actualMessage = await this.feedbackTitle.textContent();
-//     const expectedMessage = `Thank you for your comments, ${expectedName}. They will be reviewed by our Customer Service staff and given the full attention that they deserve.`;
-//     await expect(this.feedbackTitle).toHaveText(expectedMessage);
-//     return actualMessage?.trim() || '';
-// }
+  async feedbackFormSent(expectedName: string): Promise<string> {
+    const actualMessage = await this.feedbackTitle.textContent();
+    const expectedMessage = `Thank you for your comments, ${expectedName}. They will be reviewed by our Customer Service staff and given the full attention that they deserve.`;
+    await expect(this.feedbackTitle).toHaveText(expectedMessage);
+    return actualMessage?.trim() || '';
+}
 }

@@ -26,7 +26,7 @@ test.describe('E2E Test - Hooks Example in Playwright', () => {
 
   });
 
-  test.only('Go to PIM Page', async ({ page }) => {
+  test('Go to PIM Page', async ({ page }) => {
     await page.locator("//span[text()='PIM']").click();
 
   });

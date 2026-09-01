@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 import { AccessToken } from './BaseTest'
 import notes from '../TestData/create_notes_negative_tcs.json' // No destructuring here
 
-test.describe('Create Notes API Testing', () => {
+test.describe('Create Notes API Testing @sanity @E2E', () => {
   const baseUrl = 'https://practice.expandtesting.com'
   let token: string
 

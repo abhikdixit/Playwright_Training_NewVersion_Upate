@@ -1,11 +1,11 @@
 import { test, expect, Page } from '@playwright/test';
 
 test.describe('WebTable Pagination - Name and Salary Check', () => {
-  // const tgtFName = 'Dixit';
-  // const expSalary = '$163,500';
+  const tgtFName = 'Dixit';
+  const expSalary = '$163,500';
 
-  const tgtFName = 'Paul';
-  const expSalary = '$725,000';
+  // const tgtFName = 'Paul';
+  // const expSalary = '$725,000';
 
   // const tgtFName = 'Bruno';
   // const expSalary = '$163,500';

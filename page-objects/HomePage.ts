@@ -10,6 +10,7 @@ export class HomePage {
    logoutButton: Locator
    settingDropDown: Locator
    zeroBankLogo: Locator   
+   
   constructor(page: Page) {
     this.page = page
     this.signInButton = page.locator('#signin_button')

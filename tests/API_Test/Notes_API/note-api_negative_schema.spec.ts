@@ -32,7 +32,7 @@ test.describe('Create Notes API Testing', () => {
     expect([400, 422]).toContain(response.status())
 
     const body = await response.json()
-    console.log('💡 Negative Response:', body)
+    console.log('Negative Response:', body)
 
     // Expect the response to NOT match the success schema
     const ajv = new Ajv()
@@ -42,6 +42,6 @@ test.describe('Create Notes API Testing', () => {
 
     // Schema should NOT validate (because it's not a success object)
     expect(isValid).toBe(false)
-    console.log('❌ Schema validation failed as expected: ', validate.errors)
+    console.log('Schema validation failed as expected: ', validate.errors)
   })
 })

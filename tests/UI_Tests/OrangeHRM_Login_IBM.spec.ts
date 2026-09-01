@@ -14,3 +14,4 @@ test('Login TC1', async ({ page }) => {
   await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 });
 
+

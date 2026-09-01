@@ -1,0 +1,18 @@
+| Command                                            | Purpose                              |
+| -------------------------------------------------- | ------------------------------------ |
+| `npx playwright test`                              | Run all tests                        |
+| `npx playwright test login.spec.ts`                | Run a specific file                  |
+| `npx playwright test -g "Login"`                   | Run a test by name                   |
+| `npx playwright test --grep "@Smoke"`              | Run tagged tests                     |
+| `npx playwright test --project=chromium`           | Run in Chromium only                 |
+| `npx playwright test --headed`                     | Run with browser UI                  |
+| `npx playwright test --debug`                      | Debug with Playwright Inspector      |
+| `npx playwright test --ui`                         | Launch Playwright UI Mode            |
+| `npx playwright test --workers=4`                  | Run with four parallel workers       |
+| `npx playwright test --retries=2`                  | Retry failed tests                   |
+| `npx playwright test --last-failed`                | Re-run only previously failed tests  |
+| `npx playwright test --reporter=html`              | Generate an HTML report              |
+| `npx playwright show-report`                       | Open the HTML report                 |
+| `npx playwright test --trace=on`                   | Record traces                        |
+| `npx playwright test --video=retain-on-failure`    | Save video for failed tests          |
+| `npx playwright test --screenshot=only-on-failure` | Capture screenshots only on failures |

@@ -10,14 +10,24 @@ const records = parse(
     skip_empty_lines: true,
   }
 );
+//We use an interface in TypeScript to enforce type safety and autocomplete for data
+//  coming from external sources like CSV files.
 
-// TypeScript Interface for CSV Data
 interface LoginTestData {
   test_case: string;
   uname: string;
   pass: string;
   Exp_Result: string;
 }
+
+//You can use a type instead of an interface. It works almost identically for this scenario.
+/*
+type LoginTestData = {
+  test_case: string;
+  uname: string;
+  pass: string;
+  Exp_Result: string;
+} */
 
 // Convert records into typed array
 const testData: LoginTestData[] = records;

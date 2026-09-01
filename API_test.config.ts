@@ -1,4 +1,14 @@
 // @ts-check
+
+import path from 'path';
+import fs from 'fs';
+
+const reportPath = path.join(process.cwd(), 'Reports');
+
+if (!fs.existsSync(reportPath)) {
+    fs.mkdirSync(reportPath, { recursive: true });
+}
+
 import { devices } from '@playwright/test';
 
 /**
@@ -39,7 +49,38 @@ const config = {
   /* Opt out of parallel tests on CI. */
   //workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  //reporter: 'html',
+  reporter: [
+  ['playwright-smart-reporter', {
+
+    outputFile: path.join(
+      reportPath,
+      'UI_Smoke_Test_Report.html'
+    ),
+
+    historyFile: path.join(
+      reportPath,
+      'test-history.json'
+    ),
+
+    maxHistoryRuns: 5,
+    performanceThreshold: 0.2,
+
+    enableRetryAnalysis: true,
+    enableFailureClustering: true,
+    enableStabilityScore: true,
+    enableGalleryView: true,
+    enableComparison: true,
+    enableAIRecommendations: true,
+    enableTraceViewer: true,
+    enableHistoryDrilldown: true,
+
+    stabilityThreshold: 70,
+    retryFailureThreshold: 3
+
+  }]
+],
+  
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
 

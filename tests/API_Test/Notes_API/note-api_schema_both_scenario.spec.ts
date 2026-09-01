@@ -10,7 +10,7 @@ const validateSchema = ajv.compile(noteSchema);
 
 const testCases = [
   {
-    name: '✅ Positive - Valid note creation',
+    name: 'Positive - Valid note creation',
     data: {
       title: 'Valid Title',
       description: 'A well-formed note',
@@ -20,7 +20,7 @@ const testCases = [
     expectValidSchema: true,
   },
   {
-    name: '❌ Negative - Missing title',
+    name: ' Negative - Missing title',
     data: {
       description: 'Missing title field',
       category: 'Home',
@@ -29,7 +29,7 @@ const testCases = [
     expectValidSchema: false,
   },
   {
-    name: '❌ Negative - Empty category',
+    name: ' Negative - Empty category',
     data: {
       title: 'Title',
       description: 'No category provided',
@@ -39,20 +39,20 @@ const testCases = [
     expectValidSchema: false,
   },
   {
-    name: '❌ Negative - All fields missing',
+    name: ' Negative - All fields missing',
     data: {},
     expectedStatus: 400,
     expectValidSchema: false,
   },
 ];
 
-test.describe('🧪 Create Note API - Parametrized Tests', () => {
+test.describe(' Create Note API - Parametrized Tests', () => {
   let token: string;
 
-  // 🔑 Get token once before all tests
+  //  Get token once before all tests
   test.beforeAll(async ({ request }) => {
     token = await AccessToken(
-      'testing@abc.com',        // ✅ replace with your real test user
+      'testing@abc.com',        //  replace with your real test user
       'pass1234',
       request
     );
@@ -79,7 +79,7 @@ test.describe('🧪 Create Note API - Parametrized Tests', () => {
         expect(isValidSchema, JSON.stringify(validateSchema.errors, null, 2)).toBe(true);
       } else {
         expect(isValidSchema).toBe(false);
-        console.log('❌ Schema mismatch as expected:', validateSchema.errors);
+        console.log(' Schema mismatch as expected:', validateSchema.errors);
       }
     });
   }

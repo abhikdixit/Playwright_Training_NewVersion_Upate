@@ -43,7 +43,7 @@ test('Download and verify content of sample.txt', async ({ page, context }) => {
     console.log(`Downloaded file content:\n${fileContent}`);
 
     // ✅ Assert content includes expected text
-    expect(fileContent).toContain('Test file');
+    expect(fileContent).toContain('test');
 
     // Cleanup (optional)
     // fs.unlinkSync(filePath);

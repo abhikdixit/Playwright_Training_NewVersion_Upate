@@ -26,7 +26,7 @@ test.describe('Countries GraphQL API', () => {
     expect(body.data.countries[0]).toHaveProperty('name');
   });
 
-  test.only('filter specific country by code (DE)', async ({ request }) => {
+  test('filter specific country by code (DE)', async ({ request }) => {
     const response = await request.post(endpoint, {
       data: {
         query: `
