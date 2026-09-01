@@ -51,9 +51,9 @@ jobs:
         run: npx playwright install --with-deps
 
 
-      # Execute Smoke Tests
-      - name: Run Smoke Tests
-        run: npm run Smoke_Test
+      # Execute API Tests
+      - name: Run API Tests
+        run: npm run API_Test
         continue-on-error: false
 
 
