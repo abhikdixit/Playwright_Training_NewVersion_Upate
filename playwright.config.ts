@@ -35,7 +35,7 @@ const config = {
   //testDir: './tests/Spreecom_API_Framework/',
   //testDir: './tests/Spreecom_API_Minh/API_test/',
   //testDir:'./tests/API_Test/Request_API/',
-  testDir:'./tests/API_Test/Mock_Test/',
+  //testDir:'./tests/API_Test/Mock_Test/',
   //testDir:'./tests/API_Test/Notes_API/',
   //testDir:'./tests/API_Test/SOAP_Request/',
   //testMatch: ['**/*.spec.ts', '**/*.test.ts'], // only run real test files
